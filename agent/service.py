@@ -16,6 +16,7 @@ from pydantic import BaseModel, Field
 from agent import __version__
 from agent.config import get_settings
 from agent.datasets import Datasets
+from agent.intent import classify
 from agent.jobs import JobStore, WorkerPool
 from agent.llm import build_llm
 from agent.pipeline import DesignPipeline
@@ -45,7 +46,7 @@ class Engine:
             if self._key != key:
                 self._pipeline = None  # eski modeli bellekten bırak
                 llm = build_llm(settings, mv)
-                self._pipeline = DesignPipeline(llm, settings, mv.prompt_version if mv else "v1")
+                self._pipeline = DesignPipeline(llm, settings, mv.prompt_version if mv else settings.prompt_version)
                 self._key = key
                 log.info("Model yüklendi: %s (%s)", key, llm.name)
             return self._pipeline, key
@@ -104,6 +105,16 @@ def create_design(body: DesignIn):
     job_id = store.create(body.brief, body.user_ref)
     workers.notify()
     return {"id": job_id, "status": "queued", "position": store.queue_position(job_id)}
+
+
+class IntentIn(BaseModel):
+    message: str = Field(min_length=1, max_length=3000)
+
+
+@app.post("/v1/intent", dependencies=[Depends(require_key)])
+def intent(body: IntentIn):
+    """Mesaj tasarım isteği mi, domain satın alma mı? Model çağırmaz, anında döner."""
+    return vars(classify(body.message))
 
 
 @app.get("/v1/designs", dependencies=[Depends(require_key)])
@@ -185,7 +196,7 @@ class ModelIn(BaseModel):
     adapter_path: str | None = None
     base_model: str = ""
     dataset_version: str | None = None
-    prompt_version: str = "v1"
+    prompt_version: str = Field(default_factory=lambda: settings.prompt_version)
     notes: str = ""
 
 

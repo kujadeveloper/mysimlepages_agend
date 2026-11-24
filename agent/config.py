@@ -28,6 +28,8 @@ class Settings(BaseSettings):
     n_threads: int = 0                   # 0: otomatik
     max_section_tokens: int = 1200       # bölüm başına üretim sınırı
     temperature: float = 0.4
+    # Kayıt defterinde etkin sürüm yokken kullanılacak prompt şablonları (agent/prompts/<sürüm>)
+    prompt_version: str = "v2"
     max_sections: int = 8
     workers: int = 1                     # tek GPU'da aynı anda 1 iş: bellek taşmasın
 

@@ -47,7 +47,7 @@ def main(argv=None):
     p.add_argument("--adapter-path")
     p.add_argument("--base-model", default="")
     p.add_argument("--dataset")
-    p.add_argument("--prompt-version", default="v1")
+    p.add_argument("--prompt-version", default=None)
     p.add_argument("--parent")
     p.add_argument("--notes", default="")
 
@@ -74,7 +74,7 @@ def main(argv=None):
         from agent.llm import build_llm
         from agent.pipeline import DesignPipeline
         mv = reg.get(a.version) if a.version else reg.active()
-        pipe = DesignPipeline(build_llm(s, mv), s, mv.prompt_version if mv else "v1")
+        pipe = DesignPipeline(build_llm(s, mv), s, mv.prompt_version if mv else s.prompt_version)
         r = pipe.run(a.brief, lambda stage, prog: print(f"[{prog:4.0%}] {stage}", file=sys.stderr))
         Path(a.out).write_text(r.html, "utf-8")
         print(json.dumps(r.metrics, ensure_ascii=False))
@@ -99,7 +99,7 @@ def main(argv=None):
 
     elif a.cmd == "register":
         mv = reg.register(backend=a.backend, model_ref=a.model_ref, adapter_path=a.adapter_path,
-                          base_model=a.base_model, dataset_version=a.dataset, prompt_version=a.prompt_version,
+                          base_model=a.base_model, dataset_version=a.dataset, prompt_version=a.prompt_version or s.prompt_version,
                           parent=a.parent or (reg.active().version if reg.active() else None), notes=a.notes)
         print(json.dumps(asdict(mv), indent=2, ensure_ascii=False))
 

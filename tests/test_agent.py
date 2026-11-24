@@ -91,3 +91,31 @@ def test_service_end_to_end(tmp_path, monkeypatch):
         rows = [json.loads(l) for l in (tmp_path / "datasets/raw/feedback.jsonl").read_text("utf-8").splitlines()]
         assert any(r.get("corrected") and "Düzeltilmiş" in r["assistant"] for r in rows)
         assert c.post("/v1/datasets/freeze", headers=h).status_code == 201
+
+
+@pytest.mark.parametrize("message,intent,domains", [
+    ("domain satın almak istiyorum", "domain", []),
+    ("kahvem.com boş mu?", "domain", ["kahvem.com"]),
+    ("www.ornekfirma.com.tr alan adını almak istiyorum", "domain", ["ornekfirma.com.tr"]),
+    ("kahvem.com", "domain", ["kahvem.com"]),
+    ("I want to buy a domain", "domain", []),
+    ("Kafe için modern bir web sitesi tasarla, menü ve iletişim olsun", "design", []),
+    ("Diş kliniği sitesi yap, alan adımız gulus.com olacak, beyaz ve turkuaz renkler kullan, randevu formu ekle",
+     "design", ["gulus.com"]),
+    ("merhaba", "other", []),
+    ("index.html dosyası", "other", []),
+])
+def test_intent(message, intent, domains):
+    from agent.intent import classify
+    r = classify(message)
+    assert (r.intent, r.domains) == (intent, domains)
+
+
+def test_palette_contrast_is_fixed():
+    from agent.colors import contrast, fix_palette
+    # İlk gerçek denemedeki palet: kahverengi zemin üstünde koyu gri yazı, sarı düğme
+    p = fix_palette({"primary": "#FFD700", "secondary": "#8B4513", "accent": "#FFFFFF", "text": "#333333"})
+    assert contrast(p["text"], p["secondary"]) >= 4.5
+    assert contrast("#ffffff", p["primary"]) >= 4.5
+    good = {"primary": "#1d4ed8", "secondary": "#ffffff", "accent": "#f59e0b", "text": "#111827"}
+    assert fix_palette(good) == good

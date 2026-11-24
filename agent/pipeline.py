@@ -15,6 +15,7 @@ from typing import Callable
 from pydantic import BaseModel, Field, ValidationError, field_validator
 
 from agent import prompts
+from agent.colors import fix_palette
 from agent.config import Settings
 from agent.llm import LLM
 from agent.sanitize import extract_html, sanitize
@@ -48,7 +49,7 @@ class Plan(BaseModel):
     @classmethod
     def _colors(cls, v):
         base = {"primary": "#2563eb", "secondary": "#f8fafc", "accent": "#f59e0b", "text": "#0f172a"}
-        return {k: (v.get(k) if _HEX.match(str(v.get(k, ""))) else d) for k, d in base.items()}
+        return fix_palette({k: (v.get(k) if _HEX.match(str(v.get(k, ""))) else d) for k, d in base.items()})
 
     @field_validator("font")
     @classmethod
@@ -65,10 +66,10 @@ class Result:
 
 
 class DesignPipeline:
-    def __init__(self, llm: LLM, settings: Settings, prompt_version: str = "v1"):
+    def __init__(self, llm: LLM, settings: Settings, prompt_version: str | None = None):
         self.llm = llm
         self.s = settings
-        self.pv = prompt_version
+        self.pv = prompt_version or settings.prompt_version
 
     def run(self, brief: str, progress: Callable[[str, float], None] = lambda *_: None) -> Result:
         t0 = time.monotonic()
@@ -111,7 +112,10 @@ class DesignPipeline:
     def _section(self, brief: str, plan: Plan, sec: Section, trace: list) -> tuple[str, dict]:
         system = prompts.load(self.pv, "section_system")
         outline = ", ".join(s.id for s in plan.sections)
-        user = (f"Site: {plan.title} | style: {plan.style} | language: {plan.language} | font: {plan.font}\n"
+        p = plan.palette
+        user = (f"Site: {plan.title} | style: {plan.style} | language: {plan.language} | font: {plan.font} "
+                f"| year: {time.localtime().tm_year}\n"
+                f"Palette: primary {p['primary']}, background {p['secondary']}, accent {p['accent']}, text {p['text']}\n"
                 f"Page sections in order: {outline}\n"
                 f"Customer description: {brief.strip()[:1500]}\n\n"
                 f'Write the section id="{sec.id}" (type: {sec.type}). Goal: {sec.goal}')

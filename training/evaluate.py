@@ -18,7 +18,7 @@ BENCH = Path(__file__).with_name("bench_briefs.jsonl")
 
 def evaluate(settings: Settings, version: ModelVersion | None, limit: int | None = None) -> dict:
     briefs = [json.loads(l)["brief"] for l in BENCH.read_text("utf-8").splitlines() if l.strip()][:limit]
-    pipe = DesignPipeline(build_llm(settings, version), settings, version.prompt_version if version else "v1")
+    pipe = DesignPipeline(build_llm(settings, version), settings, version.prompt_version if version else settings.prompt_version)
     rows = []
     for brief in briefs:
         r = pipe.run(brief)
