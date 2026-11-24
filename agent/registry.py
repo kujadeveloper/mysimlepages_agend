@@ -8,12 +8,13 @@ data/registry/
 Dosya tabanlı olduğu için git/DVC/S3 ile yedeklenebilir; geri almak = `active` dosyasını eski sürüme çevirmek.
 """
 import json
-import os
 import re
 import threading
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
+
+from agent.fsutil import atomic_write as _atomic_write, read_text
 
 _VERSION = re.compile(r"^v(\d+)$")
 _lock = threading.Lock()
@@ -48,12 +49,12 @@ class Registry:
         out = []
         for p in self.root.glob("v*/manifest.json"):
             if _VERSION.match(p.parent.name):
-                out.append(ModelVersion(**json.loads(p.read_text("utf-8"))))
+                out.append(ModelVersion(**json.loads(read_text(p))))
         return sorted(out, key=lambda v: int(v.version[1:]))
 
     def get(self, version: str) -> ModelVersion | None:
         p = self._manifest(version)
-        return ModelVersion(**json.loads(p.read_text("utf-8"))) if p.exists() else None
+        return ModelVersion(**json.loads(read_text(p))) if p.exists() else None
 
     def next_version(self) -> str:
         nums = [int(v.version[1:]) for v in self.list()]
@@ -78,7 +79,7 @@ class Registry:
 
     def active(self) -> ModelVersion | None:
         p = self.root / "active"
-        return self.get(p.read_text().strip()) if p.exists() else None
+        return self.get(read_text(p).strip()) if p.exists() else None
 
     def activate(self, version: str) -> ModelVersion:
         mv = self.get(version)
@@ -87,8 +88,3 @@ class Registry:
         _atomic_write(self.root / "active", version)
         return mv
 
-
-def _atomic_write(path: Path, text: str):
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(text, "utf-8")
-    os.replace(tmp, path)

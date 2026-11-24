@@ -16,9 +16,20 @@ from dataclasses import asdict
 from pathlib import Path
 
 from agent.config import get_settings
+from agent.fsutil import read_text, write_text
+
+
+def _utf8_console():
+    """Windows konsolu (cp1252/cp857) Türkçe karakterlerde UnicodeEncodeError vermesin."""
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError):  # yönlendirilmiş / değiştirilmiş akış
+            pass
 
 
 def main(argv=None):
+    _utf8_console()
     ap = argparse.ArgumentParser(prog="msp-agent")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
@@ -76,7 +87,7 @@ def main(argv=None):
         mv = reg.get(a.version) if a.version else reg.active()
         pipe = DesignPipeline(build_llm(s, mv), s, mv.prompt_version if mv else s.prompt_version)
         r = pipe.run(a.brief, lambda stage, prog: print(f"[{prog:4.0%}] {stage}", file=sys.stderr))
-        Path(a.out).write_text(r.html, "utf-8")
+        write_text(Path(a.out), r.html)
         print(json.dumps(r.metrics, ensure_ascii=False))
 
     elif a.cmd == "distill":
@@ -85,7 +96,7 @@ def main(argv=None):
         from agent.pipeline import DesignPipeline
         llm = OpenAICompatLLM(a.base_url or s.openai_base_url, a.model, s.openai_api_key)
         pipe, ds = DesignPipeline(llm, s), Datasets(s.datasets_dir)
-        for i, line in enumerate(Path(a.briefs).read_text("utf-8").splitlines()):
+        for i, line in enumerate(read_text(Path(a.briefs)).splitlines()):
             if not line.strip():
                 continue
             r = pipe.run(json.loads(line)["brief"])

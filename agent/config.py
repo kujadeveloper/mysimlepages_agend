@@ -6,7 +6,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     """Tüm ayarlar ortam değişkeninden (MSP_ öneki) ya da .env dosyasından okunur."""
-    model_config = SettingsConfigDict(env_prefix="MSP_", env_file=".env", extra="ignore")
+    model_config = SettingsConfigDict(env_prefix="MSP_", env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
     # Kalıcı veri: model kayıt defteri, veri setleri, iş kuyruğu (sqlite)
     data_dir: Path = Path("data")

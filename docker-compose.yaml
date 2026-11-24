@@ -1,17 +1,22 @@
-# Ajan + Ollama (GPU). Ollama modeli GPU'da tutar, ajan hafif kalır.
-# İlk çalıştırma: docker compose up -d && docker compose exec ollama ollama pull qwen2.5-coder:3b
+# Ajan + Ollama. Her platformda çalışır (Linux, Windows, macOS; Docker Desktop dahil) — varsayılan CPU.
+#   CPU:          docker compose up -d
+#   NVIDIA GPU:   docker compose -f docker-compose.yaml -f docker-compose.gpu.yaml up -d   (Linux / Windows+WSL2)
+#   macOS:        Docker içinde Metal GPU yok. Hız için Ollama'yı doğrudan Mac'e kurun ve yalnızca ajanı çalıştırın:
+#                 OLLAMA_URL=http://host.docker.internal:11434/v1 docker compose up -d agent
+# İlk çalıştırma: docker compose exec ollama ollama pull qwen2.5-coder:3b
 services:
   agent:
     build: .
     env_file: .env
     environment:
       MSP_BACKEND: openai
-      MSP_OPENAI_BASE_URL: http://ollama:11434/v1
+      MSP_OPENAI_BASE_URL: ${OLLAMA_URL:-http://ollama:11434/v1}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"   # Linux'ta da host'taki Ollama'ya erişim
     volumes:
       - agent-data:/data
     ports:
       - "127.0.0.1:8100:8100"   # yalnızca iç ağ / backend erişsin
-    depends_on: [ollama]
     restart: unless-stopped
 
   ollama:
@@ -23,13 +28,6 @@ services:
       OLLAMA_NUM_PARALLEL: "1"        # düşük VRAM: tek istek
       OLLAMA_FLASH_ATTENTION: "1"
       OLLAMA_KV_CACHE_TYPE: "q8_0"    # KV önbelleği yarı bellek
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
     restart: unless-stopped
 
 volumes:

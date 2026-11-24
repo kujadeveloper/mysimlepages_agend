@@ -14,11 +14,12 @@ from pathlib import Path
 
 from agent.config import get_settings
 from agent.datasets import Datasets
+from agent.fsutil import read_text, write_text
 
 
 def load_rows(path: Path, tasks: set[str]):
     rows = []
-    for line in path.read_text("utf-8").splitlines():
+    for line in read_text(path).splitlines():
         if line.strip():
             r = json.loads(line)
             if r["task"] in tasks:
@@ -53,8 +54,11 @@ def main():
     import torch
     from datasets import Dataset
     from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
-    from transformers import (AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, DataCollatorForSeq2Seq,
-                              Trainer, TrainingArguments)
+    from transformers import AutoModelForCausalLM, AutoTokenizer, DataCollatorForSeq2Seq, Trainer, TrainingArguments
+    try:
+        from transformers import BitsAndBytesConfig
+    except ImportError:  # pragma: no cover
+        BitsAndBytesConfig = None
 
     ds_dir = Datasets(get_settings().datasets_dir).path(args.dataset)
     tasks = set(args.tasks.split(","))
@@ -69,15 +73,27 @@ def main():
     if train_ds is None:
         raise SystemExit("Eğitim verisi boş")
 
-    bf16 = torch.cuda.is_available() and torch.cuda.is_bf16_supported()
-    dtype = torch.bfloat16 if bf16 else torch.float16
-    quant = None if args.no_4bit else BitsAndBytesConfig(
-        load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_use_double_quant=True, bnb_4bit_compute_dtype=dtype)
+    # Platform: CUDA (Linux/Windows) -> QLoRA 4-bit; Apple Silicon (MPS) ya da CPU -> bitsandbytes yok, 4-bit'siz LoRA
+    cuda = torch.cuda.is_available()
+    mps = not cuda and getattr(torch.backends, "mps", None) is not None and torch.backends.mps.is_available()
+    bf16 = cuda and torch.cuda.is_bf16_supported()
+    fp16 = cuda and not bf16
+    dtype = torch.bfloat16 if bf16 else torch.float16 if fp16 else torch.float32
+    use_4bit = cuda and not args.no_4bit
+    if not cuda and not args.no_4bit:
+        print(f"CUDA yok ({'MPS' if mps else 'CPU'}): 4-bit kapatıldı, {dtype} ile 4-bit'siz LoRA eğitilecek (daha çok bellek)")
+    quant = BitsAndBytesConfig(
+        load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_use_double_quant=True,
+        bnb_4bit_compute_dtype=dtype) if use_4bit else None
     model = AutoModelForCausalLM.from_pretrained(args.base, quantization_config=quant, torch_dtype=dtype,
-                                                 device_map="auto", attn_implementation="sdpa")
-    if quant:
+                                                 device_map="auto" if cuda else None, attn_implementation="sdpa")
+    if mps:
+        model.to("mps")
+    if use_4bit:
         model = prepare_model_for_kbit_training(model, use_gradient_checkpointing=True)
-    model = get_peft_model(model, LoraConfig(
+    else:
+        model.enable_input_require_grads()  # gradient checkpointing + LoRA (4-bit'siz) için gerekli
+    model =get_peft_model(model, LoraConfig(
         r=args.rank, lora_alpha=args.rank * 2, lora_dropout=0.05, task_type="CAUSAL_LM",
         target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]))
     model.print_trainable_parameters()
@@ -90,7 +106,9 @@ def main():
         args=TrainingArguments(
             output_dir=args.out, num_train_epochs=args.epochs, learning_rate=args.lr,
             per_device_train_batch_size=1, per_device_eval_batch_size=1, gradient_accumulation_steps=args.grad_accum,
-            gradient_checkpointing=True, bf16=bf16, fp16=not bf16, optim="paged_adamw_8bit",
+            gradient_checkpointing=True, bf16=bf16, fp16=fp16,
+            optim="paged_adamw_8bit" if use_4bit else "adamw_torch",  # 8-bit optimizer yalnızca CUDA
+            dataloader_num_workers=0,  # Windows/macOS: alt süreç (spawn) sorunlarını önler
             lr_scheduler_type="cosine", warmup_ratio=0.03, logging_steps=10, save_strategy="epoch",
             save_total_limit=2, eval_strategy="epoch" if eval_ds else "no", report_to="none",
             group_by_length=True),  # benzer uzunlukları grupla: daha az padding, daha hızlı
@@ -101,7 +119,7 @@ def main():
     meta = {"base_model": args.base, "dataset_version": args.dataset, "tasks": sorted(tasks),
             "train_examples": len(train_ds), "eval_loss": trainer.evaluate().get("eval_loss") if eval_ds else None,
             "args": vars(args)}
-    Path(args.out, "training_meta.json").write_text(json.dumps(meta, indent=2), "utf-8")
+    write_text(Path(args.out, "training_meta.json"), json.dumps(meta, indent=2))
     print(json.dumps(meta, indent=2))
 
 

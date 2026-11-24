@@ -15,6 +15,8 @@ import threading
 from datetime import datetime, timezone
 from pathlib import Path
 
+from agent.fsutil import append_text, read_text, write_text
+
 _lock = threading.Lock()
 
 
@@ -26,20 +28,20 @@ class Datasets:
 
     def add_examples(self, examples: list[dict], source: str = "feedback"):
         path = self.raw / f"{source}.jsonl"
-        with _lock, path.open("a", encoding="utf-8") as f:
-            for ex in examples:
-                f.write(json.dumps(ex, ensure_ascii=False) + "\n")
+        text = "".join(json.dumps(ex, ensure_ascii=False) + "\n" for ex in examples)
+        with _lock:
+            append_text(path, text)
 
     def _raw_examples(self, min_rating: int):
         seen = set()
         for p in sorted(self.raw.glob("*.jsonl")):
-            for line in p.read_text("utf-8").splitlines():
+            for line in read_text(p).splitlines():
                 if not line.strip():
                     continue
                 ex = json.loads(line)
                 if ex.get("rating", 5) < min_rating or not ex.get("assistant"):
                     continue
-                key = hashlib.sha256(f'{ex["system"]}\0{ex["user"]}\0{ex["assistant"]}'.encode()).hexdigest()
+                key = hashlib.sha256(f'{ex["system"]}\0{ex["user"]}\0{ex["assistant"]}'.encode("utf-8")).hexdigest()
                 if key not in seen:  # yinelenen örnekleri at
                     seen.add(key)
                     yield ex
@@ -60,16 +62,16 @@ class Datasets:
             digest = hashlib.sha256()
             for split, rows in splits.items():
                 text = "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows)
-                (out / f"{split}.jsonl").write_text(text, "utf-8")
-                digest.update(text.encode())
+                write_text(out / f"{split}.jsonl", text)
+                digest.update(text.encode("utf-8"))
             manifest = {"version": name, "sha256": digest.hexdigest(), "min_rating": min_rating, "seed": seed,
                         "counts": {k: len(v) for k, v in splits.items()},
                         "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
-            (out / "manifest.json").write_text(json.dumps(manifest, indent=2), "utf-8")
+            write_text(out / "manifest.json", json.dumps(manifest, indent=2))
         return manifest
 
     def list(self) -> list[dict]:
-        return [json.loads(p.read_text("utf-8")) for p in sorted(self.root.glob("d*/manifest.json"))]
+        return [json.loads(read_text(p)) for p in sorted(self.root.glob("d*/manifest.json"))]
 
     def path(self, version: str) -> Path:
         p = self.root / version

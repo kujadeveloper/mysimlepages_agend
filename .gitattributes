@@ -1,0 +1,7 @@
+# Windows'ta (core.autocrlf=true) da depo içeriği LF kalsın: prompt'lar, JSONL ve Dockerfile her platformda aynı olsun
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.gguf binary
+*.safetensors binary

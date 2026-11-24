@@ -28,21 +28,65 @@ Ekibin düzelttiği bölümler en değerli veridir.
 
 ## Hızlı başlangıç
 
+Servis Linux, Windows ve macOS'ta çalışır (CI üç platformda da test eder: `.github/workflows/tests.yml`).
+
+### Docker (tüm platformlar)
+
 ```bash
-cp .env.example .env            # MSP_API_KEY'i değiştirin
-docker compose up -d
+cp .env.example .env            # Windows PowerShell: Copy-Item .env.example .env   — MSP_API_KEY'i değiştirin
+docker compose up -d            # CPU (her yerde çalışır)
 docker compose exec ollama ollama pull qwen2.5-coder:3b
+```
+
+| Platform | GPU ile çalıştırma |
+|----------|--------------------|
+| Linux + NVIDIA | `docker compose -f docker-compose.yaml -f docker-compose.gpu.yaml up -d` (nvidia-container-toolkit gerekir) |
+| Windows + NVIDIA | Docker Desktop (WSL2 arka ucu) ile aynı komut |
+| macOS | Docker içinde Metal GPU yok. [Ollama](https://ollama.com)'yı Mac'e kurun (`ollama pull qwen2.5-coder:3b`), sonra yalnızca ajanı başlatın: `OLLAMA_URL=http://host.docker.internal:11434/v1 docker compose up -d agent` |
+
+Deneme isteği:
+
+```bash
 curl -H "X-API-Key: ..." -H "Content-Type: application/json" \
      -d '{"brief":"Kafe için tek sayfalık site, sıcak kahve tonları"}' http://127.0.0.1:8100/v1/designs
 ```
 
-Geliştirme (Python 3.10+):
+Windows PowerShell'de `curl` yerine:
+
+```powershell
+Invoke-RestMethod -Method Post -Uri http://127.0.0.1:8100/v1/designs -Headers @{"X-API-Key"="..."} `
+  -ContentType "application/json; charset=utf-8" -Body '{"brief":"Kafe için tek sayfalık site, sıcak kahve tonları"}'
+```
+
+### Docker'sız geliştirme (Python 3.10+)
+
+macOS / Linux:
 
 ```bash
+python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 MSP_BACKEND=mock msp-agent generate "Kafe sitesi" -o site.html
+msp-agent serve                # http://127.0.0.1:8100
 pytest
 ```
+
+Windows (PowerShell):
+
+```powershell
+py -3 -m venv .venv; .\.venv\Scripts\Activate.ps1
+pip install -e ".[dev]"
+$env:MSP_BACKEND="mock"; msp-agent generate "Kafe sitesi" -o site.html
+msp-agent serve
+pytest
+```
+
+Windows (cmd): `.venv\Scripts\activate.bat` ve `set MSP_BACKEND=mock`. Ayarlar `.env` dosyasından da okunur,
+bu yüzden ortam değişkeni yerine `.env` içine `MSP_BACKEND=mock` yazmak her platformda aynı şekilde çalışır.
+
+Platform notları:
+- Dosyalar (JSONL veri setleri, manifest'ler, üretilen HTML) her platformda UTF-8 ve LF ile yazılır; veri seti
+  sha256 özetleri platformdan bağımsızdır. `.gitattributes` depo içeriğini Windows'ta da LF tutar.
+- Windows konsolunda Türkçe karakterler için CLI çıktısı UTF-8'e ayarlanır. Yine de bozuk görünürse: `chcp 65001`.
 
 ## Düşük kart ayarları
 
@@ -55,8 +99,15 @@ pytest
 - `MSP_N_CTX=4096`: bölüm bölüm üretim sayesinde küçük bağlam yeterli; KV önbelleği küçük kalır.
 - `MSP_WORKERS=1`: aynı anda tek üretim; istekler kuyrukta bekler, bellek taşmaz.
 - Ollama'da `OLLAMA_KV_CACHE_TYPE=q8_0`, `OLLAMA_FLASH_ATTENTION=1` (compose'ta açık).
-- Yerel GGUF: `pip install -e ".[llamacpp]"` (CUDA: `CMAKE_ARGS="-DGGML_CUDA=on"`), `MSP_BACKEND=llamacpp`,
+- Yerel GGUF: `pip install -e ".[llamacpp]"`, `MSP_BACKEND=llamacpp`,
   `MSP_DEFAULT_MODEL_PATH=models/...gguf`. Eğitilen LoRA, temel modelle birleştirilmeden yüklenebilir.
+
+  | Platform | llama-cpp-python GPU kurulumu |
+  |----------|-------------------------------|
+  | Linux (CUDA) | `CMAKE_ARGS="-DGGML_CUDA=on" pip install -e ".[llamacpp]"` |
+  | Windows (CUDA) | PowerShell: `$env:CMAKE_ARGS="-DGGML_CUDA=on"; pip install -e ".[llamacpp]"` (Visual Studio Build Tools + CUDA Toolkit gerekir) |
+  | macOS (Apple Silicon) | `pip install -e ".[llamacpp]"` — Metal varsayılan olarak açık |
+  | CPU (hepsi) | `pip install -e ".[llamacpp]"` ve `MSP_N_GPU_LAYERS=0` |
 
 ## API
 
@@ -90,8 +141,10 @@ geri almak: msp-agent activate v1
 - **Başlangıç verisi (distill)**: Henüz geri bildirim yokken, büyük bir öğretmen modeli (ör. 14B/32B; geçici olarak
   büyük bir GPU'da) `msp-agent distill briefs.jsonl --model <öğretmen>` ile çalıştırın. Çıktıları gözden geçirip
   küçük modeli bunlarla eğitin. Böylece küçük model, büyük modelin bu işteki becerisini öğrenir.
-- **QLoRA**: 4-bit temel model + LoRA, gradient checkpointing, batch 1 + accumulation, 8-bit optimizer.
+- **QLoRA** (Linux/Windows + NVIDIA): 4-bit temel model + LoRA, gradient checkpointing, batch 1 + accumulation, 8-bit optimizer.
   1.5B ~5 GB, 3B ~7 GB, 7B ~11 GB VRAM ile eğitilebilir. Kayıp yalnızca asistan yanıtı üzerinden hesaplanır.
+- **macOS / CPU eğitimi**: bitsandbytes yalnızca CUDA'da çalışır. `train_lora.py` CUDA yoksa bunu algılar,
+  4-bit'i kapatır ve Apple Silicon'da MPS ile (yoksa CPU'da) LoRA eğitir. Daha çok bellek ister; 1.5B model önerilir.
 - **Sürümlenenler**: model (`data/registry/vN/manifest.json`: temel model, adaptör, veri seti, prompt sürümü,
   üst sürüm, metrikler), veri seti (`data/datasets/dN`), prompt şablonları (`agent/prompts/vN`). Model eğitildiği
   prompt sürümüyle çalıştırılır; prompt değişikliği yeni klasör (`v2`) olarak eklenir, eskisi silinmez.

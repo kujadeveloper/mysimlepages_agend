@@ -119,3 +119,19 @@ def test_palette_contrast_is_fixed():
     assert contrast("#ffffff", p["primary"]) >= 4.5
     good = {"primary": "#1d4ed8", "secondary": "#ffffff", "accent": "#f59e0b", "text": "#111827"}
     assert fix_palette(good) == good
+
+
+def test_files_are_utf8_lf_on_every_platform(tmp_path):
+    from agent.fsutil import atomic_write
+    ds = Datasets(tmp_path)
+    ds.add_examples([{"task": "section", "system": "s", "user": "ğüşıöç", "assistant": "a", "rating": 5}])
+    raw = (tmp_path / "raw/feedback.jsonl").read_bytes()
+    assert b"\r\n" not in raw and "ğüşıöç".encode("utf-8") in raw
+    m = ds.freeze()
+    train = (tmp_path / m["version"] / "train.jsonl").read_bytes()
+    eval_ = (tmp_path / m["version"] / "eval.jsonl").read_bytes()
+    import hashlib
+    assert hashlib.sha256(eval_ + train).hexdigest() == m["sha256"]  # özet diskteki baytlarla aynı
+    atomic_write(tmp_path / "x.json", "a\nb")
+    atomic_write(tmp_path / "x.json", "c\nd")  # mevcut dosyanın üzerine (Windows'ta os.replace)
+    assert (tmp_path / "x.json").read_bytes() == b"c\nd" and not list(tmp_path.glob("*.tmp"))
