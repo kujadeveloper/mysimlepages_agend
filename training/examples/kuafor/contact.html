@@ -1,0 +1,22 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-bold md:text-4xl">Randevu</h2>
+      <p class="mt-4 text-lg opacity-80">Formu gönderin ya da Instagram'dan yazın; uygun saati onaylayalım.</p>
+      <ul class="mt-8 space-y-4">
+        <li><span class="font-semibold text-[var(--primary)]">Adres:</span> Suadiye Mah. Bağdat Cad. No: 412, Kadıköy / İstanbul</li>
+        <li><span class="font-semibold text-[var(--primary)]">Telefon:</span> <a href="tel:+902163610412" class="underline">0216 361 04 12</a></li>
+        <li><span class="font-semibold text-[var(--primary)]">Instagram:</span> <a href="https://instagram.com/saloonmira" class="underline">@saloonmira</a></li>
+      </ul>
+    </div>
+    <form class="space-y-5 rounded-2xl bg-white/70 p-6 shadow-sm ring-1 ring-black/5">
+      <div><label for="name" class="block font-semibold">Ad Soyad</label><input id="name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <div><label for="phone" class="block font-semibold">Telefon</label><input id="phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="service" class="block font-semibold">Hizmet</label><select id="service" name="service" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Kesim + fön</option><option>Boya</option><option>Balayaj</option><option>Keratin</option><option>Manikür</option><option>Gelin</option></select></div>
+        <div><label for="date" class="block font-semibold">Tarih</label><input id="date" name="date" type="date" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      </div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Randevu İste</button>
+    </form>
+  </div>
+</section>

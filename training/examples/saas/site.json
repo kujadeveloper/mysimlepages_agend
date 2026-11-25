@@ -1,0 +1,19 @@
+{
+  "brief": "Landing page for our SaaS: Fatura.io, invoicing and expense tracking for freelancers in Turkey and the EU. E-invoice (e-Fatura) integration, multi-currency, automatic reminders. Free plan + Pro. Clean modern startup look.",
+  "plan": {
+    "title": "Fatura.io",
+    "language": "en",
+    "style": "clean modern saas",
+    "palette": {"primary": "#4f46e5", "secondary": "#fafaff", "accent": "#34d399", "text": "#111827"},
+    "font": "Plus Jakarta Sans",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Floating pill navbar with Fatura.io logo, Features, Pricing, FAQ links and Start free button, mobile ☰ menu"},
+      {"id": "hero", "type": "hero", "goal": "Centered headline about getting paid faster in TRY and EUR, Start free and See pricing buttons, product screenshot"},
+      {"id": "partners", "type": "partners", "goal": "Logo strip: integrates with GİB e-Fatura, iyzico, Stripe, Wise and Paraşüt"},
+      {"id": "features", "type": "features", "goal": "Bento grid: e-Fatura in one click, multi-currency, automatic payment reminders, expense scanning, tax reports"},
+      {"id": "pricing", "type": "comparison", "goal": "Free vs Pro €9/month vs Team €29/month comparison table with invoices, currencies, reminders, users"},
+      {"id": "faq", "type": "faq", "goal": "Questions about e-Fatura legality, data location, cancelling and VAT"},
+      {"id": "footer", "type": "footer", "goal": "Multi-column footer with product links, company links, newsletter field and copyright year"}
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "brief": "Bodrum Yalıkavak'ta emlak ofisiyiz. Satılık villa, kiralık yazlık ve arsa. Yabancı müşteri de çok geliyor ama site Türkçe olsun. Lüks ama sade. Öne çıkan ilanlar ve iletişim olsun.",
+  "plan": {
+    "title": "Mavi Koy Gayrimenkul",
+    "language": "tr",
+    "style": "luxury minimal coastal",
+    "palette": {
+      "primary": "#0f766e",
+      "secondary": "#f7fbfa",
+      "accent": "#d97706",
+      "text": "#0f2a2a"
+    },
+    "font": "Cormorant Garamond",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Mavi Koy logosu ve İlanlar, Hakkımızda, Yorumlar, İletişim bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Alt kenara yaslanmış tam ekran Yalıkavak koyu görseli üstünde başlık, İlanları İncele ve Danışmana Yaz butonları"
+      },
+      {
+        "id": "listings",
+        "type": "products",
+        "goal": "Satılık 4+1 deniz manzaralı villa, kiralık 3+1 havuzlu yazlık ve imarlı arsa ilan kartları, fiyat ve metrekare"
+      },
+      {
+        "id": "about",
+        "type": "about",
+        "goal": "2005'ten beri Bodrum yarımadasında tapu, kredi ve oturum izni süreçlerinde danışmanlık"
+      },
+      {
+        "id": "testimonials",
+        "type": "testimonials",
+        "goal": "Villa alan ve yazlık kiralayan iki müşterinin yorumu"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Yalıkavak Marina yakınındaki ofis adresi, telefon ve ad, telefon, ilgilenilen ilan tipi alanlı form"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Ofis adı, yetki belgesi numarası, bağlantılar ve telif yılı"
+      }
+    ]
+  }
+}

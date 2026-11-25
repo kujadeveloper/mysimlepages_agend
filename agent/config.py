@@ -18,8 +18,8 @@ class Settings(BaseSettings):
     backend: str = "mock"
     # Kayıt defterinde etkin sürüm yoksa kullanılacak model
     default_model_path: str = ""          # llamacpp: .gguf dosyası
-    openai_base_url: str = "http://localhost:11434/v1"
-    openai_model: str = "qwen2.5-coder:3b"
+    openai_base_url: str = "http://localhost:8001/v1"   # vLLM (docker-compose.yaml, host portu)
+    openai_model: str = "qwen2.5-coder-7b"              # vLLM --served-model-name; LoRA için "msp-<ad>"
     openai_api_key: str = "none"
 
     # Düşük donanım ayarları
@@ -29,8 +29,8 @@ class Settings(BaseSettings):
     max_section_tokens: int = 1200       # bölüm başına üretim sınırı
     temperature: float = 0.4
     # Kayıt defterinde etkin sürüm yokken kullanılacak prompt şablonları (agent/prompts/<sürüm>)
-    prompt_version: str = "v2"
-    max_sections: int = 8
+    prompt_version: str = "v5"
+    max_sections: int = 10
     workers: int = 1                     # tek GPU'da aynı anda 1 iş: bellek taşmasın
 
     # Kullanıcı geri bildirimini eğitim verisi olarak sakla

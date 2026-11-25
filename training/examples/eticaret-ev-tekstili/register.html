@@ -1,0 +1,17 @@
+<section id="register" class="px-6 py-16 md:py-24">
+  <div class="mx-auto max-w-4xl rounded-3xl bg-[var(--accent)] p-8 text-black md:p-12">
+    <div class="grid items-center gap-10 md:grid-cols-2">
+      <div>
+        <h2 class="text-4xl">Üye olun, %10 kazanın</h2>
+        <p class="mt-4">İlk siparişinizde geçerli indirim kodu e-postanıza gelsin. Yeni koleksiyonları da ilk siz görün.</p>
+      </div>
+      <form class="space-y-4 rounded-2xl bg-white p-6">
+        <div><label for="r-name" class="block text-sm font-semibold">Ad Soyad</label><input id="r-name" name="name" type="text" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="r-email" class="block text-sm font-semibold">E-posta</label><input id="r-email" name="email" type="email" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="r-pass" class="block text-sm font-semibold">Şifre</label><input id="r-pass" name="password" type="password" minlength="8" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <label class="flex items-start gap-3 text-sm"><input type="checkbox" name="kvkk" required class="mt-1"><span>Üyelik sözleşmesini ve KVKK metnini kabul ediyorum.</span></label>
+        <button type="submit" class="w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Üye Ol</button>
+      </form>
+    </div>
+  </div>
+</section>

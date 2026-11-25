@@ -9,6 +9,7 @@ Kayıp yalnızca asistan yanıtı üzerinden hesaplanır (prompt'u ezberlemez).
 Sonra: GGUF'a çevirip kayıt defterine ekleyin (README > Eğitim).
 """
 import argparse
+import inspect
 import json
 from pathlib import Path
 
@@ -43,7 +44,7 @@ def main():
     ap.add_argument("--base", default="Qwen/Qwen2.5-Coder-1.5B-Instruct")
     ap.add_argument("--out", required=True)
     ap.add_argument("--tasks", default="plan,section")
-    ap.add_argument("--epochs", type=float, default=2)
+    ap.add_argument("--epochs", type=float, default=3)
     ap.add_argument("--lr", type=float, default=2e-4)
     ap.add_argument("--rank", type=int, default=16)
     ap.add_argument("--max-len", type=int, default=2048)
@@ -53,7 +54,7 @@ def main():
 
     import torch
     from datasets import Dataset
-    from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
+    from peft import LoraConfig, get_peft_model
     from transformers import AutoModelForCausalLM, AutoTokenizer, DataCollatorForSeq2Seq, Trainer, TrainingArguments
     try:
         from transformers import BitsAndBytesConfig
@@ -85,18 +86,30 @@ def main():
     quant = BitsAndBytesConfig(
         load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_use_double_quant=True,
         bnb_4bit_compute_dtype=dtype) if use_4bit else None
-    model = AutoModelForCausalLM.from_pretrained(args.base, quantization_config=quant, torch_dtype=dtype,
+    model = AutoModelForCausalLM.from_pretrained(args.base, quantization_config=quant, dtype=dtype,
                                                  device_map="auto" if cuda else None, attn_implementation="sdpa")
     if mps:
         model.to("mps")
-    if use_4bit:
-        model = prepare_model_for_kbit_training(model, use_gradient_checkpointing=True)
-    else:
-        model.enable_input_require_grads()  # gradient checkpointing + LoRA (4-bit'siz) için gerekli
+    # prepare_model_for_kbit_training kullanılmaz: 4-bit dışı katmanları (embedding, lm_head) fp32'ye çevirir; 7B'de
+    # bu ~4 GB ek bellek demek ve 16 GB kartı taşırır. LoRA ağırlıkları zaten ayrı eğitilir, bf16 yeterlidir.
+    model.config.use_cache = False
+    model.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
+    model.enable_input_require_grads()  # gradient checkpointing + LoRA için gerekli
     model =get_peft_model(model, LoraConfig(
         r=args.rank, lora_alpha=args.rank * 2, lora_dropout=0.05, task_type="CAUSAL_LM",
         target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]))
     model.print_trainable_parameters()
+
+    # transformers 4.x ve 5.x arasında değişen adlar: warmup_ratio -> warmup_steps (0-1 arası oran),
+    # group_by_length -> train_sampling_strategy="group_by_length"
+    ta_params = inspect.signature(TrainingArguments.__init__).parameters
+    compat = {"warmup_ratio": 0.03} if "warmup_ratio" in ta_params else {"warmup_steps": 0.03}
+    if "group_by_length" in ta_params:
+        compat["group_by_length"] = True  # benzer uzunlukları grupla: daha az padding, daha hızlı
+    elif "train_sampling_strategy" in ta_params:
+        compat["train_sampling_strategy"] = "group_by_length"
+    if eval_ds:  # son tur değil, ölçüm kaybı en düşük tur kaydedilir (küçük veride son tur genelde ezberler)
+        compat.update(load_best_model_at_end=True, metric_for_best_model="eval_loss", greater_is_better=False)
 
     trainer = Trainer(
         model=model,
@@ -106,12 +119,11 @@ def main():
         args=TrainingArguments(
             output_dir=args.out, num_train_epochs=args.epochs, learning_rate=args.lr,
             per_device_train_batch_size=1, per_device_eval_batch_size=1, gradient_accumulation_steps=args.grad_accum,
-            gradient_checkpointing=True, bf16=bf16, fp16=fp16,
+            gradient_checkpointing=True, gradient_checkpointing_kwargs={"use_reentrant": False}, bf16=bf16, fp16=fp16,
             optim="paged_adamw_8bit" if use_4bit else "adamw_torch",  # 8-bit optimizer yalnızca CUDA
             dataloader_num_workers=0,  # Windows/macOS: alt süreç (spawn) sorunlarını önler
-            lr_scheduler_type="cosine", warmup_ratio=0.03, logging_steps=10, save_strategy="epoch",
-            save_total_limit=2, eval_strategy="epoch" if eval_ds else "no", report_to="none",
-            group_by_length=True),  # benzer uzunlukları grupla: daha az padding, daha hızlı
+            lr_scheduler_type="cosine", logging_steps=10, save_strategy="epoch",
+            save_total_limit=2, eval_strategy="epoch" if eval_ds else "no", report_to="none", **compat),
     )
     trainer.train()
     model.save_pretrained(args.out)

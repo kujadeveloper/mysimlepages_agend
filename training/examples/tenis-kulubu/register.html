@@ -1,0 +1,21 @@
+<section id="register" class="px-6 py-16 md:py-24">
+  <div class="mx-auto max-w-xl">
+    <h2 class="text-center text-3xl font-bold md:text-4xl">Become a member</h2>
+    <p class="mt-4 text-center opacity-80">Create your account; we'll confirm your membership within one day.</p>
+    <form class="mt-10 space-y-5 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+      <div><label for="r-name" class="block font-semibold">Full name</label><input id="r-name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="r-email" class="block font-semibold">Email</label><input id="r-email" name="email" type="email" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="r-phone" class="block font-semibold">Phone</label><input id="r-phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      </div>
+      <div><label for="r-plan" class="block font-semibold">Plan</label><select id="r-plan" name="plan" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Junior · €40/month</option><option>Individual · €95/month</option><option>Family · €180/month</option></select></div>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="r-pass" class="block font-semibold">Password</label><input id="r-pass" name="password" type="password" minlength="8" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="r-pass2" class="block font-semibold">Password again</label><input id="r-pass2" name="password_confirm" type="password" minlength="8" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      </div>
+      <label class="flex items-start gap-3 text-sm"><input type="checkbox" name="terms" required class="mt-1"><span>I agree to the club rules and privacy policy.</span></label>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Create account</button>
+      <p class="text-center text-sm opacity-70">Already a member? <a href="#register" class="font-semibold text-[var(--primary)] underline">Log in</a></p>
+    </form>
+  </div>
+</section>

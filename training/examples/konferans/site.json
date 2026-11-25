@@ -1,0 +1,19 @@
+{
+  "brief": "Frontend İstanbul 2026 konferansı için site. 14-15 Mayıs, Haliç Kongre Merkezi. 20 konuşmacı, 2 sahne, workshoplar. Konuşmacılar, program, sponsorlar ve bilet fiyatları. Koyu, modern, teknolojik.",
+  "plan": {
+    "title": "Frontend İstanbul 2026",
+    "language": "tr",
+    "style": "dark tech event",
+    "palette": {"primary": "#6d28d9", "secondary": "#0a0a1a", "accent": "#f472b6", "text": "#e8e8f0"},
+    "font": "Sora",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "FE/IST logosu, Konuşmacılar, Program, Biletler bağlantıları, Bilet Al butonu ve mobil ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "14-15 Mayıs 2026 Haliç Kongre Merkezi, büyük başlık ve 20 konuşmacı, 2 sahne, 8 workshop, 1.200 katılımcı istatistikleri"},
+      {"id": "speakers", "type": "team", "goal": "Yatay kaydırılan konuşmacı kartları: isim, şirket ve konuşma başlığı"},
+      {"id": "schedule", "type": "schedule", "goal": "14 Mayıs için saatli dikey zaman çizelgesi: açılış, keynote, sahne konuşmaları, öğle arası, panel"},
+      {"id": "partners", "type": "partners", "goal": "Altın ve gümüş sponsor logolarından oluşan şerit"},
+      {"id": "tickets", "type": "pricing", "goal": "Erken kayıt 3.500₺, standart 5.000₺, workshop dahil 7.500₺, öğrenci 1.500₺ bilet kartları"},
+      {"id": "footer", "type": "footer", "goal": "Etkinlik adı, davranış kuralları bağlantısı, iletişim e-postası ve telif yılı"}
+    ]
+  }
+}

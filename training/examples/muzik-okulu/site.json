@@ -1,0 +1,19 @@
+{
+  "brief": "Eskişehir'de müzik okulu: piyano, gitar, keman, bateri, şan. Çocuk ve yetişkin. Bireysel dersler, yıl sonu konseri. Sıcak, sanatsal bir site, enstrümanlar sekmeli olsun, öğretmenler ve ders programı.",
+  "plan": {
+    "title": "Nota Müzik Akademisi",
+    "language": "tr",
+    "style": "warm artistic",
+    "palette": {"primary": "#7c2d12", "secondary": "#fffbf2", "accent": "#fbbf24", "text": "#1c1410"},
+    "font": "Merriweather Sans",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Nota logosu, Enstrümanlar, Öğretmenler, Program, Kayıt bağlantıları"},
+      {"id": "hero", "type": "hero", "goal": "Tam ekran piyano görseli üstünde her yaşta müziğe başlamak başlığı ve Ücretsiz Deneme Dersi butonu"},
+      {"id": "instruments", "type": "services", "goal": "Piyano, gitar, keman, bateri ve şan için açılır sekmeler; yaş aralığı, ders süresi ve aylık ücret (4 ders 3.600₺)"},
+      {"id": "team", "type": "team", "goal": "Yatay kaydırılan 4 öğretmen kartı: isim, enstrüman, mezun olduğu konservatuvar"},
+      {"id": "schedule", "type": "schedule", "goal": "Hafta içi 14:00-21:00, cumartesi 10:00-18:00 ders saatleri tablosu ve 14 Haziran yıl sonu konseri"},
+      {"id": "contact", "type": "contact", "goal": "Adres, telefon ve öğrenci adı, yaşı, enstrüman, veli telefonu alanlı kayıt formu"},
+      {"id": "footer", "type": "footer", "goal": "Akademi adı, MEB izni ve telif yılı"}
+    ]
+  }
+}

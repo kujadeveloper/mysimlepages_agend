@@ -1,0 +1,18 @@
+{
+  "brief": "Antalya havalimanında araç kiralama. Ekonomik, SUV, 9 kişilik minibüs. Havalimanında teslim, kaskolu, depozitosuz seçenek. Hızlı fiyat sorma formu en üstte olsun, filo ve kiralama adımları.",
+  "plan": {
+    "title": "Akdeniz Rent a Car",
+    "language": "tr",
+    "style": "clean travel",
+    "palette": {"primary": "#1e3a8a", "secondary": "#f8fafc", "accent": "#f59e0b", "text": "#0f172a"},
+    "font": "Barlow",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Üst bilgi çubuğunda 7/24 telefon, altında logo, Filo, Nasıl Çalışır, SSS bağlantıları ve mobil ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Solda havalimanında 10 dakikada teslim vaadi, sağda alış tarihi, dönüş tarihi, araç sınıfı ve telefon alanlı hızlı fiyat formu"},
+      {"id": "fleet", "type": "products", "goal": "Fiat Egea 1.450₺, Toyota C-HR hibrit 2.600₺, Mercedes Vito 9 kişilik 4.200₺ günlük; vites, yakıt, kişi, bagaj özellik listeleriyle"},
+      {"id": "process", "type": "process", "goal": "Online rezervasyon, havalimanında karşılama, aracı teslim alma, iade adımları"},
+      {"id": "faq", "type": "faq", "goal": "Depozito, ehliyet yaşı, sınır dışına çıkış, yakıt politikası soruları"},
+      {"id": "footer", "type": "footer", "goal": "Çok sütunlu: firma, ofis adresi, çalışma saatleri, bağlantılar ve telif yılı"}
+    ]
+  }
+}

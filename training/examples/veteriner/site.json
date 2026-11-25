@@ -1,0 +1,47 @@
+{
+  "brief": "eskişehirde veteriner kliniği. 7/24 acil, aşı, kısırlaştırma, diş temizliği, ayrıca küçük bir pet shop. hayvan sahipleri güvensin, sıcak bir site",
+  "plan": {
+    "title": "Pati Dostu Veteriner Kliniği",
+    "language": "tr",
+    "style": "friendly warm",
+    "palette": {
+      "primary": "#15803d",
+      "secondary": "#f0fdf4",
+      "accent": "#f97316",
+      "text": "#14281d"
+    },
+    "font": "Quicksand",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Pati Dostu logosu, Hizmetler, Saatler, İletişim bağlantıları ve 7/24 Acil telefon butonu, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Tam ekran köpek görseli üstünde ortalanmış 7/24 açık klinik başlığı, Acil Hattı ve Randevu Al butonları"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "7/24 acil, aşı takvimi, kısırlaştırma, diş temizliği, ultrason-röntgen ve pet shop kartları"
+      },
+      {
+        "id": "hours",
+        "type": "hours",
+        "goal": "Poliklinik saatleri, 7/24 acil bilgisi ve aşı karnesi hatırlatma servisi"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Klinik adresi, acil telefon ve evcil hayvan adı, türü, sahip telefonu, şikayet alanlı randevu formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Klinik adı, sorumlu hekim bilgisi ve telif yılı"
+      }
+    ]
+  }
+}

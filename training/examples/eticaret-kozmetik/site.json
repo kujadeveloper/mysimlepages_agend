@@ -1,0 +1,20 @@
+{
+  "brief": "doğal cilt bakım ürünleri satan online mağaza. yüz serumu, nemlendirici, sabun, saç bakım. kategoriler, çok satanlar, set kampanyası, müşteri yorumları, kargo ve iade ile ilgili sss olsun. 750 tl üzeri kargo bedava",
+  "plan": {
+    "title": "Nane Botanik",
+    "language": "tr",
+    "style": "natural clean ecommerce",
+    "palette": {"primary": "#4a6b49", "secondary": "#f7f4ee", "accent": "#e9c9a8", "text": "#1f2a1e"},
+    "font": "Lora",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Üstte 750₺ üzeri ücretsiz kargo çubuğu, Nane Botanik logosu, arama kutusu, Kategoriler, Çok Satanlar, SSS bağlantıları ve Sepet (2) bağlantısı, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Doğal içerikli, vegan ve hayvan deneyi yapılmamış cilt bakımı, Alışverişe Başla butonu ve ürün görseli"},
+      {"id": "categories", "type": "categories", "goal": "Yüz Bakımı, Vücut Bakımı, Saç Bakımı, Doğal Sabunlar ve Setler kategori kutuları"},
+      {"id": "bestsellers", "type": "products", "goal": "Yatay kaydırılan çok satanlar: C vitaminli serum 489₺, aloe nemlendirici 359₺, lavanta sabunu 89₺, biberiye şampuan 249₺, gül suyu tonik 199₺; puan ve Sepete Ekle butonuyla"},
+      {"id": "bundle", "type": "cta", "goal": "Serum, tonik ve nemlendiriciden oluşan Işıltı Seti 1.047₺ yerine 799₺ kampanyası"},
+      {"id": "testimonials", "type": "testimonials", "goal": "Üç müşterinin yıldızlı ürün yorumu"},
+      {"id": "faq", "type": "faq", "goal": "Kargo süresi, 750₺ üzeri ücretsiz kargo, 14 gün iade ve ürünlerin saklama koşulları soruları"},
+      {"id": "footer", "type": "footer", "goal": "Çok sütunlu: marka, kategoriler, yardım bağlantıları, güvenli ödeme bilgisi ve telif yılı"}
+    ]
+  }
+}

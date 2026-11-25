@@ -1,0 +1,19 @@
+{
+  "brief": "İzmir'de elektrikli bisiklet satış ve kiralama mağazası. Şehir, katlanır ve dağ e-bisikletleri. Aylık kiralama da var. Modelleri teknik özellikleriyle göster, kiralama ile satın alma karşılaştırması yap.",
+  "plan": {
+    "title": "Volta E-Bike İzmir",
+    "language": "tr",
+    "style": "sporty modern",
+    "palette": {"primary": "#115e59", "secondary": "#f0fdfa", "accent": "#facc15", "text": "#042f2e"},
+    "font": "Urbanist",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Volta logosu, Modeller, Kirala mı Al mı, Yorumlar bağlantıları, Test Sürüşü butonu ve mobil ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Solda Kordon'da yokuş tanımayan sürüş vaadi ve Test Sürüşü Ayarla butonu, sağda bisiklet görseli ve 3 kısa özellik"},
+      {"id": "models", "type": "products", "goal": "Şehir 42.000₺, katlanır 36.500₺, dağ 68.000₺ modelleri; menzil, motor, ağırlık, şarj süresi özellik tablolarıyla"},
+      {"id": "compare", "type": "comparison", "goal": "Aylık kiralama 2.900₺ ile satın alma karşılaştırma tablosu: ilk ödeme, bakım, sigorta, sahiplik"},
+      {"id": "testimonials", "type": "testimonials", "goal": "İşe e-bisikletle giden iki kullanıcının kısa yorumları"},
+      {"id": "contact", "type": "contact", "goal": "Alsancak mağaza adresi, telefon ve ad, telefon, model, tarih alanlı test sürüşü formu"},
+      {"id": "footer", "type": "footer", "goal": "Marka adı, garanti bilgisi ve telif yılı"}
+    ]
+  }
+}

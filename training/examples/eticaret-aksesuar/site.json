@@ -1,0 +1,18 @@
+{
+  "brief": "telefon aksesuarları satan online mağaza: kılıf, hızlı şarj aleti, kablosuz kulaklık, powerbank. koyu teknolojik tasarım. black friday kampanyası geri sayım, filtreli ürün listesi, kargo ve garanti güven rozetleri, sipariş takip bölümü",
+  "plan": {
+    "title": "Voltix Store",
+    "language": "tr",
+    "style": "dark tech ecommerce",
+    "palette": {"primary": "#2563eb", "secondary": "#0a0a0f", "accent": "#a3e635", "text": "#f4f4f5"},
+    "font": "Space Grotesk",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Voltix logosu, arama kutusu, Kampanya, Ürünler, Sipariş Takip bağlantıları ve Sepet (0), mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Black Friday %40'a varan indirim, gün-saat-dakika geri sayım kutuları ve Kampanyayı Gör butonu"},
+      {"id": "products", "type": "products", "goal": "Tümü, Kılıf, Şarj, Kulaklık, Powerbank filtre çipleri ve 8 ürün kartı: indirim rozeti, eski ve yeni fiyat, puan, Sepete Ekle"},
+      {"id": "trust", "type": "features", "goal": "Aynı gün kargo, 2 yıl garanti, 30 gün iade ve 9 taksit güven rozetleri şeridi"},
+      {"id": "order-tracking", "type": "order-tracking", "goal": "Sipariş numarası ve e-posta alanlı sipariş takip formu"},
+      {"id": "footer", "type": "footer", "goal": "Marka, yardım bağlantıları, ödeme yöntemleri ve telif yılı"}
+    ]
+  }
+}

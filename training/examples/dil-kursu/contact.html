@@ -1,0 +1,20 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-bold md:text-4xl">Ücretsiz Seviye Testi</h2>
+      <p class="mt-4 text-lg opacity-80">20 dakikalık yazılı test ve 10 dakikalık konuşma. Sonuçla birlikte size uygun kuru öneriyoruz.</p>
+      <p class="mt-8"><span class="font-semibold text-[var(--primary)]">Adres:</span> Osmanağa Mah. Söğütlüçeşme Cad. No: 52 Kat: 3, Kadıköy / İstanbul</p>
+      <p class="mt-2"><span class="font-semibold text-[var(--primary)]">Telefon:</span> <a href="tel:+902163300052" class="underline">0216 330 00 52</a></p>
+    </div>
+    <form class="space-y-5 rounded-2xl bg-white/70 p-6 shadow-sm ring-1 ring-black/5">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="name" class="block font-semibold">Ad Soyad</label><input id="name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="phone" class="block font-semibold">Telefon</label><input id="phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="lang" class="block font-semibold">Dil</label><select id="lang" name="lang" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>İngilizce</option><option>Almanca</option></select></div>
+        <div><label for="level" class="block font-semibold">Seviyeniz</label><select id="level" name="level" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Hiç bilmiyorum</option><option>Başlangıç</option><option>Orta</option><option>İleri</option></select></div>
+      </div>
+      <div><label for="slot" class="block font-semibold">Uygun olduğunuz zaman</label><select id="slot" name="slot" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Hafta içi akşam</option><option>Cumartesi</option><option>Online, esnek</option></select></div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Testi Planla</button>
+    </form>
+  </div>
+</section>

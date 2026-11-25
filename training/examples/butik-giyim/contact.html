@@ -1,0 +1,19 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-5xl gap-12 md:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-semibold md:text-4xl">Müşteri Hizmetleri</h2>
+      <p class="mt-4 opacity-80">Hafta içi 09:00 – 18:00 arasında, en geç 4 saat içinde yanıt veriyoruz.</p>
+      <p class="mt-8"><span class="font-semibold">E-posta:</span> <a href="mailto:destek@miraatelier.com" class="underline">destek@miraatelier.com</a></p>
+      <p class="mt-2"><span class="font-semibold">WhatsApp:</span> <a href="https://wa.me/905301450019" class="underline">0530 145 00 19</a></p>
+    </div>
+    <form class="space-y-5">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="c-name" class="block text-sm font-semibold">Ad Soyad</label><input id="c-name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="c-email" class="block text-sm font-semibold">E-posta</label><input id="c-email" name="email" type="email" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      </div>
+      <div><label for="c-order" class="block text-sm font-semibold">Sipariş numarası (varsa)</label><input id="c-order" name="order" type="text" placeholder="MIRA-" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <div><label for="c-message" class="block text-sm font-semibold">Mesajınız</label><textarea id="c-message" name="message" rows="4" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></textarea></div>
+      <button type="submit" class="inline-block rounded-full bg-[var(--primary)] px-8 py-3 font-semibold text-white hover:opacity-90">Gönder</button>
+    </form>
+  </div>
+</section>

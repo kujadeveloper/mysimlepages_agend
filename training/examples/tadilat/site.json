@@ -1,0 +1,52 @@
+{
+  "brief": "ev tadilat firmasıyız istanbul anadolu yakası. boya badana, mutfak banyo yenileme, alçıpan, parke, anahtar teslim tadilat. ücretsiz keşif yapıyoruz. güven veren bir site, önce sonra fotoları olsun",
+  "plan": {
+    "title": "Yenievim Tadilat",
+    "language": "tr",
+    "style": "bold trustworthy",
+    "palette": {
+      "primary": "#b45309",
+      "secondary": "#fffbf5",
+      "accent": "#1e3a8a",
+      "text": "#1c1917"
+    },
+    "font": "Archivo",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Yenievim logosu, Hizmetler, Projeler, Fiyatlar ve Ücretsiz Keşif butonu, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Anadolu Yakası'nda anahtar teslim ev tadilatı, söz verilen tarihte teslim, Ücretsiz Keşif İste butonu"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Boya badana, mutfak yenileme, banyo yenileme, alçıpan-asma tavan ve laminat parke kartları"
+      },
+      {
+        "id": "gallery",
+        "type": "gallery",
+        "goal": "Ataşehir banyo ve Maltepe mutfak projelerinin önce-sonra görselleri"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "Boya m² 180₺'den, laminat parke m² 650₺'den, banyo yenileme 120.000₺'den, mutfak 150.000₺'den başlangıç fiyatları"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Telefon, WhatsApp ve ad, telefon, ilçe, yapılacak iş alanlı ücretsiz keşif formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Firma adı, hizmet bölgeleri ve telif yılı"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+<section id="careers" class="px-6 py-16 md:py-24">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="text-3xl font-bold md:text-4xl">Kariyer</h2>
+    <p class="mt-4 text-lg opacity-80">Hibrit çalışma, yıllık eğitim bütçesi ve özel sağlık sigortası. Aradığın pozisyonu görmüyorsan genel başvuru yapabilirsin.</p>
+    <div class="mt-10 grid gap-12 lg:grid-cols-[1fr_1.2fr]">
+      <ul class="space-y-4">
+        <li class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5"><h3 class="font-semibold">Kıdemli Backend Geliştirici (.NET)</h3><p class="mt-1 text-sm opacity-70">Platform ekibi · İstanbul / Hibrit · Tam zamanlı</p></li>
+        <li class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5"><h3 class="font-semibold">Frontend Geliştirici (React)</h3><p class="mt-1 text-sm opacity-70">Ürün ekibi · Uzaktan · Tam zamanlı</p></li>
+        <li class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5"><h3 class="font-semibold">Mobil Geliştirici (Flutter)</h3><p class="mt-1 text-sm opacity-70">Mobil ekip · İstanbul / Hibrit · Tam zamanlı</p></li>
+        <li class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5"><h3 class="font-semibold">UX / UI Tasarımcı</h3><p class="mt-1 text-sm opacity-70">Tasarım ekibi · İstanbul · Tam zamanlı</p></li>
+      </ul>
+      <form class="space-y-5 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+        <h3 class="text-xl font-semibold">İş Başvurusu</h3>
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div><label for="ap-name" class="block font-semibold">Ad Soyad</label><input id="ap-name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+          <div><label for="ap-email" class="block font-semibold">E-posta</label><input id="ap-email" name="email" type="email" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+          <div><label for="ap-phone" class="block font-semibold">Telefon</label><input id="ap-phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+          <div><label for="ap-position" class="block font-semibold">Pozisyon</label><select id="ap-position" name="position" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Kıdemli Backend Geliştirici</option><option>Frontend Geliştirici</option><option>Mobil Geliştirici</option><option>UX / UI Tasarımcı</option><option>Genel başvuru</option></select></div>
+        </div>
+        <div><label for="ap-cv" class="block font-semibold">LinkedIn ya da CV bağlantısı</label><input id="ap-cv" name="cv_url" type="url" placeholder="https://" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="ap-letter" class="block font-semibold">Ön yazı</label><textarea id="ap-letter" name="cover_letter" rows="4" placeholder="Bize kendinden ve neden Nexa'yı seçtiğinden bahset" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></textarea></div>
+        <label class="flex items-start gap-3 text-sm"><input type="checkbox" name="kvkk" required class="mt-1"><span>Kişisel verilerimin başvuru süreci kapsamında işlenmesine ilişkin KVKK aydınlatma metnini okudum.</span></label>
+        <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Başvuruyu Gönder</button>
+      </form>
+    </div>
+  </div>
+</section>

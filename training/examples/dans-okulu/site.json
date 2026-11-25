@@ -1,0 +1,52 @@
+{
+  "brief": "Salsa, bachata ve tango dans okulu, İstanbul Beyoğlu. Çiftler ve tek gelenler için kurslar, düğün dansı hazırlığı, cuma geceleri sosyal dans. Tutkulu, koyu, kırmızı bir site.",
+  "plan": {
+    "title": "Pasión Dans Stüdyosu",
+    "language": "tr",
+    "style": "dark passionate",
+    "palette": {
+      "primary": "#be123c",
+      "secondary": "#140a0c",
+      "accent": "#fbbf24",
+      "text": "#f8eeee"
+    },
+    "font": "Playfair Display",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Pasión logosu, Kurslar, Düğün Dansı, Fiyatlar, İletişim bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Beyoğlu'nda salsa, bachata ve tango; partnersiz gelenler için de dersler, Deneme Dersine Gel butonu"
+      },
+      {
+        "id": "courses",
+        "type": "services",
+        "goal": "Salsa, bachata ve Arjantin tangosu başlangıç ve orta seviye kursları, gün ve saatleriyle"
+      },
+      {
+        "id": "wedding",
+        "type": "cta",
+        "goal": "Düğün ilk dansı için 4 ders özel koreografi paketi 9.000₺"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "Aylık 8 ders 3.200₺ kişi başı, çift 5.800₺, cuma sosyal dans gecesi giriş 350₺"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "İstiklal yakınındaki stüdyo adresi, WhatsApp ve Instagram"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Stüdyo adı ve telif yılı"
+      }
+    ]
+  }
+}

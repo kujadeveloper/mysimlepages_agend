@@ -1,0 +1,19 @@
+{
+  "brief": "kadın giyim butiği online mağaza. elbise, triko, dış giyim, aksesuar. ürünlerimiz sayfası kategorili olsun fiyatlarla. üye olanlara ilk siparişte %10 indirim, üye ol formu. minimal, şık",
+  "plan": {
+    "title": "Mira Atelier",
+    "language": "tr",
+    "style": "minimal fashion",
+    "palette": {"primary": "#111111", "secondary": "#f7f5f2", "accent": "#c08457", "text": "#111111"},
+    "font": "Jost",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Üstte ücretsiz kargo bilgi çubuğu, ortada MIRA logosu, Ürünlerimiz, Hakkımızda, Üye Ol bağlantıları, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Tam ekran sonbahar koleksiyonu görseli üstünde yeni sezon başlığı ve Koleksiyonu Keşfet butonu"},
+      {"id": "products", "type": "products", "goal": "Elbise, Triko, Dış Giyim, Aksesuar kategori filtreleri ve 8 ürün kartı: isim, renk sayısı, fiyat ve indirimli fiyat"},
+      {"id": "about", "type": "about", "goal": "İstanbul atölyesinde küçük seriler halinde üretim ve doğal kumaş vurgusu"},
+      {"id": "register", "type": "register", "goal": "İlk siparişte %10 indirim için ad, e-posta, telefon, şifre, şifre tekrar ve onay kutulu üye ol formu"},
+      {"id": "contact", "type": "contact", "goal": "Müşteri hizmetleri e-postası, WhatsApp ve ad, e-posta, sipariş numarası, mesaj alanlı iletişim formu"},
+      {"id": "footer", "type": "footer", "goal": "Çok sütunlu: marka, yardım bağlantıları (kargo, iade), sosyal medya ve telif yılı"}
+    ]
+  }
+}

@@ -32,17 +32,20 @@ Servis Linux, Windows ve macOS'ta çalışır (CI üç platformda da test eder: 
 
 ### Docker (tüm platformlar)
 
+LLM sunucusu **vLLM**'dir (NVIDIA GPU gerekir). Temel model HF biçiminde `models/` altında durur; eğitilen LoRA
+adaptörleri (`data/adapters/<ad>`) vLLM açılışında `msp-<ad>` adıyla otomatik yüklenir (GGUF dönüşümü gerekmez).
+
 ```bash
 cp .env.example .env            # Windows PowerShell: Copy-Item .env.example .env   — MSP_API_KEY'i değiştirin
-docker compose up -d            # CPU (her yerde çalışır)
-docker compose exec ollama ollama pull qwen2.5-coder:3b
+docker compose -f docker-compose.train.yaml run --rm train hf download Qwen/Qwen2.5-Coder-7B-Instruct --local-dir models/Qwen2.5-Coder-7B-Instruct
+docker compose up -d            # vLLM (FP8, ~8 GB VRAM) + ajan
 ```
 
-| Platform | GPU ile çalıştırma |
-|----------|--------------------|
-| Linux + NVIDIA | `docker compose -f docker-compose.yaml -f docker-compose.gpu.yaml up -d` (nvidia-container-toolkit gerekir) |
-| Windows + NVIDIA | Docker Desktop (WSL2 arka ucu) ile aynı komut |
-| macOS | Docker içinde Metal GPU yok. [Ollama](https://ollama.com)'yı Mac'e kurun (`ollama pull qwen2.5-coder:3b`), sonra yalnızca ajanı başlatın: `OLLAMA_URL=http://host.docker.internal:11434/v1 docker compose up -d agent` |
+| Platform | Not |
+|----------|-----|
+| Linux + NVIDIA | nvidia-container-toolkit gerekir |
+| Windows + NVIDIA | Docker Desktop (WSL2 arka ucu) |
+| macOS / GPU'suz | vLLM çalışmaz. Başka bir OpenAI uyumlu sunucu (ör. Ollama) kurup yalnızca ajanı başlatın: `LLM_URL=http://host.docker.internal:11434/v1 docker compose up -d --no-deps agent` ve `.env` içinde `MSP_OPENAI_MODEL` |
 
 Deneme isteği:
 
@@ -98,7 +101,8 @@ Platform notları:
 
 - `MSP_N_CTX=4096`: bölüm bölüm üretim sayesinde küçük bağlam yeterli; KV önbelleği küçük kalır.
 - `MSP_WORKERS=1`: aynı anda tek üretim; istekler kuyrukta bekler, bellek taşmaz.
-- Ollama'da `OLLAMA_KV_CACHE_TYPE=q8_0`, `OLLAMA_FLASH_ATTENTION=1` (compose'ta açık).
+- vLLM: `--quantization fp8` (7B ~8 GB), `--max-model-len 8192`, `--gpu-memory-utilization 0.85` (compose'ta).
+  Eğitim sırasında GPU'yu boşaltmak için: `docker compose stop vllm`.
 - Yerel GGUF: `pip install -e ".[llamacpp]"`, `MSP_BACKEND=llamacpp`,
   `MSP_DEFAULT_MODEL_PATH=models/...gguf`. Eğitilen LoRA, temel modelle birleştirilmeden yüklenebilir.
 
@@ -117,6 +121,7 @@ Platform notları:
 | POST | `/v1/designs` | `{brief, user_ref?}` → `202 {id, position}` |
 | GET | `/v1/designs/{id}` | durum, ilerleme (`stage`, `progress`), plan, metrikler, bitince `html` |
 | GET | `/v1/designs/{id}/preview` | HTML önizleme (CSP'li; sandbox iframe'de, ayrı kökenden gösterin) |
+| POST | `/v1/designs/{id}/revise` | `{instruction}` → `202 {id, parent_id}`: yeni sürüm. Yalnızca değişmesi gereken bölümler yeniden yazılır; renk/font plandan uygulanır; eklenen bölüm üretilir, menü ve footer güncellenir. Sonuçta `parent_id`, `instruction`, `revision {summary, changed, added, removed}` |
 | POST | `/v1/designs/{id}/feedback` | `{rating 1-5, comment?, corrections?: {section_id: html}}` → eğitim verisi |
 | GET/POST | `/v1/models`, `/v1/models/{v}/activate` | model sürümleri |
 | GET/POST | `/v1/datasets`, `/v1/datasets/freeze` | veri seti sürümleri |
@@ -129,15 +134,22 @@ Django backend'de yapılır (`user_ref` yalnızca kimlik numarasıdır, kişisel
 ```
 geri bildirim / distill ──> data/datasets/raw/*.jsonl
         │ msp-agent freeze --min-rating 4            → d1 (değişmez, sha256'lı, train/eval)
-        │ python -m training.train_lora --dataset d1 --base Qwen/Qwen2.5-Coder-1.5B-Instruct --out data/adapters/run1
-        │ llama.cpp: convert_lora_to_gguf.py data/adapters/run1 --outfile data/adapters/run1/lora.gguf
-        │ msp-agent register --backend llamacpp --model-ref models/base.gguf \
-        │        --adapter-path data/adapters/run1/lora.gguf --base-model Qwen/... --dataset d1   → v2
+        │ python -m training.train_lora --dataset d1 --base models/Qwen2.5-Coder-7B-Instruct --out data/adapters/run1
+        │ docker compose restart vllm                 → adaptör "msp-run1" adıyla sunulur
+        │ msp-agent register --backend openai --model-ref msp-run1 \
+        │        --base-model Qwen/Qwen2.5-Coder-7B-Instruct --dataset d1   → v2
+        │ (llamacpp arka ucu için: convert_lora_to_gguf.py ile GGUF'a çevirip --adapter-path verin)
         │ msp-agent eval v2                           → bench metrikleri manifest'e yazılır
         └ msp-agent activate v2                       → servis bir sonraki işte yeni modeli yükler
 geri almak: msp-agent activate v1
 ```
 
+- **Elle örnek ekleme**: `training/examples/*.json` içine yalnızca müşteri açıklaması (`brief`) ve beklenen çıktıyı
+  (`output`) yazın; `python -m training.build_examples` system/user metinlerini servisin şablonlarıyla birebir üretip
+  doğrular ve `data/datasets/raw/manual.jsonl` dosyasına yazar. Biçim için mevcut üç örneğe bakın.
+- **Windows'ta eğitim (Docker)**: Akıllı Uygulama Denetimi açıksa yerel PyTorch DLL'leri engellenir (`WinError 4551`).
+  Eğitimi GPU'lu konteynerde çalıştırın: `docker-compose.train.yaml` başındaki komutlar (model indirme, örnek
+  derleme, freeze, train_lora). Proje klasörü konteynere bağlanır; `data/` ve `models/` host'ta kalır.
 - **Başlangıç verisi (distill)**: Henüz geri bildirim yokken, büyük bir öğretmen modeli (ör. 14B/32B; geçici olarak
   büyük bir GPU'da) `msp-agent distill briefs.jsonl --model <öğretmen>` ile çalıştırın. Çıktıları gözden geçirip
   küçük modeli bunlarla eğitin. Böylece küçük model, büyük modelin bu işteki becerisini öğrenir.

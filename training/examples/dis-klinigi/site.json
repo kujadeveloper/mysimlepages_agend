@@ -1,0 +1,52 @@
+{
+  "brief": "Ataşehir'de diş kliniğimiz var. İmplant, şeffaf plak (invisalign), diş beyazlatma, çocuk diş hekimliği yapıyoruz. 3 hekimiz. Güven veren, temiz, ferah bir site istiyoruz. Online randevu ve sık sorulan sorular olsun.",
+  "plan": {
+    "title": "Dentaşehir Ağız ve Diş Sağlığı",
+    "language": "tr",
+    "style": "clean medical",
+    "palette": {
+      "primary": "#1d4ed8",
+      "secondary": "#f8fafc",
+      "accent": "#06b6d4",
+      "text": "#0f172a"
+    },
+    "font": "Inter",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Dentaşehir logosu, Tedaviler, Hekimlerimiz, SSS bağlantıları ve Randevu Al butonu, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Ataşehir'de ağrısız ve şeffaf diş tedavisi vurgusu, Online Randevu ve Tedavileri İncele butonları"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "İmplant, şeffaf plak, diş beyazlatma, çocuk diş hekimliği, kanal tedavisi ve zirkonyum kaplama kartları"
+      },
+      {
+        "id": "team",
+        "type": "team",
+        "goal": "Dt. Selin Arı (implant), Dt. Murat Koç (ortodonti) ve Dt. Ece Tan (pedodonti) hekim kartları"
+      },
+      {
+        "id": "faq",
+        "type": "faq",
+        "goal": "İmplant süresi, şeffaf plak fiyatı, beyazlatmanın zararı, SGK ve taksit hakkında sık sorulan sorular"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Klinik adresi, telefon, çalışma saatleri ve ad, telefon, tedavi, tercih edilen gün alanlı randevu formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Klinik adı, kısa açıklama, bağlantılar ve telif yılı"
+      }
+    ]
+  }
+}

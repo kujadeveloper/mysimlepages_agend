@@ -1,0 +1,25 @@
+<section id="appointment" class="bg-white px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_1.5fr]">
+    <div>
+      <h2 class="text-3xl font-bold md:text-4xl">Online Randevu</h2>
+      <p class="mt-4 text-lg opacity-80">Randevunuz SMS ile onaylanır. Saatinizden 15 dakika önce kayıt için gelmeniz yeterli.</p>
+      <ul class="mt-8 space-y-2 rounded-2xl bg-[var(--secondary)] p-6">
+        <li class="flex justify-between"><span>Hafta içi</span><span class="font-semibold">08:00 – 20:00</span></li>
+        <li class="flex justify-between"><span>Cumartesi</span><span class="font-semibold">09:00 – 16:00</span></li>
+        <li class="flex justify-between opacity-60"><span>Pazar</span><span>Kapalı</span></li>
+      </ul>
+    </div>
+    <form class="space-y-5 rounded-2xl p-6 ring-1 ring-black/10">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="a-dept" class="block font-semibold">Bölüm</label><select id="a-dept" name="department" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Dahiliye</option><option>Kardiyoloji</option><option>Kadın Doğum</option><option>Çocuk Sağlığı</option><option>Göz Hastalıkları</option></select></div>
+        <div><label for="a-doctor" class="block font-semibold">Doktor</label><select id="a-doctor" name="doctor" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Fark etmez</option><option>Uzm. Dr. Serkan Aydın</option><option>Doç. Dr. Nilay Kara</option><option>Op. Dr. Esra Şen</option><option>Uzm. Dr. Can Polat</option><option>Op. Dr. Melis Ateş</option></select></div>
+        <div><label for="a-date" class="block font-semibold">Tarih</label><input id="a-date" name="date" type="date" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="a-time" class="block font-semibold">Saat</label><select id="a-time" name="time" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>09:00</option><option>10:00</option><option>11:00</option><option>13:30</option><option>14:30</option><option>15:30</option><option>17:00</option><option>18:30</option></select></div>
+        <div><label for="a-name" class="block font-semibold">Ad Soyad</label><input id="a-name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="a-phone" class="block font-semibold">Telefon</label><input id="a-phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      </div>
+      <div><label for="a-note" class="block font-semibold">Şikâyetiniz (isteğe bağlı)</label><textarea id="a-note" name="note" rows="3" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></textarea></div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Randevu Oluştur</button>
+    </form>
+  </div>
+</section>

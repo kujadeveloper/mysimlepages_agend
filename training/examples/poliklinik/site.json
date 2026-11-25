@@ -1,0 +1,20 @@
+{
+  "brief": "Ankara Çankaya'da özel poliklinik. Dahiliye, kardiyoloji, kadın doğum, çocuk sağlığı, göz. Doktorlarımızı tanıtalım, online randevu formu olsun, ayrıca hemşire ve sekreter alımı için kariyer bölümü ve iletişim",
+  "plan": {
+    "title": "Başkent Yaşam Polikliniği",
+    "language": "tr",
+    "style": "clean medical trustworthy",
+    "palette": {"primary": "#0369a1", "secondary": "#f8fbff", "accent": "#38bdf8", "text": "#0c2340"},
+    "font": "Inter",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Üst bilgi çubuğunda çağrı merkezi numarası, altında logo, Bölümler, Doktorlar, Randevu, Kariyer, İletişim bağlantıları, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Çankaya'da 5 branşta uzman hekim, aynı gün randevu, Online Randevu butonu"},
+      {"id": "departments", "type": "services", "goal": "Dahiliye, kardiyoloji, kadın hastalıkları ve doğum, çocuk sağlığı ve göz hastalıkları bölüm kartları"},
+      {"id": "team", "type": "team", "goal": "Beş uzman hekim kartı: ad, branş ve deneyim yılı"},
+      {"id": "appointment", "type": "appointment", "goal": "Bölüm, doktor, tarih, saat, ad, T.C./telefon, şikayet alanlı randevu formu ve poliklinik çalışma saatleri"},
+      {"id": "careers", "type": "careers", "goal": "Hemşire, tıbbi sekreter ve radyoloji teknikeri açık pozisyonları ile ad, e-posta, telefon, pozisyon, CV bağlantısı, ön yazı ve KVKK onaylı iş başvuru formu"},
+      {"id": "contact", "type": "contact", "goal": "Adres, çağrı merkezi, e-posta ve ad, e-posta, konu, mesaj alanlı iletişim formu"},
+      {"id": "footer", "type": "footer", "goal": "Poliklinik adı, ruhsat bilgisi, bağlantılar ve telif yılı"}
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+<section id="appointment" class="bg-white px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_1.5fr]">
+    <div>
+      <h2 class="text-3xl font-bold md:text-4xl">Book a free consultation</h2>
+      <p class="mt-4 text-lg opacity-80">Send your request and a recent panoramic X-ray if you have one. Our dentist replies with a treatment plan and fixed price within 24 hours.</p>
+      <ul class="mt-8 space-y-2"><li>✓ 4-star hotel stay included</li><li>✓ Airport and clinic transfers</li><li>✓ Personal English-speaking coordinator</li></ul>
+    </div>
+    <form class="space-y-5 rounded-2xl p-6 ring-1 ring-black/10">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="a-treatment" class="block font-semibold">Treatment</label><select id="a-treatment" name="treatment" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Implants</option><option>Veneers</option><option>Hollywood smile</option><option>All-on-4</option><option>Not sure yet</option></select></div>
+        <div><label for="a-date" class="block font-semibold">Preferred arrival date</label><input id="a-date" name="arrival" type="date" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="a-name" class="block font-semibold">Full name</label><input id="a-name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="a-email" class="block font-semibold">Email</label><input id="a-email" name="email" type="email" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="a-wa" class="block font-semibold">WhatsApp number</label><input id="a-wa" name="whatsapp" type="tel" placeholder="+44" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="a-country" class="block font-semibold">Country</label><select id="a-country" name="country" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>United Kingdom</option><option>Germany</option><option>Netherlands</option><option>Other</option></select></div>
+      </div>
+      <div><label for="a-note" class="block font-semibold">Tell us about your teeth</label><textarea id="a-note" name="note" rows="3" placeholder="Missing teeth, previous work, a link to your X-ray..." class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></textarea></div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Request my free plan</button>
+    </form>
+  </div>
+</section>

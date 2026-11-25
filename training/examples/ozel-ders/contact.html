@@ -1,0 +1,18 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-5xl gap-12 md:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-bold md:text-4xl">Tanışalım</h2>
+      <p class="mt-4 text-lg opacity-80">İlk 30 dakikalık tanışma dersinde öğrencinin seviyesini görüp yol haritası çıkarıyorum; ücretsiz.</p>
+      <p class="mt-8"><span class="font-semibold text-[var(--primary)]">Telefon / WhatsApp:</span> <a href="https://wa.me/905051234590" class="underline">0505 123 45 90</a></p>
+    </div>
+    <form class="space-y-5 rounded-2xl bg-white/70 p-6 shadow-sm ring-1 ring-black/5">
+      <div><label for="student" class="block font-semibold">Öğrenci adı</label><input id="student" name="student" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="grade" class="block font-semibold">Sınıf</label><select id="grade" name="grade" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>5–7</option><option>8 (LGS)</option><option>9–10</option><option>11–12 (YKS)</option><option>Mezun</option></select></div>
+        <div><label for="exam" class="block font-semibold">Hedef</label><select id="exam" name="exam" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>LGS</option><option>TYT</option><option>AYT</option><option>Okul dersleri</option></select></div>
+      </div>
+      <div><label for="phone" class="block font-semibold">Veli telefonu</label><input id="phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Tanışma Dersi İste</button>
+    </form>
+  </div>
+</section>

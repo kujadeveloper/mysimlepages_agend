@@ -1,0 +1,19 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-bold md:text-4xl">Kayıt</h2>
+      <p class="mt-4 text-lg opacity-80">İlk ders ücretsiz: öğretmenimiz seviyeyi ve ilgiyi görsün, sonra karar verin.</p>
+      <p class="mt-8"><span class="font-semibold text-[var(--primary)]">Adres:</span> Hoşnudiye Mah. Ziya Gökalp Cad. No: 33, Tepebaşı / Eskişehir</p>
+      <p class="mt-2"><span class="font-semibold text-[var(--primary)]">Telefon:</span> <a href="tel:+902222210033" class="underline">0222 221 00 33</a></p>
+    </div>
+    <form class="space-y-5 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="student" class="block font-semibold">Öğrenci adı</label><input id="student" name="student" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="age" class="block font-semibold">Yaşı</label><input id="age" name="age" type="number" min="5" max="90" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="instrument" class="block font-semibold">Enstrüman</label><select id="instrument" name="instrument" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Piyano</option><option>Gitar</option><option>Keman</option><option>Bateri</option><option>Şan</option></select></div>
+        <div><label for="phone" class="block font-semibold">Veli / iletişim telefonu</label><input id="phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      </div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Deneme Dersi İste</button>
+    </form>
+  </div>
+</section>

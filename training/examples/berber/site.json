@@ -1,0 +1,52 @@
+{
+  "brief": "Beşiktaş'ta bir berber dükkanı için site. Klasik ve modern tıraş, sakal bakımı. Koyu tema, altın detaylar. Fiyat listesi ve randevu formu olsun.",
+  "plan": {
+    "title": "Altın Makas Barber",
+    "language": "tr",
+    "style": "dark classic barbershop",
+    "palette": {
+      "primary": "#8a6a12",
+      "secondary": "#111111",
+      "accent": "#d4af37",
+      "text": "#f4f1ea"
+    },
+    "font": "Oswald",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Altın Makas logosu, Hizmetler, Fiyatlar, Ekibimiz, Randevu bağlantıları ve öne çıkan Randevu Al butonu, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Tam ekran ustura tıraşı görseli üstünde soldan karartılmış katmanla Beşiktaş'ın klasik berberi başlığı, Randevu Al ve Fiyatları Gör butonları"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Klasik kesim, modern fade, ustura sakal tıraşı, sıcak havlu bakımı, cilt bakımı ve damat paketinin açıklamalı kartları"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "Saç kesimi 450₺, sakal 300₺, saç+sakal 650₺, çocuk 300₺, cilt bakımı 400₺, damat paketi 2.500₺ fiyat listesi"
+      },
+      {
+        "id": "team",
+        "type": "team",
+        "goal": "Usta Kemal (25 yıl), Burak (fade uzmanı) ve Emre (sakal tasarımı) berber kartları"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Ihlamurdere Caddesi adresi, telefon, çalışma saatleri ve ad, telefon, hizmet, tarih alanlı randevu formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Altın Makas adı, kısa slogan, bölüm bağlantıları ve telif yılı"
+      }
+    ]
+  }
+}

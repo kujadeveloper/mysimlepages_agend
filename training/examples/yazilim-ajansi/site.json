@@ -1,0 +1,52 @@
+{
+  "brief": "We're a small software studio in Istanbul building web and mobile apps for startups (React, Next.js, Flutter, Node). We want a modern, techy dark site with purple tones. Services, how we work, and a contact form for project inquiries.",
+  "plan": {
+    "title": "Northbyte Studio",
+    "language": "en",
+    "style": "modern dark tech",
+    "palette": {
+      "primary": "#7c3aed",
+      "secondary": "#0b0a14",
+      "accent": "#22d3ee",
+      "text": "#e5e7eb"
+    },
+    "font": "Space Grotesk",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Northbyte logo, Services, Process, Work, Contact links and Start a project button, mobile ☰ menu"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Istanbul studio shipping web and mobile MVPs for startups in 8 weeks, Start a project and See our process buttons"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Web apps with Next.js, mobile apps with Flutter, backend and APIs with Node, and product design cards"
+      },
+      {
+        "id": "process",
+        "type": "about",
+        "goal": "Four-step process: discovery week, design sprint, 2-week build cycles, launch and support"
+      },
+      {
+        "id": "testimonials",
+        "type": "testimonials",
+        "goal": "Two startup founders describing the MVP Northbyte built and the result"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Project inquiry form with name, email, company, budget range and project description"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Studio name, Istanbul address, GitHub and LinkedIn links and copyright year"
+      }
+    ]
+  }
+}

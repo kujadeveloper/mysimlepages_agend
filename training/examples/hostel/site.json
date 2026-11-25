@@ -1,0 +1,47 @@
+{
+  "brief": "Hostel in Istanbul Karaköy, walking distance to Galata. Dorms and private rooms, rooftop bar with Bosphorus view, free walking tours. Young backpacker vibe, colorful and fun. Rooms with prices and a booking link.",
+  "plan": {
+    "title": "Galata Nest Hostel",
+    "language": "en",
+    "style": "colorful backpacker",
+    "palette": {
+      "primary": "#9333ea",
+      "secondary": "#fffbeb",
+      "accent": "#22c55e",
+      "text": "#1c1917"
+    },
+    "font": "Space Grotesk",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Galata Nest logo, Rooms, Rooftop, Location links and Book now button, mobile ☰ menu"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Hostel 5 minutes from Galata Tower with a Bosphorus rooftop, Book a bed button"
+      },
+      {
+        "id": "rooms",
+        "type": "products",
+        "goal": "8-bed dorm €18, 4-bed female dorm €24, private double €65 per night with what's included"
+      },
+      {
+        "id": "features",
+        "type": "features",
+        "goal": "Rooftop bar, free daily walking tour, 24h reception, lockers and fast wifi"
+      },
+      {
+        "id": "location",
+        "type": "location",
+        "goal": "Distances to Galata Tower, Karaköy ferry, Istiklal Street and airport shuttle"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Hostel name, address, Instagram and copyright year"
+      }
+    ]
+  }
+}

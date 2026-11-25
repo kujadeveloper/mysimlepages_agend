@@ -1,35 +1,61 @@
-# Ajan + Ollama. Her platformda çalışır (Linux, Windows, macOS; Docker Desktop dahil) — varsayılan CPU.
-#   CPU:          docker compose up -d
-#   NVIDIA GPU:   docker compose -f docker-compose.yaml -f docker-compose.gpu.yaml up -d   (Linux / Windows+WSL2)
-#   macOS:        Docker içinde Metal GPU yok. Hız için Ollama'yı doğrudan Mac'e kurun ve yalnızca ajanı çalıştırın:
-#                 OLLAMA_URL=http://host.docker.internal:11434/v1 docker compose up -d agent
-# İlk çalıştırma: docker compose exec ollama ollama pull qwen2.5-coder:3b
+# Ajan + vLLM (NVIDIA GPU gerekir; Linux ya da Windows + Docker Desktop/WSL2).
+#   docker compose up -d
+# Temel model host'ta: models/Qwen2.5-Coder-7B-Instruct (HF biçimi). İndirme:
+#   docker compose -f docker-compose.train.yaml run --rm train hf download Qwen/Qwen2.5-Coder-7B-Instruct --local-dir models/Qwen2.5-Coder-7B-Instruct
+# Eğitilen LoRA'lar (data/adapters/<ad>) açılışta "msp-<ad>" adıyla otomatik yüklenir; yeni adaptör için:
+#   docker compose restart vllm      ve .env: MSP_OPENAI_MODEL=msp-<ad>
+# GPU'suz ortam / macOS: başka bir OpenAI uyumlu sunucu (Ollama, LM Studio) kullanın, yalnızca ajanı başlatın:
+#   LLM_URL=http://host.docker.internal:11434/v1 docker compose up -d --no-deps agent
+# Kalıcı veri host klasöründe: MSP_DOCKER_DATA (.env, ör. E:/mysimplepages), yoksa ./docker-data.
 services:
   agent:
     build: .
     env_file: .env
     environment:
       MSP_BACKEND: openai
-      MSP_OPENAI_BASE_URL: ${OLLAMA_URL:-http://ollama:11434/v1}
+      MSP_OPENAI_BASE_URL: ${LLM_URL:-http://vllm:8000/v1}
     extra_hosts:
-      - "host.docker.internal:host-gateway"   # Linux'ta da host'taki Ollama'ya erişim
+      - "host.docker.internal:host-gateway"
     volumes:
-      - agent-data:/data
+      - ${MSP_DOCKER_DATA:-./docker-data}/agent-data:/data
     ports:
       - "127.0.0.1:8100:8100"   # yalnızca iç ağ / backend erişsin
+    depends_on:
+      vllm:
+        condition: service_healthy
+        required: false
     restart: unless-stopped
 
-  ollama:
-    image: ollama/ollama:0.5.7
-    volumes:
-      - ollama:/root/.ollama
+  vllm:
+    image: vllm/vllm-openai:v0.11.0
+    entrypoint: ["python3", "/app-docker/vllm_entry.py"]
     environment:
-      OLLAMA_KEEP_ALIVE: "30m"        # model bellekte kalsın, her istekte yüklenmesin
-      OLLAMA_NUM_PARALLEL: "1"        # düşük VRAM: tek istek
-      OLLAMA_FLASH_ATTENTION: "1"
-      OLLAMA_KV_CACHE_TYPE: "q8_0"    # KV önbelleği yarı bellek
+      VLLM_BASE_MODEL: /models/Qwen2.5-Coder-7B-Instruct
+      VLLM_SERVED_NAME: qwen2.5-coder-7b
+      # 16 GB kart: FP8 ağırlık (~8 GB) + KV önbelleği. Daha küçük kartta 3B model ya da --quantization bitsandbytes
+      VLLM_EXTRA_ARGS: >-
+        --quantization fp8 --max-model-len 8192 --gpu-memory-utilization 0.85
+        --enable-lora --max-lora-rank 16 --max-loras 2
+      VLLM_ALLOW_RUNTIME_LORA_UPDATING: "True"   # POST /v1/load_lora_adapter ile yeniden başlatmadan da eklenebilir
+      HF_HUB_OFFLINE: "1"
+    volumes:
+      - ./models:/models:ro
+      - ./data/adapters:/adapters:ro
+      - ./docker:/app-docker:ro
+      - ${MSP_DOCKER_DATA:-./docker-data}/vllm-cache:/root/.cache
+    ports:
+      - "127.0.0.1:8001:8000"   # host'ta 8001: 8000 Django backend'in (mypage) portu. Ajan iç ağdan vllm:8000'e bağlanır.
+    shm_size: "8gb"
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request;urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 15s
+      timeout: 5s
+      start_period: 600s   # ilk açılışta model yükleme + derleme birkaç dakika sürer
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
     restart: unless-stopped
-
-volumes:
-  agent-data:
-  ollama:

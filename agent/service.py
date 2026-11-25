@@ -19,7 +19,7 @@ from agent.datasets import Datasets
 from agent.intent import classify
 from agent.jobs import JobStore, WorkerPool
 from agent.llm import build_llm
-from agent.pipeline import DesignPipeline
+from agent.pipeline import DesignPipeline, Plan, split_sections
 from agent.registry import Registry
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
@@ -57,9 +57,18 @@ engine = Engine()
 
 def handle(job: dict):
     pipeline, version = engine.pipeline()
-    result = pipeline.run(job["brief"], lambda stage, p: store.progress(job["id"], stage, p))
+    report = lambda stage, p: store.progress(job["id"], stage, p)  # noqa: E731
+    if job.get("parent_id"):
+        parent = store.get(job["parent_id"])
+        if not parent or parent["status"] != "done":
+            raise ValueError("Düzeltilecek tasarım bulunamadı")
+        plan = Plan.model_validate(parent["plan"])
+        sections = parent.get("sections") or split_sections(parent["html"], plan)
+        result = pipeline.revise(parent["brief"], plan, sections, job["instruction"], report)
+    else:
+        result = pipeline.run(job["brief"], report)
     store.finish(job["id"], html=result.html, plan=result.plan.model_dump(), metrics=result.metrics,
-                 trace=result.trace, model_version=version)
+                 trace=result.trace, model_version=version, sections=result.sections)
 
 
 workers = WorkerPool(store, handle, settings.workers)
@@ -107,6 +116,21 @@ def create_design(body: DesignIn):
     return {"id": job_id, "status": "queued", "position": store.queue_position(job_id)}
 
 
+class ReviseIn(BaseModel):
+    instruction: str = Field(min_length=3, max_length=1000)
+
+
+@app.post("/v1/designs/{job_id}/revise", dependencies=[Depends(require_key)], status_code=202)
+def revise_design(job_id: str, body: ReviseIn):
+    """Biten bir tasarımı kullanıcının talimatıyla düzeltir; sonuç yeni bir sürümdür (eski sürüm korunur)."""
+    parent = _job_or_404(job_id)
+    if parent["status"] != "done":
+        raise HTTPException(409, "Yalnızca tamamlanmış bir tasarım düzeltilebilir")
+    new_id = store.create(parent["brief"], parent["user_ref"], parent_id=job_id, instruction=body.instruction.strip())
+    workers.notify()
+    return {"id": new_id, "status": "queued", "position": store.queue_position(new_id), "parent_id": job_id}
+
+
 class IntentIn(BaseModel):
     message: str = Field(min_length=1, max_length=3000)
 
@@ -137,7 +161,10 @@ def _job_or_404(job_id: str) -> dict:
 def get_design(job_id: str, include_html: bool = True):
     job = _job_or_404(job_id)
     out = {k: job[k] for k in ("id", "status", "user_ref", "brief", "stage", "progress", "plan", "metrics",
-                               "model_version", "error", "rating", "created_at", "finished_at")}
+                               "model_version", "error", "rating", "created_at", "finished_at",
+                               "parent_id", "instruction")}
+    # Düzeltmenin özeti kullanıcıya gösterilir (metrics iç bilgidir, backend süzer)
+    out["revision"] = (job["metrics"] or {}).get("revision")
     if job["status"] == "queued":
         out["position"] = store.queue_position(job_id)
     if include_html and job["status"] == "done":
@@ -181,7 +208,7 @@ def feedback(job_id: str, body: FeedbackIn):
 
 
 def _section_id(call: dict) -> str | None:
-    if call["task"] != "section":
+    if call["task"] not in ("section", "revise_section"):
         return None
     marker = 'Write the section id="'
     i = call["user"].find(marker)

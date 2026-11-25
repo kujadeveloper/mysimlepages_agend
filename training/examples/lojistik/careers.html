@@ -1,0 +1,27 @@
+<section id="careers" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_1.3fr]">
+    <div>
+      <h2 class="text-3xl font-bold uppercase md:text-4xl">Kariyer</h2>
+      <p class="mt-4 text-lg opacity-80">Yol harcırahı, yemek kartı ve özel sağlık sigortası ile büyüyen ekibimize katılın.</p>
+      <ul class="mt-8 space-y-4">
+        <li class="border-l-4 border-[var(--primary)] bg-white p-4 shadow-sm"><h3 class="font-bold">Uluslararası Tır Şoförü</h3><p class="text-sm opacity-70">CE ehliyet, SRC 3-4, en az 3 yıl Avrupa deneyimi</p></li>
+        <li class="border-l-4 border-[var(--primary)] bg-white p-4 shadow-sm"><h3 class="font-bold">Depo Operasyon Sorumlusu</h3><p class="text-sm opacity-70">Mersin Serbest Bölge · forklift belgesi tercih sebebi</p></li>
+        <li class="border-l-4 border-[var(--primary)] bg-white p-4 shadow-sm"><h3 class="font-bold">Dış Ticaret Uzmanı</h3><p class="text-sm opacity-70">Gümrük mevzuatı bilgisi, iyi derecede İngilizce</p></li>
+      </ul>
+    </div>
+    <form class="space-y-5 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+      <h3 class="text-xl font-bold">İş Başvurusu</h3>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="j-name" class="block font-semibold">Ad Soyad</label><input id="j-name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="j-phone" class="block font-semibold">Telefon</label><input id="j-phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="j-email" class="block font-semibold">E-posta</label><input id="j-email" name="email" type="email" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="j-position" class="block font-semibold">Pozisyon</label><select id="j-position" name="position" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Uluslararası Tır Şoförü</option><option>Depo Operasyon Sorumlusu</option><option>Dış Ticaret Uzmanı</option></select></div>
+        <div><label for="j-license" class="block font-semibold">Ehliyet sınıfı</label><select id="j-license" name="license" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Yok / gerekmiyor</option><option>B</option><option>C</option><option>CE</option></select></div>
+        <div><label for="j-years" class="block font-semibold">Deneyim (yıl)</label><input id="j-years" name="experience" type="number" min="0" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      </div>
+      <div><label for="j-cv" class="block font-semibold">CV bağlantısı</label><input id="j-cv" name="cv_url" type="url" placeholder="https://" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <label class="flex items-start gap-3 text-sm"><input type="checkbox" name="kvkk" required class="mt-1"><span>KVKK kapsamında başvuru verilerimin işlenmesini kabul ediyorum.</span></label>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Başvur</button>
+    </form>
+  </div>
+</section>

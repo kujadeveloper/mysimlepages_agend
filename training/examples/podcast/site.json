@@ -1,0 +1,18 @@
+{
+  "brief": "site for my podcast 'Build in Istanbul' - weekly interviews with Turkish startup founders, in English. episodes list, listen links (Spotify, Apple), about the host, newsletter. dark and bold",
+  "plan": {
+    "title": "Build in Istanbul",
+    "language": "en",
+    "style": "dark bold media",
+    "palette": {"primary": "#be185d", "secondary": "#111827", "accent": "#fbbf24", "text": "#f3f4f6"},
+    "font": "Inter",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Podcast name with Episodes, Host, Newsletter links"},
+      {"id": "hero", "type": "hero", "goal": "Centered show title, one-line pitch about weekly founder interviews and Spotify, Apple Podcasts, YouTube buttons"},
+      {"id": "episodes", "type": "blog", "goal": "List of four latest episodes with number, guest, company, length and date"},
+      {"id": "host", "type": "about", "goal": "Host Can Özkan, former founder, with portrait and short bio"},
+      {"id": "newsletter", "type": "newsletter", "goal": "Weekly email with show notes and founder tips, email signup form"},
+      {"id": "footer", "type": "footer", "goal": "Minimal footer with social links and copyright year"}
+    ]
+  }
+}

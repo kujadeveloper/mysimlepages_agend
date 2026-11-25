@@ -1,0 +1,19 @@
+{
+  "brief": "İzmir Alsancak'ta coworking ofis. Esnek masa, sabit masa, özel ofis, toplantı odası. Freelancerlar ve küçük ekipler için. Modern, ferah. Planları karşılaştırmalı tablo ile göster.",
+  "plan": {
+    "title": "Kovan Coworking Alsancak",
+    "language": "tr",
+    "style": "modern bright",
+    "palette": {"primary": "#0f172a", "secondary": "#f4f4f0", "accent": "#facc15", "text": "#0f172a"},
+    "font": "Outfit",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Yüzen yuvarlak menüde Kovan logosu, Alan, Planlar, Konum bağlantıları ve Ücretsiz Dene butonu"},
+      {"id": "hero", "type": "hero", "goal": "Alsancak'ta 7/24 erişimli coworking, ortalanmış başlık ve 3 istatistik (120 masa, 6 toplantı odası, 1 Gbps)"},
+      {"id": "space", "type": "features", "goal": "Bento ızgarada sessiz oda, telefon kabinleri, mutfak, teras ve etkinlik alanı"},
+      {"id": "plans", "type": "comparison", "goal": "Esnek masa 4.500₺, sabit masa 7.500₺, 4 kişilik özel ofis 26.000₺ aylık; erişim, dolap, toplantı saati satırlı karşılaştırma tablosu"},
+      {"id": "testimonials", "type": "testimonials", "goal": "Bir UX tasarımcısının büyük alıntı şeklinde yorumu"},
+      {"id": "location", "type": "location", "goal": "Alsancak adresi, metro ve vapura yürüme mesafesi ve Ücretsiz Gün Al butonu"},
+      {"id": "footer", "type": "footer", "goal": "Çok sütunlu: marka, bağlantılar, iletişim ve bülten kayıt formu, telif yılı"}
+    ]
+  }
+}

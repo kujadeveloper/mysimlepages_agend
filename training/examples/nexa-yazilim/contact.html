@@ -1,0 +1,22 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-bold md:text-4xl">İletişim</h2>
+      <p class="mt-4 text-lg opacity-80">Projeniz hakkında konuşalım; 1 iş günü içinde dönüş yapıyoruz.</p>
+      <ul class="mt-8 space-y-4">
+        <li><span class="font-semibold text-[var(--primary)]">Adres:</span> Maslak Mah. Büyükdere Cad. No: 255 Kat: 12, Sarıyer / İstanbul</li>
+        <li><span class="font-semibold text-[var(--primary)]">Telefon:</span> <a href="tel:+902123450255" class="underline">0212 345 02 55</a></li>
+        <li><span class="font-semibold text-[var(--primary)]">E-posta:</span> <a href="mailto:merhaba@nexayazilim.com" class="underline">merhaba@nexayazilim.com</a></li>
+      </ul>
+    </div>
+    <form class="space-y-5 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="c-name" class="block font-semibold">Ad Soyad</label><input id="c-name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="c-email" class="block font-semibold">E-posta</label><input id="c-email" name="email" type="email" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      </div>
+      <div><label for="c-subject" class="block font-semibold">Konu</label><select id="c-subject" name="subject" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Yeni proje</option><option>Mevcut proje desteği</option><option>İş birliği</option><option>Diğer</option></select></div>
+      <div><label for="c-message" class="block font-semibold">Mesajınız</label><textarea id="c-message" name="message" rows="5" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></textarea></div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Gönder</button>
+    </form>
+  </div>
+</section>

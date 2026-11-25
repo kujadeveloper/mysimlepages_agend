@@ -1,0 +1,21 @@
+<section id="register" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-5xl items-center gap-12 md:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-bold md:text-4xl">Ücretsiz üye ol</h2>
+      <p class="mt-4 text-lg opacity-80">Her kursun ilk iki dersi üyelere ücretsiz. Kredi kartı gerekmez.</p>
+      <ul class="mt-6 space-y-2 opacity-80"><li>✓ 28 ücretsiz ders</li><li>✓ Aylık veri analizi bülteni</li><li>✓ İlerlemeni kaydet</li></ul>
+    </div>
+    <form class="space-y-4 rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+      <div><label for="r-name" class="block text-sm font-semibold">Ad Soyad</label><input id="r-name" name="name" type="text" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <div><label for="r-email" class="block text-sm font-semibold">E-posta</label><input id="r-email" name="email" type="email" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <div><label for="r-phone" class="block text-sm font-semibold">Telefon</label><input id="r-phone" name="phone" type="tel" class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div><label for="r-pass" class="block text-sm font-semibold">Şifre</label><input id="r-pass" name="password" type="password" minlength="8" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="r-pass2" class="block text-sm font-semibold">Şifre tekrar</label><input id="r-pass2" name="password_confirm" type="password" minlength="8" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      </div>
+      <label class="flex items-start gap-3 text-sm"><input type="checkbox" name="kvkk" required class="mt-1"><span>Üyelik sözleşmesini ve KVKK aydınlatma metnini okudum, kabul ediyorum.</span></label>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Üye Ol</button>
+      <p class="text-center text-sm opacity-70">Zaten üye misin? <a href="#register" class="font-semibold text-[var(--primary)] underline">Giriş yap</a></p>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,52 @@
+{
+  "brief": "reformer pilates stüdyosu ankara çayyolu. grup dersleri max 6 kişi, birebir dersler, hamile pilatesi. paket fiyatları ve ders programı. pastel yumuşak tonlar",
+  "plan": {
+    "title": "Core Studio Çayyolu",
+    "language": "tr",
+    "style": "soft pastel minimal",
+    "palette": {
+      "primary": "#9d4f6b",
+      "secondary": "#fbf7f4",
+      "accent": "#e9cfc3",
+      "text": "#2e2226"
+    },
+    "font": "Jost",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Core Studio logosu, Dersler, Paketler, Program, İletişim bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "En fazla 6 kişilik reformer pilates dersleri, Deneme Dersi Al butonu"
+      },
+      {
+        "id": "classes",
+        "type": "services",
+        "goal": "Reformer grup, birebir, düet ve hamile pilatesi derslerinin açıklamaları"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "Deneme dersi 600₺, 8 ders grup paketi 6.400₺, 12 ders 8.900₺, birebir ders 1.800₺"
+      },
+      {
+        "id": "schedule",
+        "type": "hours",
+        "goal": "Hafta içi sabah ve akşam, hafta sonu öğleden önce ders saatleri"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Çayyolu adresi, WhatsApp ve ad, telefon, ders tipi alanlı deneme dersi formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Stüdyo adı, Instagram ve telif yılı"
+      }
+    ]
+  }
+}

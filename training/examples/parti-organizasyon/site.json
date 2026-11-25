@@ -1,0 +1,47 @@
+{
+  "brief": "çocuk doğum günü partisi organizasyonu yapıyoruz istanbul. temalı süsleme, animatör, sihirbaz, pasta, evde veya mekanda. renkli eğlenceli site, paketler ve fiyatlar",
+  "plan": {
+    "title": "Balonlu Kutlama",
+    "language": "tr",
+    "style": "playful colorful",
+    "palette": {
+      "primary": "#7e22ce",
+      "secondary": "#fff7ed",
+      "accent": "#fb923c",
+      "text": "#2e1065"
+    },
+    "font": "Fredoka",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Balonlu Kutlama logosu, Temalar, Paketler, Rezervasyon bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Evde ya da mekânda temalı çocuk doğum günü partileri, Parti Planla butonu"
+      },
+      {
+        "id": "themes",
+        "type": "gallery",
+        "goal": "Uzay, deniz kızı, dinozor, süper kahraman, prenses ve Minecraft temalı süsleme görselleri"
+      },
+      {
+        "id": "packages",
+        "type": "pricing",
+        "goal": "Mini 7.500₺ (15 çocuk, süsleme+animatör 2 saat), Süper 13.500₺ (+sihirbaz, pasta), Mega 22.000₺ (+mekân, ikram)"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "WhatsApp ve veli adı, telefon, çocuğun yaşı, tema, tarih, çocuk sayısı alanlı rezervasyon formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Firma adı, Instagram ve telif yılı"
+      }
+    ]
+  }
+}

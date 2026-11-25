@@ -1,0 +1,52 @@
+{
+  "brief": "İstanbul Avrupa yakasında temizlik şirketi. Ev temizliği, ofis temizliği, inşaat sonrası temizlik, koltuk yıkama. Sigortalı personel. Fiyat al formu, ferah temiz renkler.",
+  "plan": {
+    "title": "Pırıl Temizlik Hizmetleri",
+    "language": "tr",
+    "style": "fresh clean",
+    "palette": {
+      "primary": "#0369a1",
+      "secondary": "#f0f9ff",
+      "accent": "#84cc16",
+      "text": "#0c2a3e"
+    },
+    "font": "Nunito Sans",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Pırıl logosu, Hizmetler, Fiyatlar, Fiyat Al bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Avrupa Yakası'nda sigortalı ve referanslı temizlik personeli, Fiyat Al butonu"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Ev temizliği, ofis temizliği, inşaat sonrası temizlik ve koltuk-halı yıkama"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "Günlük ev temizliği 2.200₺, ofis aylık sözleşme 18.000₺'den, inşaat sonrası m² 45₺, üçlü koltuk yıkama 1.400₺"
+      },
+      {
+        "id": "testimonials",
+        "type": "testimonials",
+        "goal": "Düzenli ev temizliği alan iki müşterinin yorumu"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Telefon, WhatsApp ve ad, telefon, ilçe, hizmet türü, tarih alanlı fiyat formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Firma adı, hizmet bölgeleri ve telif yılı"
+      }
+    ]
+  }
+}

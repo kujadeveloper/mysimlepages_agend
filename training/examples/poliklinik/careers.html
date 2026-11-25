@@ -1,0 +1,29 @@
+<section id="careers" class="px-6 py-16 md:py-24">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="text-3xl font-bold md:text-4xl">Kariyer</h2>
+    <p class="mt-4 text-lg opacity-80">Ekibimize katılacak sağlık profesyonelleri arıyoruz.</p>
+    <div class="mt-10 overflow-x-auto rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
+      <table class="w-full min-w-[560px] text-left">
+        <thead><tr class="border-b border-black/10"><th class="p-4">Pozisyon</th><th class="p-4">Birim</th><th class="p-4">Çalışma</th></tr></thead>
+        <tbody>
+          <tr class="border-b border-black/5"><td class="p-4 font-semibold">Hemşire (2 kişi)</td><td class="p-4">Poliklinik</td><td class="p-4">Tam zamanlı · vardiyasız</td></tr>
+          <tr class="border-b border-black/5"><td class="p-4 font-semibold">Tıbbi Sekreter</td><td class="p-4">Hasta kabul</td><td class="p-4">Tam zamanlı</td></tr>
+          <tr><td class="p-4 font-semibold">Radyoloji Teknikeri</td><td class="p-4">Görüntüleme</td><td class="p-4">Tam zamanlı</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <form class="mt-10 space-y-5 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+      <h3 class="text-xl font-semibold">Başvuru Formu</h3>
+      <div class="grid gap-5 md:grid-cols-2">
+        <div><label for="j-name" class="block font-semibold">Ad Soyad</label><input id="j-name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="j-email" class="block font-semibold">E-posta</label><input id="j-email" name="email" type="email" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="j-phone" class="block font-semibold">Telefon</label><input id="j-phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="j-position" class="block font-semibold">Pozisyon</label><select id="j-position" name="position" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Hemşire</option><option>Tıbbi Sekreter</option><option>Radyoloji Teknikeri</option></select></div>
+      </div>
+      <div><label for="j-cv" class="block font-semibold">CV bağlantısı (Google Drive, LinkedIn)</label><input id="j-cv" name="cv_url" type="url" placeholder="https://" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <div><label for="j-letter" class="block font-semibold">Deneyiminiz ve sertifikalarınız</label><textarea id="j-letter" name="cover_letter" rows="4" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></textarea></div>
+      <label class="flex items-start gap-3 text-sm"><input type="checkbox" name="kvkk" required class="mt-1"><span>Başvuru kapsamında kişisel verilerimin işlenmesine ilişkin KVKK aydınlatma metnini okudum.</span></label>
+      <button type="submit" class="inline-block rounded-full bg-[var(--primary)] px-8 py-3 font-semibold text-white hover:opacity-90">Başvur</button>
+    </form>
+  </div>
+</section>

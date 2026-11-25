@@ -1,0 +1,21 @@
+<section id="personalize" class="bg-white px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
+    <img src="https://placehold.co/600x640/e2e8f0/475569?text=İsim+Kolyesi" alt="El yazısı fontla Elif yazan gümüş isim kolyesi" class="w-full">
+    <div>
+      <p class="text-sm uppercase tracking-[0.3em] opacity-60">Kişiye özel</p>
+      <h2 class="mt-3 text-4xl md:text-5xl">İsim Kolyesi</h2>
+      <p class="mt-4 opacity-80">Dilediğiniz isim ya da kelime, 5 iş gününde atölyemizde işlenip kadife kutuda gönderilir. <span class="font-semibold">1.290 ₺'den</span></p>
+      <form class="mt-8 space-y-4">
+        <div><label for="p-name" class="block text-sm font-semibold">Yazılacak isim (en fazla 10 harf)</label><input id="p-name" name="text" type="text" maxlength="10" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div><label for="p-font" class="block text-sm font-semibold">Yazı tipi</label><select id="p-font" name="font" class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>El yazısı</option><option>Düz</option><option>Serif</option></select></div>
+          <div><label for="p-length" class="block text-sm font-semibold">Zincir uzunluğu</label><select id="p-length" name="length" class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>40 cm</option><option>45 cm</option><option>50 cm</option></select></div>
+          <div><label for="p-plating" class="block text-sm font-semibold">Kaplama</label><select id="p-plating" name="plating" class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Gümüş (1.290 ₺)</option><option>Altın kaplama (1.490 ₺)</option><option>Rose kaplama (1.490 ₺)</option></select></div>
+          <div><label for="p-gift" class="block text-sm font-semibold">Hediye paketi</label><select id="p-gift" name="gift" class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Evet, ücretsiz</option><option>Hayır</option></select></div>
+        </div>
+        <div><label for="p-note" class="block text-sm font-semibold">Hediye notu</label><textarea id="p-note" name="note" rows="2" class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></textarea></div>
+        <button type="submit" class="w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Sepete Ekle</button>
+      </form>
+    </div>
+  </div>
+</section>

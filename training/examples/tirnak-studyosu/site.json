@@ -1,0 +1,18 @@
+{
+  "brief": "nail art stüdyosu istanbul nişantaşı. kalıcı oje, protez tırnak, nail art, medikal pedikür. online randevu alınsın, saat seçebilsinler. fiyat listesi ve tasarım galerisi olsun",
+  "plan": {
+    "title": "Polish Room Nişantaşı",
+    "language": "tr",
+    "style": "chic pastel",
+    "palette": {"primary": "#be185d", "secondary": "#fff1f5", "accent": "#fbcfe8", "text": "#3b0d24"},
+    "font": "Quicksand",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Polish Room logosu, Fiyatlar, Galeri bağlantıları ve Randevu Al butonu, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Nişantaşı'nda steril aletlerle nail art, 2 dakikada online randevu, Randevu Al butonu"},
+      {"id": "pricing", "type": "pricing", "goal": "Kalıcı oje 650₺, protez tırnak 1.400₺, nail art tırnak başı 60₺'den, medikal pedikür 900₺ fiyat listesi, süreleriyle"},
+      {"id": "gallery", "type": "gallery", "goal": "Altı nail art tasarımından oluşan galeri: french, ombre, krom, minimal çizgi, çiçek, mermer"},
+      {"id": "appointment", "type": "appointment", "goal": "Hizmet seçimi, tarih, 10:00-19:30 arası saat seçimi, ad, telefon ve not alanlı randevu formu, çalışma saatleri yanında"},
+      {"id": "footer", "type": "footer", "goal": "Stüdyo adı, adres, Instagram ve telif yılı"}
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "brief": "sokak hayvanları derneği, izmir. mama dağıtımı, kısırlaştırma, tedavi, sahiplendirme. bağış toplamak istiyoruz, bağışların nereye gittiğini göstermek önemli",
+  "plan": {
+    "title": "Patiler İçin İzmir Derneği",
+    "language": "tr",
+    "style": "warm hopeful",
+    "palette": {
+      "primary": "#c2410c",
+      "secondary": "#fffaf5",
+      "accent": "#fed7aa",
+      "text": "#3a1a0a"
+    },
+    "font": "Nunito",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Dernek logosu, Çalışmalarımız, Etki, Bülten bağlantıları ve öne çıkan Bağış Yap butonu, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Tam ekran sokak köpeği görseli üstünde 'Her kap mama bir umut' başlığı ve Bağış Yap butonu"
+      },
+      {
+        "id": "stats",
+        "type": "stats",
+        "goal": "2025'te 48 ton mama, 1.900 kısırlaştırma, 640 tedavi ve 310 sahiplendirme rakamlarından oluşan şerit"
+      },
+      {
+        "id": "process",
+        "type": "process",
+        "goal": "Bağışın yolu: bağış, mama ve ilaç alımı, gönüllü dağıtım, aylık şeffaflık raporu"
+      },
+      {
+        "id": "donate",
+        "type": "cta",
+        "goal": "250₺ bir köpeğin aylık maması, 1.000₺ bir kısırlaştırma, 2.500₺ bir tedavi seçenekli bağış çağrısı ve IBAN"
+      },
+      {
+        "id": "newsletter",
+        "type": "newsletter",
+        "goal": "Aylık şeffaflık raporu için e-posta kayıt formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Dernek adı, kütük numarası, iletişim ve telif yılı"
+      }
+    ]
+  }
+}

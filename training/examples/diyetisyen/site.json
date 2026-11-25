@@ -1,0 +1,20 @@
+{
+  "brief": "diyetisyenim bursa nilüferde ofisim var online da danışmanlık veriyorum. kilo verme, sporcu beslenmesi, gebelik beslenmesi. süreç nasıl işliyor göstermek istiyorum, blog yazılarım da olsun",
+  "plan": {
+    "title": "Dyt. Zeynep Erdem",
+    "language": "tr",
+    "style": "fresh friendly",
+    "palette": {"primary": "#047857", "secondary": "#f6fbf7", "accent": "#fcd34d", "text": "#12261b"},
+    "font": "Figtree",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Dyt. Zeynep Erdem adı, Programlar, Süreç, Blog bağlantıları, Randevu butonu ve mobil ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Yasaklarla değil alışkanlıklarla beslenme vaadi, solda metin ve Randevu Al butonu, sağda portre"},
+      {"id": "programs", "type": "services", "goal": "Kilo yönetimi, sporcu beslenmesi ve gebelik-emzirme beslenmesi programları ve aylık ücretleri"},
+      {"id": "process", "type": "process", "goal": "Dikey zaman çizelgesi: ilk görüşme ve analiz, kişisel menü, haftalık takip, 3. ay sonrası bağımsızlık"},
+      {"id": "stats", "type": "stats", "goal": "1.400 danışan, ortalama 8,5 kg kayıp, %92 programı tamamlama oranı"},
+      {"id": "blog", "type": "blog", "goal": "Üç blog yazısı kartı: ara öğün önerileri, protein ihtiyacı, Ramazan'da beslenme"},
+      {"id": "contact", "type": "contact", "goal": "Nilüfer ofis adresi, WhatsApp ve ad, telefon, program, görüşme şekli alanlı form"},
+      {"id": "footer", "type": "footer", "goal": "İsim, Instagram ve telif yılı"}
+    ]
+  }
+}

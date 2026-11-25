@@ -1,0 +1,19 @@
+{
+  "brief": "Nişantaşı'nda omakase ve sushi restoranı. 12 kişilik tezgah, şef masası, a la carte menü de var. Japon minimalizmi, koyu ve sade. Menü kategorileri (nigiri, maki, sıcaklar), rezervasyon.",
+  "plan": {
+    "title": "Kaze Omakase",
+    "language": "tr",
+    "style": "dark japanese minimal",
+    "palette": {"primary": "#b91c1c", "secondary": "#0c0c0c", "accent": "#d6c7a1", "text": "#f1ede6"},
+    "font": "Noto Serif",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Ortada KAZE logosu, iki yanda Menü, Omakase, Saatler, Rezervasyon bağlantıları, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Tam ekran tezgâh görseli üstünde 12 kişilik tezgâhta omakase vurgusu ve Rezervasyon butonu"},
+      {"id": "omakase", "type": "about", "goal": "Şef Kenji Tanaka'nın 18 tabaklık omakase deneyimi 6.500₺, akşam 19:00 ve 21:30 seansları, zigzag görsel-metin"},
+      {"id": "menu", "type": "menu", "goal": "Nigiri, maki ve sıcaklar kategorilerine bağlantılı sekmeler ve noktalı çizgili fiyat listesi"},
+      {"id": "hours", "type": "hours", "goal": "Salı-Pazar 18:00-24:00, pazartesi kapalı, adres ve vale bilgisi"},
+      {"id": "contact", "type": "contact", "goal": "Ad, telefon, tarih, seans, kişi sayısı, alerji notu alanlı rezervasyon formu"},
+      {"id": "footer", "type": "footer", "goal": "Minimal logo, Instagram ve telif yılı"}
+    ]
+  }
+}

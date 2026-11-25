@@ -1,0 +1,18 @@
+{
+  "brief": "personal site for me, freelance full-stack developer (Python/Django, React). based in Izmir, working remotely with EU clients. minimal and clean. projects, services with day rate, contact",
+  "plan": {
+    "title": "Emre Kılıç — Full-Stack Developer",
+    "language": "en",
+    "style": "minimal developer portfolio",
+    "palette": {"primary": "#4338ca", "secondary": "#fcfcfd", "accent": "#a5b4fc", "text": "#111827"},
+    "font": "Inter",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Name and Work, Services, Contact links"},
+      {"id": "hero", "type": "hero", "goal": "Freelance Django and React developer in Izmir working remotely with EU teams, availability badge and Get in touch button"},
+      {"id": "projects", "type": "gallery", "goal": "Three case studies: logistics dashboard for a Dutch startup, booking platform for a Berlin clinic, internal tool migration from PHP to Django"},
+      {"id": "services", "type": "pricing", "goal": "Web app development at €550/day, code audits at €1,500 fixed, monthly retainer from €3,000 with tech stack list"},
+      {"id": "contact", "type": "contact", "goal": "Email, GitHub, LinkedIn and a short form with name, email, project details"},
+      {"id": "footer", "type": "footer", "goal": "Name and copyright year"}
+    ]
+  }
+}

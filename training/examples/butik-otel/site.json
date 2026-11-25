@@ -1,0 +1,52 @@
+{
+  "brief": "Alaçatı'da 9 odalı taş butik otel. Bahçede kahvaltı, havuz, rüzgar sörfü merkezine yakın. Sezon mayıs-ekim. Odalar ve fiyatlar, rezervasyon talebi formu olsun. Ege havası, beyaz-mavi değil biraz farklı olsun.",
+  "plan": {
+    "title": "Taşev Alaçatı",
+    "language": "tr",
+    "style": "aegean stone boutique",
+    "palette": {
+      "primary": "#0e7490",
+      "secondary": "#fbf9f4",
+      "accent": "#e2c08d",
+      "text": "#1f2a30"
+    },
+    "font": "Cormorant Garamond",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Taşev logosu, Odalar, Kahvaltı, Konum, Rezervasyon bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Ekranı kaplayan taş avlu görseli üstünde ortalanmış 9 odalı butik otel başlığı ve Rezervasyon Talebi butonu"
+      },
+      {
+        "id": "rooms",
+        "type": "products",
+        "goal": "Bahçe odası 6.500₺, havuz manzaralı 8.200₺, teraslı süit 11.500₺ gecelik; zigzag görsel-metin satırları"
+      },
+      {
+        "id": "breakfast",
+        "type": "about",
+        "goal": "İncir ağacı altında köy yumurtası, ev reçelleri ve Alaçatı otlarıyla serpme kahvaltı"
+      },
+      {
+        "id": "location",
+        "type": "location",
+        "goal": "Hacı Memiş'e 3 dk, sörf plajına 8 dk, İzmir Havalimanı'na 50 dk mesafe bilgileri"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Telefon, WhatsApp ve ad, telefon, giriş-çıkış tarihi, oda tipi, kişi sayısı alanlı rezervasyon talebi formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Otel adı, adres, turizm belgesi numarası ve telif yılı"
+      }
+    ]
+  }
+}

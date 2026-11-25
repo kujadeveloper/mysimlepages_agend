@@ -1,0 +1,17 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto max-w-2xl">
+    <h2 class="text-center text-3xl font-bold md:text-4xl">Rezervasyon</h2>
+    <p class="mt-4 text-center opacity-80">Omakase için en az 48 saat önceden. İptaller 24 saat öncesine kadar ücretsiz.</p>
+    <form class="mt-10 space-y-5">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="name" class="block text-sm uppercase tracking-widest opacity-70">Ad Soyad</label><input id="name" name="name" type="text" required class="mt-2 w-full border-b border-white/30 bg-transparent px-1 py-3"></div>
+        <div><label for="phone" class="block text-sm uppercase tracking-widest opacity-70">Telefon</label><input id="phone" name="phone" type="tel" required class="mt-2 w-full border-b border-white/30 bg-transparent px-1 py-3"></div>
+        <div><label for="date" class="block text-sm uppercase tracking-widest opacity-70">Tarih</label><input id="date" name="date" type="date" required class="mt-2 w-full border-b border-white/30 bg-transparent px-1 py-3"></div>
+        <div><label for="seating" class="block text-sm uppercase tracking-widest opacity-70">Seans</label><select id="seating" name="seating" class="mt-2 w-full border-b border-white/30 bg-[#0c0c0c] px-1 py-3"><option>Omakase 19:00</option><option>Omakase 21:30</option><option>À la carte</option></select></div>
+        <div><label for="guests" class="block text-sm uppercase tracking-widest opacity-70">Kişi</label><input id="guests" name="guests" type="number" min="1" max="6" value="2" class="mt-2 w-full border-b border-white/30 bg-transparent px-1 py-3"></div>
+        <div><label for="allergy" class="block text-sm uppercase tracking-widest opacity-70">Alerji notu</label><input id="allergy" name="allergy" type="text" class="mt-2 w-full border-b border-white/30 bg-transparent px-1 py-3"></div>
+      </div>
+      <button type="submit" class="mt-4 inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Talep Gönder</button>
+    </form>
+  </div>
+</section>

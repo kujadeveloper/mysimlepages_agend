@@ -1,0 +1,18 @@
+{
+  "brief": "Urla'da butik bağ evi ve şaraphane. Kendi bağımızın şarapları, tadım deneyimleri, bağ evinde akşam yemeği. Koyu bordo, şık, şarap listesi ve tadım paketleri, rezervasyon.",
+  "plan": {
+    "title": "Asmalı Bağ Evi Urla",
+    "language": "tr",
+    "style": "dark elegant wine",
+    "palette": {"primary": "#be123c", "secondary": "#1a0d10", "accent": "#e8c07a", "text": "#f3e9e4"},
+    "font": "Cormorant Garamond",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Ortada Asmalı logosu, Şaraplar, Tadım, Rezervasyon bağlantıları ve mobil ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Tam ekran bağ görseli üstünde Urla'nın kırmızı toprağından şaraplar başlığı"},
+      {"id": "wines", "type": "menu", "goal": "İki sütunlu şarap listesi: Urla Karası, Bornova Misketi, Syrah, Sauvignon Blanc kadeh ve şişe fiyatları noktalı çizgiyle"},
+      {"id": "tastings", "type": "process", "goal": "Bağ yürüyüşü, mahzen turu, 5 şarap tadımı ve peynir tabağı adımlarıyla tadım deneyimi; kişi başı 1.800₺ ve 3.200₺ paketler"},
+      {"id": "reservation", "type": "cta", "goal": "Cuma-pazar bağ evi akşam yemeği ve tadım için rezervasyon çağrısı, telefon ve WhatsApp"},
+      {"id": "footer", "type": "footer", "goal": "Bağ evi adı, adres, 18 yaş uyarısı ve telif yılı"}
+    ]
+  }
+}

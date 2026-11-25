@@ -1,0 +1,47 @@
+{
+  "brief": "bilgisayar ve telefon teknik servisi eskişehir. ekran değişimi, batarya, anakart tamiri, veri kurtarma, laptop temizlik. koyu teknolojik bir site, arıza kaydı formu",
+  "plan": {
+    "title": "Devre Teknik Servis",
+    "language": "tr",
+    "style": "dark tech",
+    "palette": {
+      "primary": "#2563eb",
+      "secondary": "#0f172a",
+      "accent": "#22d3ee",
+      "text": "#e2e8f0"
+    },
+    "font": "Inter",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Devre logosu, Hizmetler, Fiyatlar, Arıza Kaydı bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Eskişehir'de telefon ve bilgisayar tamiri, aynı gün ekran değişimi, Arıza Kaydı Oluştur butonu"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Ekran değişimi, batarya değişimi, anakart onarımı, veri kurtarma ve laptop bakım-temizlik"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "iPhone 13 ekran 6.500₺, Samsung A54 ekran 3.900₺, batarya 1.800₺'den, laptop temizlik 1.200₺, arıza tespiti 300₺"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Adres, telefon ve ad, telefon, cihaz marka-model, arıza açıklaması alanlı arıza kaydı formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Servis adı, garanti bilgisi ve telif yılı"
+      }
+    ]
+  }
+}

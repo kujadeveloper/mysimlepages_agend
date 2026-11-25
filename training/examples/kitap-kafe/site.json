@@ -1,0 +1,18 @@
+{
+  "brief": "Cihangir'de sahaf + kafe. İkinci el ve yeni kitaplar, haftalık okuma kulübü, imza günleri, şiir akşamları. Nostaljik, kağıt dokulu, sıcak bir site. Etkinlik takvimi ve kitap önerileri.",
+  "plan": {
+    "title": "Sayfa Arası Kitap Kafe",
+    "language": "tr",
+    "style": "nostalgic literary",
+    "palette": {"primary": "#3f3f46", "secondary": "#f6f1e7", "accent": "#b45309", "text": "#27272a"},
+    "font": "Libre Baskerville",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Ortada Sayfa Arası logosu, altında Raflar, Etkinlikler, Saatler bağlantıları"},
+      {"id": "hero", "type": "hero", "goal": "Ortalanmış serif başlıkla Cihangir'de kahve kokulu sahaf, kısa bir alıntı ve Etkinliklere Bak butonu"},
+      {"id": "picks", "type": "products", "goal": "Yatay kaydırılan haftanın önerileri: 5 kitap kartı, yazar, durum (ikinci el/yeni) ve fiyat"},
+      {"id": "events", "type": "schedule", "goal": "Tarihli etkinlik listesi: okuma kulübü, imza günü, şiir akşamı, çocuk masal saati"},
+      {"id": "hours", "type": "hours", "goal": "Çalışma saatleri, adres ve kahve menüsünden üç ürün fiyatı"},
+      {"id": "footer", "type": "footer", "goal": "Logo, bir dize ve telif yılı"}
+    ]
+  }
+}

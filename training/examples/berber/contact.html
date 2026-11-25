@@ -1,0 +1,42 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-bold uppercase md:text-4xl">Randevu Al</h2>
+      <p class="mt-4 text-lg opacity-80">Formu doldurun, 30 dakika içinde telefonla onaylayalım. Acil randevular için arayabilirsiniz.</p>
+      <ul class="mt-8 space-y-4">
+        <li><span class="font-semibold text-[var(--accent)]">Adres:</span> Sinanpaşa Mah. Ihlamurdere Cad. No: 27, Beşiktaş / İstanbul</li>
+        <li><span class="font-semibold text-[var(--accent)]">Telefon:</span> <a href="tel:+902122594127" class="underline">0212 259 41 27</a></li>
+        <li><span class="font-semibold text-[var(--accent)]">Pazartesi – Cumartesi:</span> 10:00 – 21:00</li>
+        <li><span class="font-semibold text-[var(--accent)]">Pazar:</span> 11:00 – 18:00</li>
+      </ul>
+    </div>
+    <form class="space-y-5 rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+      <div>
+        <label for="name" class="block font-semibold">Adınız Soyadınız</label>
+        <input id="name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3">
+      </div>
+      <div>
+        <label for="phone" class="block font-semibold">Telefon</label>
+        <input id="phone" name="phone" type="tel" required placeholder="05xx xxx xx xx" class="mt-2 w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3">
+      </div>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div>
+          <label for="service" class="block font-semibold">Hizmet</label>
+          <select id="service" name="service" class="mt-2 w-full rounded-lg border border-white/20 bg-[#1c1c1c] px-4 py-3">
+            <option>Saç Kesimi</option>
+            <option>Sakal Tıraşı</option>
+            <option>Saç + Sakal</option>
+            <option>Çocuk Kesimi</option>
+            <option>Cilt Bakımı</option>
+            <option>Damat Paketi</option>
+          </select>
+        </div>
+        <div>
+          <label for="date" class="block font-semibold">Tarih</label>
+          <input id="date" name="date" type="date" required class="mt-2 w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3">
+        </div>
+      </div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Randevu Talebi Gönder</button>
+    </form>
+  </div>
+</section>

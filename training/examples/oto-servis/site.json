@@ -1,0 +1,47 @@
+{
+  "brief": "oto tamirci sitesi lazım ankara ostim. motor, yağ değişimi, fren balata, lastik, klima gazı. 15 yıllık işletme. müşteri fiyat sorabilsin",
+  "plan": {
+    "title": "Usta Garaj Oto Servis",
+    "language": "tr",
+    "style": "industrial bold",
+    "palette": {
+      "primary": "#c2410c",
+      "secondary": "#f5f5f4",
+      "accent": "#1c1917",
+      "text": "#1c1917"
+    },
+    "font": "Archivo",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Usta Garaj logosu, Hizmetler, Neden Biz, Fiyat Al bağlantıları ve telefon numarası, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Ostim'de 15 yıllık tecrübe, aynı gün teslim ve yazılı fiyat garantisi, Fiyat Al ve Hemen Ara butonları"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Motor bakımı, yağ değişimi, fren balata, lastik ve rot balans, klima gazı, arıza tespiti kartları ve başlangıç fiyatları"
+      },
+      {
+        "id": "why-us",
+        "type": "features",
+        "goal": "Orijinal yedek parça, işçilikte 6 ay garanti, bilgisayarlı arıza tespiti, fotoğraflı bilgilendirme"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Ostim adresi, telefon, çalışma saatleri ve ad, telefon, araç marka-model, yapılacak iş alanlı fiyat sorma formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Servis adı, adres ve telif yılı"
+      }
+    ]
+  }
+}

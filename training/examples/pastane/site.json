@@ -1,0 +1,52 @@
+{
+  "brief": "Nişantaşı'nda butik pastaneyiz. Özel gün pastaları (doğum günü, düğün), makaron, ekler, kurabiye kutuları. Şık, Fransız pastanesi havası. Özel pasta siparişi ve sık sorulanlar olsun.",
+  "plan": {
+    "title": "Maison Elif Pâtisserie",
+    "language": "tr",
+    "style": "elegant french patisserie",
+    "palette": {
+      "primary": "#9d174d",
+      "secondary": "#fdf2f8",
+      "accent": "#d4a373",
+      "text": "#3f1d2b"
+    },
+    "font": "Playfair Display",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Maison Elif logosu, Vitrin, Özel Pasta, SSS, Sipariş bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Nişantaşı'nda Fransız tekniğiyle el yapımı tatlılar, Özel Pasta Siparişi ve Vitrine Göz At butonları"
+      },
+      {
+        "id": "products",
+        "type": "products",
+        "goal": "Makaron kutusu, çikolatalı ekler, frambuazlı tart ve tereyağlı kurabiye kutusu fiyatlarıyla"
+      },
+      {
+        "id": "custom-cakes",
+        "type": "services",
+        "goal": "Doğum günü, düğün ve nişan pastaları için tasarım süreci ve kişi başı başlangıç fiyatları"
+      },
+      {
+        "id": "faq",
+        "type": "faq",
+        "goal": "Kaç gün önce sipariş, glutensiz seçenek, teslimat bölgeleri ve tadım hakkında sorular"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Abdi İpekçi Caddesi adresi, telefon ve ad, telefon, etkinlik tarihi, kişi sayısı, istek alanlı sipariş formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Pastane adı, Instagram ve telif yılı"
+      }
+    ]
+  }
+}

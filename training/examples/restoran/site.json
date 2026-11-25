@@ -1,0 +1,47 @@
+{
+  "brief": "Ankara Bahçelievler'de ocakbaşı restoranımız var, 1992'den beri. Adana, urfa, beyti, kuzu şiş, ciğer. Akşamları rezervasyonla çalışıyoruz, paket servis de var. Sıcak, iştah açan, koyu tonlarda bir site istiyorum. Menü fiyatlarıyla olsun.",
+  "plan": {
+    "title": "Köz Ocakbaşı",
+    "language": "tr",
+    "style": "dark warm rustic",
+    "palette": {
+      "primary": "#b3261e",
+      "secondary": "#17110d",
+      "accent": "#f2a541",
+      "text": "#f5ede4"
+    },
+    "font": "Bitter",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Köz logosu, Menü, Hikayemiz, Rezervasyon bağlantıları ve telefon, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Tam ekran ocakbaşı görseli üstünde soldan karartılmış katmanla 1992'den beri meşe kömüründe kebap, Rezervasyon Yap ve Menüyü Gör butonları"
+      },
+      {
+        "id": "menu",
+        "type": "menu",
+        "goal": "Adana 520₺, Urfa 520₺, Beyti 590₺, kuzu şiş 640₺, ciğer 480₺, mezeler ve tatlılardan oluşan fiyatlı menü"
+      },
+      {
+        "id": "about",
+        "type": "about",
+        "goal": "Kurucu Hüseyin Usta'nın Adana'dan getirdiği tarif ve günlük çekilen zırh kıyması"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Bahçelievler adresi, rezervasyon telefonu, paket servis bilgisi ve ad, telefon, tarih, saat, kişi sayısı alanlı rezervasyon formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Restoran adı, açılış saatleri ve telif yılı"
+      }
+    ]
+  }
+}

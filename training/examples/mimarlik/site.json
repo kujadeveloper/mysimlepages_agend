@@ -1,0 +1,47 @@
+{
+  "brief": "mimarlık ofisi, izmir. konut, iç mimari, restorasyon projeleri. minimal siyah beyaz bir portfolyo sitesi istiyoruz, projeler öne çıksın",
+  "plan": {
+    "title": "Atölye Kırk Mimarlık",
+    "language": "tr",
+    "style": "minimal monochrome",
+    "palette": {
+      "primary": "#171717",
+      "secondary": "#fafafa",
+      "accent": "#a3a3a3",
+      "text": "#171717"
+    },
+    "font": "Manrope",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Atölye Kırk logosu ve Projeler, Ofis, İletişim bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "İzmir'de konut, iç mekan ve restorasyon tasarlayan mimarlık ofisi tek cümlelik manifesto"
+      },
+      {
+        "id": "projects",
+        "type": "gallery",
+        "goal": "Urla taş ev restorasyonu, Bornova apartman dairesi iç mimarisi, Seferihisar müstakil konut ve Kemeraltı han projeleri, yıl ve m² bilgisiyle"
+      },
+      {
+        "id": "about",
+        "type": "about",
+        "goal": "2014'te kurulan 6 kişilik ekip, kurucu mimarlar ve hizmet adımları"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Alsancak ofis adresi, telefon ve e-posta"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Ofis adı, Instagram ve telif yılı"
+      }
+    ]
+  }
+}

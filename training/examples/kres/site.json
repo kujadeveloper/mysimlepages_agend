@@ -1,0 +1,52 @@
+{
+  "brief": "Bursa Nilüfer'de 2-6 yaş anaokulu/kreş. Montessori yaklaşımı, İngilizce, bahçede oyun, organik yemek. Veliler güven arıyor. Renkli ama göz yormayan bir site. Kayıt formu ve veli yorumları olsun.",
+  "plan": {
+    "title": "Minik Adımlar Montessori Anaokulu",
+    "language": "tr",
+    "style": "playful soft",
+    "palette": {
+      "primary": "#6d28d9",
+      "secondary": "#fffbeb",
+      "accent": "#f59e0b",
+      "text": "#1f2937"
+    },
+    "font": "Nunito",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Minik Adımlar logosu, Programlar, Günümüz, Veliler, Kayıt bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Montessori ile kendi hızında öğrenen çocuklar vurgusu, Okulu Ziyaret Et ve Kayıt Formu butonları"
+      },
+      {
+        "id": "programs",
+        "type": "services",
+        "goal": "Bento ızgarada büyük okula hazırlık kartı ile 2-3, 3-4 ve 4-5 yaş sınıf kartları"
+      },
+      {
+        "id": "daily",
+        "type": "features",
+        "goal": "Organik mutfak, günlük İngilizce, bahçe ve sebze ekimi, kamera ile veli bilgilendirme"
+      },
+      {
+        "id": "testimonials",
+        "type": "testimonials",
+        "goal": "Üç velinin çocuklarının gelişimini anlatan kısa yorumları"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Nilüfer adresi, telefon ve veli adı, çocuğun yaşı, telefon alanlı ön kayıt formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Okul adı, MEB izin bilgisi, bağlantılar ve telif yılı"
+      }
+    ]
+  }
+}

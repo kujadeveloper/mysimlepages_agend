@@ -1,0 +1,18 @@
+{
+  "brief": "Ankara Kızılay'da güzellik merkezi. Buz lazer epilasyon, hydrafacial cilt bakımı, kalıcı makyaj, bölgesel incelme. Kadın müşteriler. Ücretsiz ön görüşme formu sayfanın başında olsun.",
+  "plan": {
+    "title": "Lumina Güzellik Merkezi",
+    "language": "tr",
+    "style": "elegant modern beauty",
+    "palette": {"primary": "#86198f", "secondary": "#fdf4ff", "accent": "#f0abfc", "text": "#3b0a3f"},
+    "font": "Lexend",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Üstte telefon ve saatlerin olduğu ince bilgi çubuğu, altında Lumina logosu, Hizmetler, Süreç, SSS bağlantıları"},
+      {"id": "hero", "type": "hero", "goal": "Solda buz lazer ve cilt bakımı vaadi, sağda ad, telefon, ilgilenilen işlem alanlı ücretsiz ön görüşme formu"},
+      {"id": "services", "type": "services", "goal": "Buz lazer epilasyon, Hydrafacial, kalıcı makyaj ve bölgesel incelme; zigzag görsel-metin satırları ve seans fiyatları"},
+      {"id": "process", "type": "process", "goal": "Ücretsiz cilt analizi, kişisel plan, seanslar ve takip olmak üzere 4 adımlı süreç"},
+      {"id": "faq", "type": "faq", "goal": "Lazer acıtır mı, kaç seans gerekir, yazın lazer olur mu soruları"},
+      {"id": "footer", "type": "footer", "goal": "Merkez adı, adres, sosyal medya ve telif yılı"}
+    ]
+  }
+}

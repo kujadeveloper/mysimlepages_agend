@@ -1,0 +1,52 @@
+{
+  "brief": "Kadıköy'de İngilizce ve Almanca dil kursu. Küçük gruplar (max 8 kişi), konuşma ağırlıklı, IELTS hazırlık, online seçenek. Gençlere ve çalışanlara hitap ediyoruz. Enerjik renkli bir site. Seviye tespit sınavı için form olsun.",
+  "plan": {
+    "title": "Speakwell Dil Akademisi",
+    "language": "tr",
+    "style": "vibrant friendly",
+    "palette": {
+      "primary": "#a21caf",
+      "secondary": "#fefce8",
+      "accent": "#facc15",
+      "text": "#1e1b4b"
+    },
+    "font": "Poppins",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Speakwell logosu, Kurslar, Fiyatlar, Yorumlar ve Seviye Testi butonu, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "En fazla 8 kişilik sınıflarda konuşarak öğrenilen İngilizce ve Almanca, Ücretsiz Seviye Testi butonu"
+      },
+      {
+        "id": "courses",
+        "type": "services",
+        "goal": "Yatay kaydırılan kurs kartları: genel İngilizce, Almanca, IELTS hazırlık, iş İngilizcesi, çocuklar için İngilizce"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "Kur başı (8 hafta) yüz yüze 9.500₺, online 7.000₺, birebir ders saati 1.200₺ fiyatları"
+      },
+      {
+        "id": "testimonials",
+        "type": "testimonials",
+        "goal": "IELTS 7.5 alan öğrenci ve Almanya'ya taşınan mühendisin yorumları"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Kadıköy adresi ve ad, telefon, dil, mevcut seviye, tercih edilen saat alanlı seviye testi formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Akademi adı, MEB izin bilgisi ve telif yılı"
+      }
+    ]
+  }
+}

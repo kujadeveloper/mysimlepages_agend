@@ -1,0 +1,47 @@
+{
+  "brief": "Kapalıçarşı'da 3. kuşak kuyumcuyuz. Tektaş pırlanta, alyans, kişiye özel tasarım. Zarif lüks bir site, randevuyla tasarım görüşmesi.",
+  "plan": {
+    "title": "Karakaş Mücevher",
+    "language": "tr",
+    "style": "luxury classic",
+    "palette": {
+      "primary": "#1e3a5f",
+      "secondary": "#fdfcf8",
+      "accent": "#c9a227",
+      "text": "#1a1a1a"
+    },
+    "font": "Cormorant Garamond",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Karakaş logosu, Koleksiyon, Özel Tasarım, Randevu bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "1962'den beri Kapalıçarşı'da üç kuşak kuyumculuk, Randevu Al butonu"
+      },
+      {
+        "id": "collection",
+        "type": "products",
+        "goal": "Tektaş pırlanta 0,30 ct 68.000₺'den, alyans çifti 24.000₺'den, beştaş 95.000₺'den, inci küpe 18.500₺"
+      },
+      {
+        "id": "custom",
+        "type": "services",
+        "goal": "Kişiye özel tasarım süreci: görüşme, 3D çizim, mum model ve atölyede üretim"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Kapalıçarşı Kalpakçılar Caddesi adresi, telefon ve ad, telefon, ilgi alanı, tarih alanlı randevu formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Marka adı, sertifika bilgisi ve telif yılı"
+      }
+    ]
+  }
+}

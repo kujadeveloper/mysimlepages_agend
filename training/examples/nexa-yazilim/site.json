@@ -1,0 +1,20 @@
+{
+  "brief": "nexayazilim.com için kurumsal site yap: anasayfa, hakkımızda, hizmetlerimiz, kariyer, blog ve iletişim olsun. kariyer bölümünde açık pozisyonlar ve iş başvuru formu, iletişimde de ayrı bir iletişim formu olsun",
+  "plan": {
+    "title": "Nexa Yazılım",
+    "language": "tr",
+    "style": "modern corporate tech",
+    "palette": {"primary": "#2563eb", "secondary": "#f8fafc", "accent": "#a78bfa", "text": "#0f172a"},
+    "font": "Manrope",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Nexa logosu, Hakkımızda, Hizmetler, Kariyer, Blog, İletişim bağlantıları, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "İstanbul merkezli yazılım şirketi: kurumsal web, mobil ve yapay zekâ çözümleri, Hizmetlerimiz ve Bize Katılın butonları"},
+      {"id": "about", "type": "about", "goal": "2015'te kurulan 45 kişilik ekip, 120+ proje, misyon ve değerler"},
+      {"id": "services", "type": "services", "goal": "Kurumsal web uygulamaları, mobil uygulama, yapay zekâ entegrasyonu ve bulut altyapı hizmetleri"},
+      {"id": "careers", "type": "careers", "goal": "Kıdemli backend, frontend, mobil geliştirici ve UX tasarımcı açık pozisyonları ile ad, e-posta, telefon, pozisyon, CV bağlantısı, ön yazı ve KVKK onaylı iş başvuru formu"},
+      {"id": "blog", "type": "blog", "goal": "Mühendislik blogundan üç yazı: monolitten mikroservise geçiş, LLM ile müşteri destek botu, ekip içi kod inceleme kültürü"},
+      {"id": "contact", "type": "contact", "goal": "Maslak ofis adresi, telefon, e-posta ve ad, e-posta, konu, mesaj alanlı iletişim formu"},
+      {"id": "footer", "type": "footer", "goal": "Çok sütunlu: şirket, bağlantılar, iletişim ve telif yılı"}
+    ]
+  }
+}

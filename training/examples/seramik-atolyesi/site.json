@@ -1,0 +1,47 @@
+{
+  "brief": "Kadıköy Yeldeğirmeni'nde seramik atölyesi. Çömlek çarkı kursları, el şekillendirme, tek seferlik workshop (sevgililer, doğum günü grupları), kendi ürünlerimizi de satıyoruz. Toprak tonları, el yapımı his.",
+  "plan": {
+    "title": "Toprak Ana Seramik Atölyesi",
+    "language": "tr",
+    "style": "earthy handmade",
+    "palette": {
+      "primary": "#9a3412",
+      "secondary": "#faf6f1",
+      "accent": "#d6b89c",
+      "text": "#2b211b"
+    },
+    "font": "Fraunces",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Toprak Ana logosu, Kurslar, Workshop, Dükkân, İletişim bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Yeldeğirmeni'nde çamura dokunmak için atölye, Workshop'a Katıl butonu"
+      },
+      {
+        "id": "courses",
+        "type": "services",
+        "goal": "8 haftalık çark kursu 7.500₺, el şekillendirme kursu 6.000₺ ve tek seferlik 3 saatlik workshop 1.400₺"
+      },
+      {
+        "id": "shop",
+        "type": "products",
+        "goal": "El yapımı kupa 650₺, servis tabağı 1.100₺, vazo 1.450₺ ve ikili espresso fincan seti 900₺"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Yeldeğirmeni adresi, Instagram ve ad, telefon, etkinlik türü, kişi sayısı, tarih alanlı rezervasyon formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Atölye adı ve telif yılı"
+      }
+    ]
+  }
+}

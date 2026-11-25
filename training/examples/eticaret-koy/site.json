@@ -1,0 +1,18 @@
+{
+  "brief": "köyden doğal ürünler online satış: çiçek balı, kars kaşarı, köy tereyağı, tarhana, erişte. kilo fiyatlarıyla ürünler, nasıl sipariş verilir, kargo bilgisi ve sipariş takip olsun. samimi doğal bir site",
+  "plan": {
+    "title": "Bizim Köy Doğal Ürünler",
+    "language": "tr",
+    "style": "rustic friendly ecommerce",
+    "palette": {"primary": "#3f6212", "secondary": "#fdfaf1", "accent": "#f59e0b", "text": "#1f2a14"},
+    "font": "Bitter",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Bizim Köy logosu, Ürünler, Nasıl Sipariş, Sipariş Takip bağlantıları ve Sepet, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Artvin yaylalarından ve Kars'tan katkısız ürünler, Ürünleri Gör butonu ve aracı yok vurgusu"},
+      {"id": "products", "type": "products", "goal": "Yayla çiçek balı 850₺/kg, Kars kaşarı 720₺/kg, köy tereyağı 980₺/kg, ev tarhanası 380₺/kg, el yapımı erişte 260₺/kg kartları; miktar seçimi ve Sepete Ekle"},
+      {"id": "process", "type": "process", "goal": "Siparişi ver, üreticiden çıkar, soğuk zincirle 2 günde kapında adımları"},
+      {"id": "order-tracking", "type": "order-tracking", "goal": "Sipariş numarası ve telefon alanlı sipariş takip formu"},
+      {"id": "footer", "type": "footer", "goal": "Marka, WhatsApp hattı ve telif yılı"}
+    ]
+  }
+}

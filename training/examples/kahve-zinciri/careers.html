@@ -1,0 +1,24 @@
+<section id="careers" class="px-6 py-16 md:py-24">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="text-3xl font-bold md:text-4xl">Açık Pozisyonlar</h2>
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <article class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5"><h3 class="text-xl font-semibold">Barista</h3><p class="mt-1 text-sm opacity-70">Tüm şubeler · tam ya da yarı zamanlı</p><p class="mt-4 font-semibold text-[var(--primary)]">28.000 – 32.000 ₺ + prim</p></article>
+      <article class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5"><h3 class="text-xl font-semibold">Vardiya Sorumlusu</h3><p class="mt-1 text-sm opacity-70">Kadıköy, Beşiktaş, Alsancak · tam zamanlı</p><p class="mt-4 font-semibold text-[var(--primary)]">36.000 – 42.000 ₺ + prim</p></article>
+      <article class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5"><h3 class="text-xl font-semibold">Şube Müdürü</h3><p class="mt-1 text-sm opacity-70">Yeni açılacak Ataşehir şubesi · tam zamanlı</p><p class="mt-4 font-semibold text-[var(--primary)]">55.000 – 65.000 ₺ + prim</p></article>
+    </div>
+    <form class="mt-12 space-y-5 rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 md:p-10">
+      <h3 class="text-2xl font-bold">Başvuru Formu</h3>
+      <div class="grid gap-5 md:grid-cols-3">
+        <div><label for="j-name" class="block font-semibold">Ad Soyad</label><input id="j-name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="j-phone" class="block font-semibold">Telefon</label><input id="j-phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="j-email" class="block font-semibold">E-posta</label><input id="j-email" name="email" type="email" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="j-position" class="block font-semibold">Pozisyon</label><select id="j-position" name="position" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Barista</option><option>Vardiya Sorumlusu</option><option>Şube Müdürü</option></select></div>
+        <div><label for="j-branch" class="block font-semibold">Tercih ettiğin şube</label><select id="j-branch" name="branch" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Fark etmez</option><option>Kadıköy</option><option>Beşiktaş</option><option>Ataşehir</option><option>Alsancak (İzmir)</option></select></div>
+        <div><label for="j-exp" class="block font-semibold">Deneyim</label><select id="j-exp" name="experience" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Deneyimim yok</option><option>1 yıldan az</option><option>1–3 yıl</option><option>3 yıldan fazla</option></select></div>
+      </div>
+      <div><label for="j-letter" class="block font-semibold">Kendinden kısaca bahset</label><textarea id="j-letter" name="cover_letter" rows="3" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></textarea></div>
+      <label class="flex items-start gap-3 text-sm"><input type="checkbox" name="kvkk" required class="mt-1"><span>Başvurum kapsamında kişisel verilerimin işlenmesine onay veriyorum (KVKK).</span></label>
+      <button type="submit" class="inline-block rounded-full bg-[var(--primary)] px-8 py-3 font-semibold text-white hover:opacity-90">Başvuruyu Gönder</button>
+    </form>
+  </div>
+</section>

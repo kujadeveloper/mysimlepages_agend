@@ -1,0 +1,20 @@
+{
+  "task": "plan",
+  "brief": "Kadıköy'de 1985'ten beri açık bir mahalle fırını için site. Ekşi mayalı ekmekler, simit, poğaça ve pastalar satıyoruz. Sıcak, samimi bir hava olsun; krem ve kahve tonları. Menü, çalışma saatleri ve iletişim formu mutlaka olsun.",
+  "output": {
+    "title": "Tarihi Moda Fırını",
+    "language": "tr",
+    "style": "warm artisan",
+    "palette": {"primary": "#8b4513", "secondary": "#fffaf3", "accent": "#d4a24c", "text": "#2b1d12"},
+    "font": "Lora",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Tarihi Moda Fırını logosu ve Menü, Hakkımızda, Saatler, İletişim bağlantıları"},
+      {"id": "hero", "type": "hero", "goal": "1985'ten beri her sabah taze ekşi mayalı ekmek vurgusu, Menüyü Gör ve Yol Tarifi butonları"},
+      {"id": "menu", "type": "menu", "goal": "Ekşi mayalı ekmek, simit, peynirli poğaça, açma ve günün pastasından oluşan fiyatlı menü"},
+      {"id": "about", "type": "about", "goal": "Üç kuşaktır süren aile fırını hikâyesi ve taş fırında pişirme geleneği"},
+      {"id": "hours", "type": "hours", "goal": "Hafta içi 06:30-20:00, hafta sonu 07:00-21:00 çalışma saatleri"},
+      {"id": "contact", "type": "contact", "goal": "Moda Caddesi adresi, telefon ve sipariş için ad, telefon, mesaj alanlı form"},
+      {"id": "footer", "type": "footer", "goal": "Fırın adı, kısa slogan, bölüm bağlantıları ve telif yılı"}
+    ]
+  }
+}

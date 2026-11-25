@@ -1,0 +1,20 @@
+{
+  "brief": "Mersin merkezli lojistik firması: karayolu parsiyel ve komple yük, depolama, gümrük. kurumsal site, rakamlarla güven verelim. teklif al formu, şoför ve operasyon personeli alımı için kariyer bölümü ve ayrıca iletişim olsun",
+  "plan": {
+    "title": "Akdeniz Hat Lojistik",
+    "language": "tr",
+    "style": "corporate bold logistics",
+    "palette": {"primary": "#c2410c", "secondary": "#f8fafc", "accent": "#1e293b", "text": "#0f172a"},
+    "font": "Barlow",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Akdeniz Hat logosu, Hizmetler, Teklif Al, Kariyer, İletişim bağlantıları, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Tam ekran tır filosu görseli üstünde Mersin Limanı'ndan Avrupa'ya kapıdan kapıya taşımacılık başlığı ve Teklif Al butonu"},
+      {"id": "stats", "type": "stats", "goal": "140 araçlık filo, 22.000 m² depo, 18 ülke, yılda 36.000 sefer istatistik şeridi"},
+      {"id": "services", "type": "services", "goal": "Komple yük, parsiyel taşıma, depolama ve gümrük müşavirliği hizmetleri"},
+      {"id": "quote", "type": "quote", "goal": "Çıkış ve varış şehri, yük tipi, ağırlık, palet sayısı, yükleme tarihi, firma, ad, telefon alanlı teklif formu"},
+      {"id": "careers", "type": "careers", "goal": "Uluslararası tır şoförü, depo operasyon sorumlusu ve dış ticaret uzmanı pozisyonları ile ad, telefon, e-posta, pozisyon, ehliyet sınıfı, deneyim ve KVKK onaylı başvuru formu"},
+      {"id": "contact", "type": "contact", "goal": "Genel merkez adresi, telefon, e-posta ve ad, e-posta, konu, mesaj alanlı iletişim formu"},
+      {"id": "footer", "type": "footer", "goal": "Çok sütunlu: firma, hizmetler, belgeler (K1, R1, ISO 9001) ve telif yılı"}
+    ]
+  }
+}

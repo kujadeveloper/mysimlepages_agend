@@ -1,0 +1,52 @@
+{
+  "brief": "Ayvalık'ta aile zeytinliğimiz var, soğuk sıkım natürel sızma zeytinyağı, kırma zeytin ve zeytinyağlı sabun satıyoruz. Online satışa başlıyoruz, ürünler ve fiyatlar, sipariş whatsapp ile. Doğal, zeytin yeşili.",
+  "plan": {
+    "title": "Hasbahçe Ayvalık Zeytinyağı",
+    "language": "tr",
+    "style": "natural rustic",
+    "palette": {
+      "primary": "#4d7c0f",
+      "secondary": "#fbfaf3",
+      "accent": "#ca8a04",
+      "text": "#1f2a14"
+    },
+    "font": "Lora",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Hasbahçe logosu, Ürünler, Hikayemiz, Sipariş bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Ayvalık'tan 48 saatte soğuk sıkım erken hasat zeytinyağı, Ürünleri Gör ve WhatsApp Sipariş butonları"
+      },
+      {
+        "id": "products",
+        "type": "products",
+        "goal": "1 lt erken hasat 650₺, 5 lt teneke natürel sızma 2.750₺, 1 kg kırma yeşil zeytin 380₺, 3'lü zeytinyağlı sabun 240₺"
+      },
+      {
+        "id": "about",
+        "type": "about",
+        "goal": "Üç kuşaklık aile zeytinliği, 1.200 Ayvalık cinsi ağaç ve 22°C altında soğuk sıkım"
+      },
+      {
+        "id": "faq",
+        "type": "faq",
+        "goal": "Kargo süresi ve ücreti, asit oranı, saklama koşulları hakkında sorular"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "WhatsApp sipariş hattı, e-posta ve zeytinlik adresi"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Marka adı, kısa slogan ve telif yılı"
+      }
+    ]
+  }
+}

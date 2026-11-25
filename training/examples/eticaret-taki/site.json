@@ -1,0 +1,18 @@
+{
+  "brief": "925 ayar gümüş takı online mağaza, el yapımı. kolye, yüzük, küpe, bileklik. isim kolyesi kişiselleştirme siparişi formu olsun, hediye rehberi bölümü, şık minimal tasarım",
+  "plan": {
+    "title": "Ay Işığı Gümüş",
+    "language": "tr",
+    "style": "minimal elegant jewelry",
+    "palette": {"primary": "#475569", "secondary": "#f8f8f7", "accent": "#cbd5e1", "text": "#1e293b"},
+    "font": "Cormorant Garamond",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Ortada AY IŞIĞI logosu, Koleksiyon, Kişiye Özel, Hediye Rehberi bağlantıları ve Sepet, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Tam ekran gümüş kolye görseli üstünde el yapımı 925 ayar gümüş başlığı ve Koleksiyonu Gör butonu"},
+      {"id": "products", "type": "products", "goal": "Kolye, Yüzük, Küpe, Bileklik filtreleri ve hilal kolye 1.190₺, damla küpe 890₺, ince halka yüzük 590₺, zincir bileklik 790₺ kartları"},
+      {"id": "personalize", "type": "quote", "goal": "İsim kolyesi kişiselleştirme formu: isim, yazı tipi, zincir uzunluğu, kaplama rengi, hediye paketi notu; 1.290₺'den"},
+      {"id": "gift-guide", "type": "categories", "goal": "Anneler için, sevgili için, kendine hediye ve 1.000₺ altı hediye rehberi kutuları"},
+      {"id": "footer", "type": "footer", "goal": "Marka, gümüş bakım bilgisi, yardım bağlantıları ve telif yılı"}
+    ]
+  }
+}

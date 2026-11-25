@@ -1,0 +1,47 @@
+{
+  "brief": "Ankara Keçiören'de kombi servisi. Kombi bakımı, arıza onarımı, petek temizliği, kombi montajı. Tüm markalar. Hızlı servis vurgusu, arıza bildir formu.",
+  "plan": {
+    "title": "Isıtan Kombi Servis",
+    "language": "tr",
+    "style": "warm practical",
+    "palette": {
+      "primary": "#b91c1c",
+      "secondary": "#fafaf9",
+      "accent": "#fde68a",
+      "text": "#292524"
+    },
+    "font": "Rubik",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Isıtan logosu, Hizmetler, Fiyatlar ve telefon butonu, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Keçiören ve çevresinde aynı gün kombi servisi, Arıza Bildir ve Hemen Ara butonları"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Kombi bakımı, arıza onarımı, makineli petek temizliği ve kombi montajı"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "Kombi bakımı 1.500₺, petek temizliği daire başı 2.800₺, arıza tespiti 600₺ fiyatları"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Telefon ve ad, telefon, adres, kombi markası, arıza kodu alanlı arıza bildirim formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Firma adı, hizmet bölgeleri ve telif yılı"
+      }
+    ]
+  }
+}

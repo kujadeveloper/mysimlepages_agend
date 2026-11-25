@@ -1,0 +1,19 @@
+{
+  "brief": "modüler koltuk ve mobilya markası, online satış ve istanbul showroom. öne çıkan ürün modüler kanepe kumaş renk seçenekleriyle, diğer ürünler, taksit seçenekleri tablosu, showroom adresi. premium minimal",
+  "plan": {
+    "title": "Lino Mobilya",
+    "language": "tr",
+    "style": "premium minimal furniture",
+    "palette": {"primary": "#44403c", "secondary": "#f5f3ef", "accent": "#d6a77a", "text": "#1c1917"},
+    "font": "Manrope",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "LINO logosu, Kanepe, Ürünler, Taksit, Showroom bağlantıları ve Sepet, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Alt kenara yaslanmış tam ekran salon görseli üstünde modüler kanepe başlığı ve Kanepeyi İncele butonu"},
+      {"id": "spotlight", "type": "products", "goal": "Lino Modüler Kanepe 3'lü 54.900₺: kumaş renk seçenekleri, modül sayısı, ölçüler, 4 hafta teslim ve Sepete Ekle"},
+      {"id": "products", "type": "products", "goal": "Meşe sehpa 8.900₺, berjer 18.500₺, TV ünitesi 14.900₺, yemek masası 26.500₺ ürün kartları"},
+      {"id": "financing", "type": "comparison", "goal": "Peşin %5 indirim, 6 taksit faizsiz, 12 taksit ve alışveriş kredisi karşılaştırma tablosu, 54.900₺ kanepe için aylık tutarlarla"},
+      {"id": "location", "type": "location", "goal": "Nişantaşı showroom adresi, çalışma saatleri ve randevulu kumaş danışmanlığı"},
+      {"id": "footer", "type": "footer", "goal": "Marka, teslimat ve garanti bilgisi, telif yılı"}
+    ]
+  }
+}

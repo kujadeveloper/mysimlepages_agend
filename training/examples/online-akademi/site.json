@@ -1,0 +1,19 @@
+{
+  "brief": "online eğitim platformu: excel, power bi, python veri analizi kursları satıyoruz. tek tek kurs satın alma ve aylık üyelik ile tüm kurslara erişim var. kurslar ürün olarak listelensin, üyelik planları ve üye ol formu, sss olsun",
+  "plan": {
+    "title": "Veriyolu Akademi",
+    "language": "tr",
+    "style": "friendly edtech",
+    "palette": {"primary": "#7c3aed", "secondary": "#faf5ff", "accent": "#fbbf24", "text": "#1e1b4b"},
+    "font": "Lexend",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Veriyolu logosu, Kurslar, Üyelik, SSS bağlantıları ve Üye Ol butonu, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "İş hayatında veri analizi öğren vaadi, 18.000 öğrenci ve 4,8 puan istatistiği, Kursları Gör ve Ücretsiz Üye Ol butonları"},
+      {"id": "courses", "type": "products", "goal": "Excel ile İleri Analiz 1.290₺, Power BI Sıfırdan 1.490₺, Python ile Veri Analizi 1.890₺, SQL Temelleri 990₺ kurs kartları; süre, seviye ve puanla"},
+      {"id": "membership", "type": "membership", "goal": "Aylık 449₺ ve yıllık 3.990₺ tüm kurslara erişim planları, sertifika ve canlı soru-cevap dahil"},
+      {"id": "faq", "type": "faq", "goal": "Kursa ne kadar süre erişirim, sertifika geçerli mi, iade var mı, kurumsal fatura soruları"},
+      {"id": "register", "type": "register", "goal": "Ad, e-posta, telefon, şifre, şifre tekrar ve KVKK onaylı ücretsiz üye kayıt formu, giriş yap bağlantısı"},
+      {"id": "footer", "type": "footer", "goal": "Platform adı, bağlantılar ve telif yılı"}
+    ]
+  }
+}

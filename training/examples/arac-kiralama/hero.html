@@ -1,0 +1,19 @@
+<section id="hero" class="bg-[var(--primary)] px-6 py-16 text-white md:py-24">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
+    <div>
+      <h1 class="text-4xl font-bold leading-tight md:text-6xl">Uçaktan in, 10 dakikada yola çık.</h1>
+      <p class="mt-6 text-lg opacity-90">Antalya Havalimanı dış hatlar ve iç hatlarda isim tabelalı karşılama. Tam kasko ve sınırsız kilometre her fiyata dahil.</p>
+      <ul class="mt-6 space-y-2 opacity-90"><li>✓ Depozitosuz kiralama seçeneği</li><li>✓ Ücretsiz bebek koltuğu</li><li>✓ 48 saat öncesine kadar ücretsiz iptal</li></ul>
+    </div>
+    <form class="space-y-4 rounded-2xl bg-white p-6 text-[var(--text)] shadow-xl">
+      <p class="text-lg font-bold">Hızlı Fiyat Al</p>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div><label for="pickup" class="block text-sm font-semibold">Alış tarihi</label><input id="pickup" name="pickup" type="date" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="return" class="block text-sm font-semibold">Dönüş tarihi</label><input id="return" name="return" type="date" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      </div>
+      <div><label for="class" class="block text-sm font-semibold">Araç sınıfı</label><select id="class" name="class" class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Ekonomik</option><option>SUV</option><option>9 kişilik minibüs</option></select></div>
+      <div><label for="phone" class="block text-sm font-semibold">Telefon</label><input id="phone" name="phone" type="tel" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--accent)] px-6 py-3 font-bold text-black hover:opacity-90">Fiyatı Göster</button>
+    </form>
+  </div>
+</section>

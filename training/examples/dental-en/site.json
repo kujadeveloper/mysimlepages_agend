@@ -1,0 +1,19 @@
+{
+  "brief": "Dental clinic in Antalya for international patients (UK, Germany). Implants, veneers, Hollywood smile, all-on-4. Show treatments with prices in euro, patient reviews, and an online appointment / free consultation form. Also a separate contact section with WhatsApp.",
+  "plan": {
+    "title": "Lara Smile Dental Clinic",
+    "language": "en",
+    "style": "clean bright medical tourism",
+    "palette": {"primary": "#0e7490", "secondary": "#f6fbfc", "accent": "#fcd34d", "text": "#0b2730"},
+    "font": "Plus Jakarta Sans",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Clinic logo, Treatments, Reviews, Book links and a WhatsApp button, mobile ☰ menu"},
+      {"id": "hero", "type": "hero", "goal": "Full-bleed sea-view clinic image with headline about smile makeovers in Antalya, free online consultation button and 3 trust badges"},
+      {"id": "treatments", "type": "pricing", "goal": "Price table in euro: implant €450, zirconia crown €180, e.max veneer €250, Hollywood smile from €3,600, all-on-4 from €4,900, with days needed in Antalya"},
+      {"id": "testimonials", "type": "testimonials", "goal": "Two patient reviews from Manchester and Munich with treatment done"},
+      {"id": "appointment", "type": "appointment", "goal": "Appointment form: treatment, preferred arrival date, name, email, WhatsApp number, country, upload note about X-ray, with what's included (hotel, transfer)"},
+      {"id": "contact", "type": "contact", "goal": "Clinic address, WhatsApp, email and a contact form with name, email, subject and message"},
+      {"id": "footer", "type": "footer", "goal": "Clinic name, licence number and copyright year"}
+    ]
+  }
+}

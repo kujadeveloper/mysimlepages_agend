@@ -1,0 +1,47 @@
+{
+  "brief": "Moda'da smash burger dükkanı. Dana kıyma her gün çekiliyor, patates elde kesiliyor. Gençlere hitap eden, koyu, sarı-turuncu, iştah açan bir site. Menü ve paket servis linkleri (Yemeksepeti, Getir).",
+  "plan": {
+    "title": "Smashville Moda",
+    "language": "tr",
+    "style": "bold dark street food",
+    "palette": {
+      "primary": "#c2410c",
+      "secondary": "#111111",
+      "accent": "#fde047",
+      "text": "#fafafa"
+    },
+    "font": "Anton",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "SMASHVILLE logosu, Menü, Hikaye, Sipariş bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Moda'nın smash burgeri, her gün taze çekilen dana kıyma, Menüye Bak ve Sipariş Ver butonları"
+      },
+      {
+        "id": "menu",
+        "type": "menu",
+        "goal": "Classic Smash 380₺, Double Smash 490₺, Truffle Smash 540₺, Chicken Crunch 420₺, el kesimi patates 140₺, milkshake 190₺"
+      },
+      {
+        "id": "about",
+        "type": "about",
+        "goal": "Günlük çekilen %20 yağlı dana kıyma, patates ekmeği ve ev yapımı sos vurgusu"
+      },
+      {
+        "id": "order",
+        "type": "cta",
+        "goal": "Yemeksepeti ve Getir'den paket sipariş butonları, adres ve saatler"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Marka adı, Instagram ve telif yılı"
+      }
+    ]
+  }
+}

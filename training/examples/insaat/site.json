@@ -1,0 +1,19 @@
+{
+  "brief": "Kocaeli merkezli inşaat ve taahhüt firması. Konut projeleri, sanayi tesisleri, kentsel dönüşüm. 1998'den beri, 60+ proje. Kurumsal güven veren site, referanslar ve tamamlanan projeler zaman çizelgesi.",
+  "plan": {
+    "title": "Taşkın Yapı İnşaat",
+    "language": "tr",
+    "style": "corporate industrial",
+    "palette": {"primary": "#334155", "secondary": "#f8fafc", "accent": "#f59e0b", "text": "#0f172a"},
+    "font": "Roboto Condensed",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Üst bilgi çubuğunda telefon ve e-posta, altında Taşkın Yapı logosu, Hizmetler, Projeler, Referanslar, İletişim bağlantıları ve mobil ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Tam ekran şantiye görseli üstünde 1998'den beri güvenle inşa ediyoruz başlığı ve Projelerimiz butonu"},
+      {"id": "stats", "type": "stats", "goal": "28 yıl, 64 tamamlanan proje, 3.100 konut, 420.000 m² inşaat alanı istatistik şeridi"},
+      {"id": "services", "type": "services", "goal": "Konut projeleri, sanayi tesisleri, kentsel dönüşüm ve anahtar teslim taahhüt"},
+      {"id": "projects", "type": "about", "goal": "Yıllara göre tamamlanan projeler zaman çizelgesi: 2019 Başiskele Konutları, 2021 Dilovası fabrika, 2023 İzmit kentsel dönüşüm, 2025 Kartepe villaları"},
+      {"id": "partners", "type": "partners", "goal": "Çalışılan kurum logoları şeridi: TOKİ, bankalar ve sanayi firmaları"},
+      {"id": "footer", "type": "footer", "goal": "Çok sütunlu: firma özeti, hizmetler, iletişim bilgileri ve telif yılı"}
+    ]
+  }
+}

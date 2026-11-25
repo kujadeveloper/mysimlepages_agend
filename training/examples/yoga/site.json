@@ -1,0 +1,52 @@
+{
+  "brief": "Fethiye'de yoga stüdyosu ve yıllık retreat. hatha vinyasa yin dersleri. haftalık ders programı ve retreat tarihleri olsun, doğal sakin renkler",
+  "plan": {
+    "title": "Likya Yoga Evi",
+    "language": "tr",
+    "style": "calm natural",
+    "palette": {
+      "primary": "#3f6212",
+      "secondary": "#f7f5ef",
+      "accent": "#b08a5a",
+      "text": "#26301f"
+    },
+    "font": "Jost",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Likya Yoga Evi logosu, Dersler, Program, Retreat, İletişim bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Alt kenara yaslanmış tam ekran zeytinlik shala görseli üstünde başlık, İlk Dersine Gel ve Retreat Tarihleri butonları"
+      },
+      {
+        "id": "classes",
+        "type": "services",
+        "goal": "Hatha, Vinyasa, Yin ve başlangıç seviyesi derslerinin açıklamaları"
+      },
+      {
+        "id": "schedule",
+        "type": "hours",
+        "goal": "Pazartesi-Pazar haftalık ders saatleri tablosu ve tek ders 450₺, 8'li paket 3.200₺ fiyatları"
+      },
+      {
+        "id": "retreat",
+        "type": "cta",
+        "goal": "Mayıs ve Eylül'de 5 günlük Kabak Koyu retreat'i, konaklama dahil fiyat ve kayıt butonu"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Stüdyo adresi, WhatsApp ve e-posta"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Stüdyo adı, kısa söz ve telif yılı"
+      }
+    ]
+  }
+}

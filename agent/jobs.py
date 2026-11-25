@@ -28,6 +28,12 @@ CREATE TABLE IF NOT EXISTS jobs (
 );
 CREATE INDEX IF NOT EXISTS jobs_status ON jobs(status, created_at);
 """
+# Sonradan eklenen sütunlar (mevcut veritabanlarına ALTER TABLE ile eklenir)
+MIGRATIONS = {
+    "parent_id": "TEXT",      # düzeltme ise üzerine çalışılan tasarım
+    "instruction": "TEXT",    # kullanıcının düzeltme talimatı
+    "sections": "TEXT",       # {bölüm_id: html}: düzeltmede değişmeyen bölümler aynen korunur
+}
 
 
 def _now():
@@ -41,6 +47,11 @@ class JobStore:
         self._claim_lock = threading.Lock()
         with self._conn() as c:
             c.executescript(SCHEMA)
+            have = {r[1] for r in c.execute("PRAGMA table_info(jobs)")}
+            for col, typ in MIGRATIONS.items():
+                if col not in have:
+                    c.execute(f"ALTER TABLE jobs ADD COLUMN {col} {typ}")
+            c.execute("CREATE INDEX IF NOT EXISTS jobs_parent ON jobs(parent_id)")
             c.execute("UPDATE jobs SET status='queued', stage=NULL, progress=0 WHERE status='running'")
 
     def _conn(self) -> sqlite3.Connection:
@@ -52,10 +63,12 @@ class JobStore:
             self._local.conn = c
         return c
 
-    def create(self, brief: str, user_ref: str | None) -> str:
+    def create(self, brief: str, user_ref: str | None, parent_id: str | None = None,
+               instruction: str | None = None) -> str:
         job_id = uuid.uuid4().hex
-        self._conn().execute("INSERT INTO jobs(id, status, brief, user_ref, created_at) VALUES (?,?,?,?,?)",
-                             (job_id, "queued", brief, user_ref, _now()))
+        self._conn().execute(
+            "INSERT INTO jobs(id, status, brief, user_ref, parent_id, instruction, created_at) VALUES (?,?,?,?,?,?,?)",
+            (job_id, "queued", brief, user_ref, parent_id, instruction, _now()))
         return job_id
 
     def get(self, job_id: str) -> dict | None:
@@ -63,14 +76,15 @@ class JobStore:
         if row is None:
             return None
         d = dict(row)
-        for k in ("plan", "metrics", "trace"):
+        for k in ("plan", "metrics", "trace", "sections"):
             d[k] = json.loads(d[k]) if d[k] else None
         return d
 
     def list_for(self, user_ref: str, limit: int = 20) -> list[dict]:
         rows = self._conn().execute(
-            "SELECT id, status, substr(brief, 1, 200) AS brief, rating, created_at, finished_at FROM jobs "
-            "WHERE user_ref=? ORDER BY created_at DESC LIMIT ?", (user_ref, limit)).fetchall()
+            "SELECT id, status, substr(brief, 1, 200) AS brief, parent_id, substr(instruction, 1, 200) AS instruction, "
+            "rating, created_at, finished_at FROM jobs WHERE user_ref=? ORDER BY created_at DESC LIMIT ?",
+            (user_ref, limit)).fetchall()
         return [dict(r) for r in rows]
 
     def count_since(self, user_ref: str, since_iso: str) -> int:
@@ -95,12 +109,12 @@ class JobStore:
     def progress(self, job_id: str, stage: str, value: float):
         self._conn().execute("UPDATE jobs SET stage=?, progress=? WHERE id=?", (stage, round(value, 3), job_id))
 
-    def finish(self, job_id: str, *, html, plan, metrics, trace, model_version):
+    def finish(self, job_id: str, *, html, plan, metrics, trace, model_version, sections=None):
         self._conn().execute(
             "UPDATE jobs SET status='done', stage='done', progress=1, html=?, plan=?, metrics=?, trace=?, "
-            "model_version=?, finished_at=? WHERE id=?",
+            "model_version=?, sections=?, finished_at=? WHERE id=?",
             (html, json.dumps(plan, ensure_ascii=False), json.dumps(metrics), json.dumps(trace, ensure_ascii=False),
-             model_version, _now(), job_id))
+             model_version, json.dumps(sections, ensure_ascii=False) if sections is not None else None, _now(), job_id))
 
     def fail(self, job_id: str, error: str):
         self._conn().execute("UPDATE jobs SET status='failed', error=?, finished_at=? WHERE id=?",

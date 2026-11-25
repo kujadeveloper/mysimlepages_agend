@@ -1,0 +1,52 @@
+{
+  "brief": "kuaförüm site lazım. bağdat caddesinde kadın kuaförü. boya, balayaj, keratin, gelin saçı, manikür. instagramdan randevu alıyoruz şu an",
+  "plan": {
+    "title": "Saloon Mira Bağdat",
+    "language": "tr",
+    "style": "soft feminine elegant",
+    "palette": {
+      "primary": "#9f1239",
+      "secondary": "#fdf6f3",
+      "accent": "#e8b4a6",
+      "text": "#3b2424"
+    },
+    "font": "Playfair Display",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Saloon Mira logosu, Hizmetler, Fiyatlar, Gelin, Randevu bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Bağdat Caddesi'nde renk ve bakım uzmanı kuaför, Randevu Al ve Fiyatlar butonları"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Saç boyama, balayaj, keratin bakımı, kesim-fön ve manikür-pedikür kartları"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "Kesim-fön 900₺, dip boya 1.400₺, balayaj 4.500₺'den, keratin 3.500₺'den, manikür 600₺ fiyat listesi"
+      },
+      {
+        "id": "bridal",
+        "type": "cta",
+        "goal": "Gelin saçı ve makyajı paketi, prova dahil 12.000₺, gelin randevusu çağrısı"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Bağdat Caddesi adresi, telefon, Instagram ve ad, telefon, hizmet, tarih alanlı randevu formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Salon adı, çalışma saatleri ve telif yılı"
+      }
+    ]
+  }
+}

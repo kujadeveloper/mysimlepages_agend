@@ -1,0 +1,47 @@
+{
+  "brief": "spor salonu kadıköy. crossfit, personal training, grup dersleri. 7/24 açık. enerjik agresif bir site olsun üyelik fiyatları olsun",
+  "plan": {
+    "title": "Ironbox Kadıköy",
+    "language": "tr",
+    "style": "bold dark athletic",
+    "palette": {
+      "primary": "#dc2626",
+      "secondary": "#0b0b0f",
+      "accent": "#facc15",
+      "text": "#f5f5f5"
+    },
+    "font": "Barlow Condensed",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "IRONBOX logosu, Dersler, Üyelik, İletişim bağlantıları ve Ücretsiz Dene butonu, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Tam ekran karanlık barbell görseli üstünde 7/24 açık salon başlığı, İlk Ders Ücretsiz butonu ve 3 istatistik"
+      },
+      {
+        "id": "classes",
+        "type": "services",
+        "goal": "CrossFit WOD, olimpik halter, HIIT, mobilite ve birebir personal training dersleri"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "Aylık 2.900₺, 3 aylık 7.800₺, yıllık 26.000₺ üyelik paketleri ve PT ek ücreti"
+      },
+      {
+        "id": "cta",
+        "type": "cta",
+        "goal": "İlk dersin ücretsiz olduğunu hatırlatan, WhatsApp ile kayıt çağrısı"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Salon adı, adres, sosyal medya ve telif yılı"
+      }
+    ]
+  }
+}

@@ -54,4 +54,14 @@ def fix_palette(p: dict[str, str]) -> dict[str, str]:
         if luminance(bg) <= 0.5 or contrast(p["primary"], bg) >= 3:
             break
         p["primary"] = _shade(p["primary"], 0.85)
+    # Koyu zeminde ana renk zemine karışmamalı (ör. #1a202c düğme, #191919 zemin). Beyaz düğme metni okunur kaldıkça
+    # adım adım açarız; koyu zeminde bu iki koşulu birlikte sağlayan dar bir aralık vardır.
+    if luminance(bg) <= 0.5:
+        for _ in range(24):
+            if contrast(p["primary"], bg) >= 2.5:
+                break
+            lighter = _shade(p["primary"], 1.06) if max(_hex_to_rgb(p["primary"])) > 0.02 else "#3a3a3a"
+            if contrast("#ffffff", lighter) < 4.5:
+                break
+            p["primary"] = lighter
     return p

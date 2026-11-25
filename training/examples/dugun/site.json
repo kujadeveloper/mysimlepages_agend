@@ -1,0 +1,52 @@
+{
+  "brief": "Antalya'da düğün organizasyon firmasıyız. Kır düğünü, sahil nikahı, kına gecesi. Zarif, romantik bir site istiyoruz. Paketler ve galeri olsun, teklif formu da.",
+  "plan": {
+    "title": "Zeytin Dalı Organizasyon",
+    "language": "tr",
+    "style": "romantic elegant",
+    "palette": {
+      "primary": "#8a4b5a",
+      "secondary": "#fdf8f5",
+      "accent": "#c9a96e",
+      "text": "#3a2a2e"
+    },
+    "font": "Cormorant Garamond",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Zeytin Dalı logosu, Hizmetler, Galeri, Paketler, Teklif bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Ekranı kaplayan zeytinlikte düğün masası görseli üstünde ortalanmış başlık, Teklif Al ve Galeriyi Gör butonları"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Kır düğünü, sahil nikahı ve kına gecesi organizasyonlarının açıklamaları"
+      },
+      {
+        "id": "gallery",
+        "type": "gallery",
+        "goal": "Zeytinlikte düğün masası, sahilde nikah kemeri, kına tepsisi ve ışık süslemesi görselleri"
+      },
+      {
+        "id": "packages",
+        "type": "pricing",
+        "goal": "Nikah 85.000₺, Kır Düğünü 220.000₺ ve Kına Gecesi 65.000₺ paketleri ve içerikleri"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Lara ofis adresi, telefon ve isimler, tarih, davetli sayısı, organizasyon türü alanlı teklif formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Firma adı, kısa slogan, Instagram ve telif yılı"
+      }
+    ]
+  }
+}

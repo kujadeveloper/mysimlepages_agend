@@ -1,0 +1,19 @@
+{
+  "brief": "online petshop: kedi ve köpek maması, kum, oyuncak, aksesuar. otomatik tekrar eden mama siparişi (abonelik) %10 indirimli. kategoriler, çok satanlar, abonelik ve sss. renkli sevimli tasarım",
+  "plan": {
+    "title": "Mama Kapında",
+    "language": "tr",
+    "style": "playful friendly ecommerce",
+    "palette": {"primary": "#7c3aed", "secondary": "#faf7ff", "accent": "#fde047", "text": "#1e1b4b"},
+    "font": "Nunito",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Mama Kapında logosu, arama kutusu, Kedi, Köpek, Otomatik Sipariş, SSS bağlantıları ve Sepet, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Mama bitmeden kapında, otomatik siparişte %10 indirim, Kedi ve Köpek alışveriş butonları"},
+      {"id": "categories", "type": "categories", "goal": "Kedi maması, köpek maması, kedi kumu, oyuncak, tasma ve aksesuar kategori kutuları"},
+      {"id": "products", "type": "products", "goal": "Çok satanlar: tahılsız kedi maması 10 kg 2.490₺, kuzu etli köpek maması 15 kg 2.890₺, bentonit kum 10 L 289₺, tırmalama tahtası 459₺; puan, indirim ve Sepete Ekle"},
+      {"id": "membership", "type": "membership", "goal": "Otomatik sipariş: her 2, 4 ya da 6 haftada bir, %10 indirim, ücretsiz kargo, istediğin zaman iptal; nasıl çalışır adımları"},
+      {"id": "faq", "type": "faq", "goal": "Kargo süresi, otomatik siparişi değiştirme, son kullanma tarihi ve iade soruları"},
+      {"id": "footer", "type": "footer", "goal": "Marka, yardım bağlantıları ve telif yılı"}
+    ]
+  }
+}

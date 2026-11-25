@@ -1,0 +1,19 @@
+{
+  "brief": "Kaz Dağları'nda glamping tesisi. Kubbe çadırlar, ağaç evler, sonsuzluk havuzu, sabah yogası, köy kahvaltısı. Doğa içinde lüks konaklama. Konaklama tipleri, olanaklar ve SSS olsun.",
+  "plan": {
+    "title": "Ida Glamp Kaz Dağları",
+    "language": "tr",
+    "style": "nature luxury",
+    "palette": {"primary": "#365314", "secondary": "#f8f6ef", "accent": "#d9a35b", "text": "#1f2a14"},
+    "font": "Josefin Sans",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Şeffaf, hero görselinin üzerinde Ida Glamp logosu, Konaklama, Olanaklar, SSS bağlantıları ve Rezervasyon butonu"},
+      {"id": "hero", "type": "hero", "goal": "Tam ekran orman görseli üstünde çam ağaçları arasında yıldızların altında uyumak başlığı"},
+      {"id": "stays", "type": "products", "goal": "Zigzag satırlarda kubbe çadır 7.500₺, ağaç ev 9.800₺, aile bungalovu 12.000₺ gecelik, kahvaltı dahil"},
+      {"id": "amenities", "type": "features", "goal": "Altı ikonlu olanak ızgarası: sonsuzluk havuzu, sabah yogası, köy kahvaltısı, şömine, yürüyüş rotaları, şarj istasyonu"},
+      {"id": "faq", "type": "faq", "goal": "Evcil hayvan, ulaşım, çocuk yaşı ve iptal koşulları soruları iki sütunlu"},
+      {"id": "contact", "type": "cta", "goal": "WhatsApp ile rezervasyon çağrısı ve adres"},
+      {"id": "footer", "type": "footer", "goal": "Tesis adı, turizm belgesi ve telif yılı"}
+    ]
+  }
+}

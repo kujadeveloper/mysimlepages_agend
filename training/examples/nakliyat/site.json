@@ -1,0 +1,47 @@
+{
+  "brief": "evden eve nakliyat firması, bursa merkezli şehirler arası da yapıyoruz. asansörlü taşıma, ambalajlama, sigortalı. fiyat teklifi formu olsun",
+  "plan": {
+    "title": "Güven Evden Eve Nakliyat",
+    "language": "tr",
+    "style": "reliable bold",
+    "palette": {
+      "primary": "#1d4ed8",
+      "secondary": "#f8fafc",
+      "accent": "#f97316",
+      "text": "#0f172a"
+    },
+    "font": "Rubik",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Güven Nakliyat logosu, Hizmetler, Nasıl Çalışır, Teklif Al bağlantıları ve telefon, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Bursa'dan tüm Türkiye'ye sigortalı ve asansörlü evden eve taşıma, Ücretsiz Teklif Al butonu"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Şehir içi taşıma, şehirler arası taşıma, asansörlü taşıma, ambalajlama ve eşya depolama"
+      },
+      {
+        "id": "process",
+        "type": "features",
+        "goal": "Ekspertiz, sözleşme ve sigorta, ambalaj ve yükleme, kurulum adımlarının zamanlarıyla dikey zaman çizelgesi"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Telefon ve ad, telefon, nereden, nereye, ev tipi, taşınma tarihi alanlı teklif formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Firma adı, K1 yetki belgesi bilgisi ve telif yılı"
+      }
+    ]
+  }
+}

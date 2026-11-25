@@ -1,0 +1,19 @@
+{
+  "brief": "Online sneaker store based in Istanbul, shipping across Europe. New arrivals, a featured drop with size selection, the brands we carry and a newsletter for restocks. Bold street style.",
+  "plan": {
+    "title": "Kickbase",
+    "language": "en",
+    "style": "bold street ecommerce",
+    "palette": {"primary": "#111827", "secondary": "#f5f5f4", "accent": "#f97316", "text": "#111827"},
+    "font": "Archivo",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "KICKBASE logo, search form, New Arrivals, Drop, Brands links and Cart (1), mobile ☰ menu"},
+      {"id": "hero", "type": "hero", "goal": "Full-bleed sneaker image with the headline for this week's drop and Shop the Drop button"},
+      {"id": "new-arrivals", "type": "products", "goal": "Horizontally scrolling new arrivals: five sneakers with brand, model, colorway, euro price and Add to cart"},
+      {"id": "drop", "type": "products", "goal": "Featured product spotlight: Air Max 1 'Clay' €169 with image, size selector EU 38-46, color, stock note and Add to cart"},
+      {"id": "partners", "type": "partners", "goal": "Brand strip: Nike, adidas, New Balance, ASICS, Salomon"},
+      {"id": "newsletter", "type": "newsletter", "goal": "Restock alerts and early drop access email signup"},
+      {"id": "footer", "type": "footer", "goal": "Multi-column footer with shop links, help links, EU shipping note and copyright year"}
+    ]
+  }
+}

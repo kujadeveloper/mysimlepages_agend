@@ -1,0 +1,22 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-bold md:text-4xl">Randevu Alın</h2>
+      <p class="mt-4 text-lg opacity-80">Formu gönderin, hasta danışmanımız aynı gün sizi arasın.</p>
+      <ul class="mt-8 space-y-4">
+        <li><span class="font-semibold text-[var(--primary)]">Adres:</span> Atatürk Mah. Ataşehir Bulvarı No: 42 Kat: 3, Ataşehir / İstanbul</li>
+        <li><span class="font-semibold text-[var(--primary)]">Telefon:</span> <a href="tel:+902164560042" class="underline">0216 456 00 42</a></li>
+        <li><span class="font-semibold text-[var(--primary)]">Hafta içi:</span> 09:00 – 19:00 · <span class="font-semibold text-[var(--primary)]">Cumartesi:</span> 09:00 – 15:00</li>
+      </ul>
+    </div>
+    <form class="space-y-5 rounded-2xl bg-white/70 p-6 shadow-sm ring-1 ring-black/5">
+      <div><label for="name" class="block font-semibold">Ad Soyad</label><input id="name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <div><label for="phone" class="block font-semibold">Telefon</label><input id="phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <div><label for="treatment" class="block font-semibold">Tedavi</label>
+        <select id="treatment" name="treatment" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Muayene / Kontrol</option><option>İmplant</option><option>Şeffaf Plak</option><option>Diş Beyazlatma</option><option>Çocuk Diş Hekimliği</option></select>
+      </div>
+      <div><label for="day" class="block font-semibold">Tercih ettiğiniz gün</label><input id="day" name="day" type="date" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Randevu Talebi Gönder</button>
+    </form>
+  </div>
+</section>

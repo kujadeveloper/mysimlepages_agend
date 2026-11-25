@@ -1,0 +1,52 @@
+{
+  "brief": "avukatlık bürosu sitesi. ankara çankaya. iş hukuku, boşanma, miras davaları. ciddi kurumsal görünsün. 2 ortak avukatız",
+  "plan": {
+    "title": "Kaya & Demir Hukuk Bürosu",
+    "language": "tr",
+    "style": "corporate elegant",
+    "palette": {
+      "primary": "#1e3a5f",
+      "secondary": "#fbfaf7",
+      "accent": "#b08d57",
+      "text": "#1c1917"
+    },
+    "font": "Playfair Display",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Büro adı ve Çalışma Alanları, Avukatlarımız, Süreç, İletişim bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Ankara Çankaya'da iş, aile ve miras hukukunda 20 yıllık deneyim, Ön Görüşme Talep Et butonu"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "İş hukuku (işe iade, kıdem tazminatı), boşanma ve velayet, miras ve tenkis davaları kartları"
+      },
+      {
+        "id": "team",
+        "type": "team",
+        "goal": "Av. Hakan Kaya ve Av. Zeynep Demir ortak avukat kartları, baro sicili ve uzmanlıkları"
+      },
+      {
+        "id": "about",
+        "type": "about",
+        "goal": "Solda başlık, sağda ön görüşme, yazılı değerlendirme, dava süreci, karar ve icra adımlarından oluşan dikey zaman çizelgesi"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Kızılay adresi, telefon, e-posta ve ad, telefon, konu, kısa açıklama alanlı ön görüşme formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Büro adı, avukatlık meslek kuralları uyarısı, bağlantılar ve telif yılı"
+      }
+    ]
+  }
+}

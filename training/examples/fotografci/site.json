@@ -1,0 +1,52 @@
+{
+  "brief": "I'm a wedding and portrait photographer based in Istanbul, also shooting destination weddings in Cappadocia and Bodrum. Need a minimal dark portfolio site with a gallery, packages and a booking inquiry form.",
+  "plan": {
+    "title": "Deniz Arslan Photography",
+    "language": "en",
+    "style": "minimal dark editorial",
+    "palette": {
+      "primary": "#57534e",
+      "secondary": "#0e0e0e",
+      "accent": "#e7c9a9",
+      "text": "#ededed"
+    },
+    "font": "Cormorant Garamond",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Photographer name and Work, Packages, Kind Words, Inquire links, mobile ☰ menu"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Full-width cover image with the tagline about honest, unposed wedding stories in Istanbul and beyond"
+      },
+      {
+        "id": "gallery",
+        "type": "gallery",
+        "goal": "Six-image grid: Bosphorus wedding, Cappadocia balloons, Bodrum sunset, couple portrait, family session, details"
+      },
+      {
+        "id": "packages",
+        "type": "pricing",
+        "goal": "Elopement €1,200, Full Day €2,800 and Destination €4,500 packages with hours and deliverables"
+      },
+      {
+        "id": "testimonials",
+        "type": "testimonials",
+        "goal": "Two couple testimonials from an Istanbul and a Cappadocia wedding"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Inquiry form with names, email, wedding date, location and message"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Name, Instagram handle and copyright year"
+      }
+    ]
+  }
+}

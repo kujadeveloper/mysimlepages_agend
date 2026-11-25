@@ -1,0 +1,20 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-bold md:text-4xl">Arıza Kaydı</h2>
+      <p class="mt-4 text-lg opacity-80">Cihazınızı ve sorunu yazın; fiyat ve parça durumunu 30 dakika içinde bildirelim.</p>
+      <p class="mt-8"><span class="font-semibold text-[var(--accent)]">Adres:</span> Hoşnudiye Mah. İsmet İnönü Cad. No: 61/B, Tepebaşı / Eskişehir</p>
+      <p class="mt-2"><span class="font-semibold text-[var(--accent)]">Telefon:</span> <a href="tel:+902222310061" class="underline">0222 231 00 61</a></p>
+      <p class="mt-2 opacity-70">Pazartesi – Cumartesi 10:00 – 20:00</p>
+    </div>
+    <form class="space-y-5 rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="name" class="block font-semibold">Ad Soyad</label><input id="name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3"></div>
+        <div><label for="phone" class="block font-semibold">Telefon</label><input id="phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3"></div>
+      </div>
+      <div><label for="device" class="block font-semibold">Cihaz marka / model</label><input id="device" name="device" type="text" placeholder="Ör. iPhone 13, Lenovo IdeaPad 5" class="mt-2 w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3"></div>
+      <div><label for="issue" class="block font-semibold">Arıza</label><textarea id="issue" name="issue" rows="3" class="mt-2 w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3"></textarea></div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Kayıt Oluştur</button>
+    </form>
+  </div>
+</section>

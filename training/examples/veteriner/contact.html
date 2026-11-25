@@ -1,0 +1,22 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-bold md:text-4xl">Randevu ve İletişim</h2>
+      <p class="mt-4 text-lg opacity-80">Acil durumlarda form yerine lütfen doğrudan arayın.</p>
+      <ul class="mt-8 space-y-4">
+        <li><span class="font-semibold text-[var(--primary)]">Adres:</span> Vişnelik Mah. Atatürk Bulvarı No: 112, Odunpazarı / Eskişehir</li>
+        <li><span class="font-semibold text-[var(--primary)]">Acil:</span> <a href="tel:+902222300707" class="underline">0222 230 07 07</a></li>
+        <li><span class="font-semibold text-[var(--primary)]">WhatsApp:</span> <a href="https://wa.me/905322300707" class="underline">0532 230 07 07</a></li>
+      </ul>
+    </div>
+    <form class="space-y-5 rounded-2xl bg-white/70 p-6 shadow-sm ring-1 ring-black/5">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="pet" class="block font-semibold">Dostunuzun adı</label><input id="pet" name="pet" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="species" class="block font-semibold">Türü</label><select id="species" name="species" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Kedi</option><option>Köpek</option><option>Kuş</option><option>Diğer</option></select></div>
+      </div>
+      <div><label for="phone" class="block font-semibold">Telefonunuz</label><input id="phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <div><label for="issue" class="block font-semibold">Şikâyet / istek</label><textarea id="issue" name="issue" rows="3" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></textarea></div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Randevu İste</button>
+    </form>
+  </div>
+</section>

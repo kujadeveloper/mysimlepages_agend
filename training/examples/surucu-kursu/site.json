@@ -1,0 +1,47 @@
+{
+  "brief": "Konya Selçuklu'da sürücü kursu. B sınıfı ehliyet, A2 motosiklet, otomatik vites araç seçeneği. Sınavda ilk seferde geçme oranımız yüksek. Kayıt formu ve fiyatlar olsun.",
+  "plan": {
+    "title": "Selçuklu Yıldırım Sürücü Kursu",
+    "language": "tr",
+    "style": "friendly bold yellow",
+    "palette": {
+      "primary": "#1f2937",
+      "secondary": "#fffdf0",
+      "accent": "#facc15",
+      "text": "#111827"
+    },
+    "font": "Nunito",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Yıldırım Sürücü Kursu logosu, Ehliyetler, Fiyatlar, Kayıt bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Konya Selçuklu'da ilk sınavda %87 geçme oranı, otomatik vites seçeneği, Hemen Kayıt Ol butonu"
+      },
+      {
+        "id": "licenses",
+        "type": "services",
+        "goal": "B sınıfı manuel, B sınıfı otomatik, A2 motosiklet ve sınıf yükseltme kursları"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "B manuel 24.000₺, B otomatik 27.500₺, A2 16.000₺ kurs ücretleri, taksit ve harç bilgisi"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Selçuklu adresi, telefon ve ad, telefon, ehliyet sınıfı, tercih edilen saat alanlı ön kayıt formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Kurs adı, MEB izin bilgisi ve telif yılı"
+      }
+    ]
+  }
+}

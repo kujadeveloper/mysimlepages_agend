@@ -1,0 +1,5 @@
+Editing mode: you receive the CURRENT HTML of this section and the customer's change request.
+- Return the complete updated HTML of the whole section, not a diff and not only the changed part.
+- Keep the same root element and the same id.
+- Apply the requested change fully. Keep every other text, link, structure and class exactly as it is unless the change requires otherwise.
+- If the request does not concern this section, return the current HTML unchanged.

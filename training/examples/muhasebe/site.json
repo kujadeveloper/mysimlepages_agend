@@ -1,0 +1,52 @@
+{
+  "brief": "Kocaeli İzmit'te serbest muhasebeci mali müşavirlik ofisi. Şirket kuruluşu, aylık defter tutma, e-fatura, SGK işlemleri. KOBİ'lere ve yeni girişimcilere hizmet veriyoruz. Güvenilir, sade.",
+  "plan": {
+    "title": "Yıldız Mali Müşavirlik",
+    "language": "tr",
+    "style": "clean corporate",
+    "palette": {
+      "primary": "#1e40af",
+      "secondary": "#f8fafc",
+      "accent": "#10b981",
+      "text": "#0f172a"
+    },
+    "font": "IBM Plex Sans",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Yıldız Mali Müşavirlik logosu, Hizmetler, Ücretler, SSS, İletişim bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "İzmit'te KOBİ ve girişimcilere dijital muhasebe, Ücretsiz Ön Görüşme butonu"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Şirket kuruluşu, aylık defter ve beyanname, e-fatura geçişi, SGK ve bordro hizmetleri"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "Şahıs şirketi aylık 3.500₺, limited şirket aylık 6.500₺, şirket kuruluşu 8.000₺ ücret tablosu"
+      },
+      {
+        "id": "faq",
+        "type": "faq",
+        "goal": "Evrakları nasıl iletirim, şahıs mı limited mi, beyanname tarihleri hakkında sorular"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "İzmit ofis adresi, telefon, e-posta ve ad, telefon, şirket türü, mesaj alanlı form"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Ofis adı, TÜRMOB oda sicil bilgisi ve telif yılı"
+      }
+    ]
+  }
+}

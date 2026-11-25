@@ -1,0 +1,19 @@
+{
+  "brief": "online kahve çekirdeği satışı ve aylık kahve aboneliği. etiyopya, kolombiya, brezilya tek köken çekirdekler, öğütme seçeneği. ürünler, abonelik planları, nasıl çalışır ve sss olsun",
+  "plan": {
+    "title": "Çekirdek Kulübü",
+    "language": "tr",
+    "style": "warm modern ecommerce",
+    "palette": {"primary": "#92400e", "secondary": "#fffaf3", "accent": "#fcd34d", "text": "#1c1410"},
+    "font": "DM Sans",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Çekirdek Kulübü logosu, Kahveler, Abonelik, SSS bağlantıları ve Sepet, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Kavrulduktan 48 saat sonra kapında taze kahve, Aboneliği Başlat ve Kahveleri Gör butonları"},
+      {"id": "products", "type": "products", "goal": "Etiyopya Yirgacheffe 449₺, Kolombiya Huila 399₺, Brezilya Santos 349₺, Ev Harmanı 329₺ 250 g çekirdek kartları; tat notaları, öğütme seçimi ve Sepete Ekle"},
+      {"id": "membership", "type": "membership", "goal": "Aylık 1 paket 379₺, 2 paket 699₺ ve 3 aylık peşin 1.990₺ abonelik planları, ücretsiz kargo ve istediğin zaman iptal"},
+      {"id": "process", "type": "process", "goal": "Kahve ve öğütme seç, her ay 1'inde kavrulur, 3'ünde kapında adımları"},
+      {"id": "faq", "type": "faq", "goal": "Öğütme seçenekleri, abonelik iptali, teslim günü değiştirme ve hediye abonelik soruları"},
+      {"id": "footer", "type": "footer", "goal": "Marka, bağlantılar ve telif yılı"}
+    ]
+  }
+}

@@ -26,7 +26,10 @@ def test_extract_html_from_fenced_reply():
 def test_pipeline_with_mock(tmp_path):
     r = DesignPipeline(MockLLM(), Settings(data_dir=tmp_path)).run("Kafe için tek sayfalık site")
     assert r.html.startswith("<!doctype html>") and 'id="hero"' in r.html and "<script>alert" not in r.html
-    assert [c["task"] for c in r.trace] == ["plan", "section", "section", "section"]
+    # Mock plan hero/features/contact döndürür; iskelet kuralı navbar ve footer'ı ekler
+    assert [s.id for s in r.plan.sections] == ["navbar", "hero", "features", "contact", "footer"]
+    assert [c["task"] for c in r.trace] == ["plan"] + ["section"] * 5
+    assert r.trace[0]["added_sections"] == ["navbar", "footer"]
     assert r.metrics["fallback_sections"] == 0
 
 
@@ -87,7 +90,7 @@ def test_service_end_to_end(tmp_path, monkeypatch):
         assert c.get(f"/v1/designs/{job['id']}/preview", headers=h).headers["content-security-policy"]
         fb = c.post(f"/v1/designs/{job['id']}/feedback", headers=h,
                     json={"rating": 5, "corrections": {"hero": '<section id="hero">Düzeltilmiş</section>'}}).json()
-        assert fb["examples"] == 4
+        assert fb["examples"] == 6   # 1 plan + 5 bölüm (navbar ve footer iskelet kuralıyla eklenir)
         rows = [json.loads(l) for l in (tmp_path / "datasets/raw/feedback.jsonl").read_text("utf-8").splitlines()]
         assert any(r.get("corrected") and "Düzeltilmiş" in r["assistant"] for r in rows)
         assert c.post("/v1/datasets/freeze", headers=h).status_code == 201

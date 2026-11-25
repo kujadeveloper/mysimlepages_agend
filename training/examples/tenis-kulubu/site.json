@@ -1,0 +1,19 @@
+{
+  "brief": "Website for our tennis club in Izmir (Urla). 8 clay courts, coaching for kids and adults. We need membership plans with prices and an online member sign up form. Elegant, green.",
+  "plan": {
+    "title": "Urla Lawn & Tennis Club",
+    "language": "en",
+    "style": "classic elegant sport",
+    "palette": {"primary": "#14532d", "secondary": "#fbfaf5", "accent": "#d9f99d", "text": "#1a2e1a"},
+    "font": "Libre Franklin",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Club logo, Courts, Membership, Coaching, Join links, mobile ☰ menu"},
+      {"id": "hero", "type": "hero", "goal": "Full-bleed clay court image with the club's founding year and Become a Member button"},
+      {"id": "courts", "type": "features", "goal": "8 clay courts, 2 floodlit, clubhouse, pro shop and junior academy"},
+      {"id": "membership", "type": "membership", "goal": "Junior €40, Individual €95 and Family €180 monthly plans, yearly prices, court booking and coaching discounts, Join buttons to the sign up form"},
+      {"id": "coaching", "type": "schedule", "goal": "Weekly group coaching table for juniors, beginners and advanced adults"},
+      {"id": "register", "type": "register", "goal": "Member sign up form: full name, email, phone, plan, password, password again, consent checkbox and a log in link"},
+      {"id": "footer", "type": "footer", "goal": "Club name, address, opening hours and copyright year"}
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "brief": "ahşap eğitici oyuncak online mağazası. yaş gruplarına göre kategoriler (0-2, 2-4, 4-6 yaş), montessori oyuncakları, yapboz, denge oyunları. renkli eğlenceli ama güven veren, ürünler, velilerin yorumları, güvenlik sertifikası bilgisi",
+  "plan": {
+    "title": "Tahta Kutu Oyuncak",
+    "language": "tr",
+    "style": "playful warm ecommerce",
+    "palette": {"primary": "#c2410c", "secondary": "#fffbeb", "accent": "#86efac", "text": "#292524"},
+    "font": "Fredoka",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Tahta Kutu logosu, Yaşa Göre, Ürünler, Yorumlar bağlantıları ve Sepet, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Doğal ahşap, su bazlı boya ve CE sertifikalı eğitici oyuncaklar, Yaşa Göre Seç butonu"},
+      {"id": "categories", "type": "categories", "goal": "0-2 yaş, 2-4 yaş, 4-6 yaş ve Montessori renkli kategori kartları"},
+      {"id": "products", "type": "products", "goal": "Gökkuşağı istifleme 489₺, şekil ayırma kutusu 389₺, denge ağacı 459₺, ahşap tren seti 899₺, yapboz harita 349₺, Montessori meşgul tahtası 1.190₺; yaş etiketi ve Sepete Ekle"},
+      {"id": "features", "type": "features", "goal": "CE ve EN71 sertifika, su bazlı boya, sürdürülebilir kayın ağacı ve 1 yıl garanti güven rozetleri"},
+      {"id": "testimonials", "type": "testimonials", "goal": "Üç velinin yıldızlı yorumu"},
+      {"id": "footer", "type": "footer", "goal": "Marka, yardım bağlantıları ve telif yılı"}
+    ]
+  }
+}

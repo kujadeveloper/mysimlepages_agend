@@ -1,0 +1,19 @@
+{
+  "brief": "satranç kulübü ankara kızılay. çocuk ve yetişkin kursları, haftalık turnuvalar, ders programı. üyelik ücretleri ve online üye kayıt formu olsun. koyu şık bir tasarım",
+  "plan": {
+    "title": "Kızılay Satranç Kulübü",
+    "language": "tr",
+    "style": "dark classic",
+    "palette": {"primary": "#a16207", "secondary": "#18181b", "accent": "#e5e5e5", "text": "#fafafa"},
+    "font": "Cormorant Garamond",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Ortada ♞ logolu kulüp adı, Hakkımızda, Üyelik, Program, Üye Kayıt bağlantıları, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Tam ekran satranç tahtası görseli üstünde 1974'ten beri Kızılay'da satranç başlığı ve Üye Ol butonu"},
+      {"id": "about", "type": "about", "goal": "Kulübün tarihi, 3 FIDE ustası antrenör, lisanslı sporcu sayısı ve turnuva başarıları"},
+      {"id": "membership", "type": "membership", "goal": "Öğrenci 600₺, yetişkin 900₺ aylık ve yıllık aile üyeliği 14.000₺; turnuvalar ve kurs indirimleri dahil, Üye Ol butonları"},
+      {"id": "schedule", "type": "schedule", "goal": "Haftalık program tablosu: çocuk başlangıç, çocuk ileri, yetişkin kursu, cuma blitz turnuvası, pazar klasik turnuva"},
+      {"id": "register", "type": "register", "goal": "Ad, doğum yılı, e-posta, telefon, üyelik tipi, ELO puanı, şifre ve onay kutulu üye kayıt formu"},
+      {"id": "footer", "type": "footer", "goal": "Kulüp adı, adres ve telif yılı"}
+    ]
+  }
+}

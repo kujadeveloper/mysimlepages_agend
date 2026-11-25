@@ -1,0 +1,20 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-bold md:text-4xl">Fiyat Alın</h2>
+      <p class="mt-4 text-lg opacity-80">Formu doldurun, 15 dakika içinde fiyat verelim.</p>
+      <p class="mt-8"><span class="font-semibold text-[var(--primary)]">Telefon:</span> <a href="tel:+902122840033" class="underline">0212 284 00 33</a></p>
+      <p class="mt-2"><span class="font-semibold text-[var(--primary)]">WhatsApp:</span> <a href="https://wa.me/905442840033" class="underline">0544 284 00 33</a></p>
+    </div>
+    <form class="space-y-5 rounded-2xl bg-white/70 p-6 shadow-sm ring-1 ring-black/5">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="name" class="block font-semibold">Ad Soyad</label><input id="name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="phone" class="block font-semibold">Telefon</label><input id="phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="district" class="block font-semibold">İlçe</label><select id="district" name="district" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Beşiktaş</option><option>Şişli</option><option>Sarıyer</option><option>Bakırköy</option><option>Beylikdüzü</option><option>Başakşehir</option></select></div>
+        <div><label for="date" class="block font-semibold">Tarih</label><input id="date" name="date" type="date" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      </div>
+      <div><label for="service" class="block font-semibold">Hizmet</label><select id="service" name="service" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Ev temizliği</option><option>Ofis temizliği</option><option>İnşaat sonrası</option><option>Koltuk yıkama</option></select></div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Fiyat İste</button>
+    </form>
+  </div>
+</section>

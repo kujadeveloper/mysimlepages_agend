@@ -1,0 +1,18 @@
+{
+  "brief": "matematik öğretmeniyim özel ders veriyorum lgs yks hazırlık online ve yüz yüze ankara",
+  "plan": {
+    "title": "Mert Hoca Matematik",
+    "language": "tr",
+    "style": "friendly academic",
+    "palette": {"primary": "#155e75", "secondary": "#f8fafc", "accent": "#fbbf24", "text": "#0f172a"},
+    "font": "Nunito",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Mert Hoca adı ve Dersler, Ücretler, İletişim bağlantıları"},
+      {"id": "hero", "type": "hero", "goal": "LGS ve YKS matematikte birebir özel ders, Ankara yüz yüze ve online, Ücretsiz Tanışma Dersi butonu"},
+      {"id": "services", "type": "services", "goal": "LGS matematik, TYT-AYT matematik ve geometri, okul derslerine destek; ders süreleri ve yöntem"},
+      {"id": "pricing", "type": "pricing", "goal": "Yüz yüze ders saati 1.500₺, online 1.200₺, 10 derslik paket 13.000₺"},
+      {"id": "contact", "type": "contact", "goal": "Telefon, WhatsApp ve öğrenci adı, sınıf, hedef sınav, telefon alanlı form"},
+      {"id": "footer", "type": "footer", "goal": "İsim ve telif yılı"}
+    ]
+  }
+}

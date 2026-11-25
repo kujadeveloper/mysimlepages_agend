@@ -1,0 +1,52 @@
+{
+  "brief": "Fizik tedavi ve rehabilitasyon merkezi, İzmir Karşıyaka. Bel fıtığı, boyun ağrısı, spor yaralanmaları, ameliyat sonrası rehabilitasyon, manuel terapi. Uzman fizyoterapistler. Randevu formu ve seans fiyatları olsun.",
+  "plan": {
+    "title": "Hareket Fizyoterapi Merkezi",
+    "language": "tr",
+    "style": "clinical clean",
+    "palette": {
+      "primary": "#0f766e",
+      "secondary": "#f5fbfa",
+      "accent": "#99f6e4",
+      "text": "#11302d"
+    },
+    "font": "Inter",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Hareket logosu, Tedaviler, Ekip, Fiyatlar ve Randevu butonu, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Karşıyaka'da ağrısız hareket için kişiye özel fizyoterapi, Randevu Al butonu"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Bel ve boyun fıtığı, spor yaralanmaları, ameliyat sonrası rehabilitasyon ve manuel terapi; zigzag görsel-metin satırları"
+      },
+      {
+        "id": "team",
+        "type": "team",
+        "goal": "Fzt. Burcu Demir (manuel terapi) ve Fzt. Kaan Öz (sporcu rehabilitasyonu) kartları"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "İlk değerlendirme 1.500₺, seans 1.800₺, 10 seans paket 16.000₺ fiyatları"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Karşıyaka adresi, telefon ve ad, telefon, şikayet bölgesi, tarih alanlı randevu formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Merkez adı, ruhsat bilgisi ve telif yılı"
+      }
+    ]
+  }
+}

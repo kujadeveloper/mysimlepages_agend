@@ -1,0 +1,7 @@
+{
+  "task": "section",
+  "brief": "Kadıköy'de 1985'ten beri açık bir mahalle fırını için site. Ekşi mayalı ekmekler, simit, poğaça ve pastalar satıyoruz. Sıcak, samimi bir hava olsun; krem ve kahve tonları. Menü, çalışma saatleri ve iletişim formu mutlaka olsun.",
+  "plan_from": "01_plan_firin.json",
+  "section_id": "hero",
+  "output": "<section id=\"hero\" class=\"py-16 md:py-24 px-6\"><div class=\"mx-auto max-w-6xl grid gap-12 md:grid-cols-2 items-center\"><div><span class=\"inline-block rounded-full bg-[var(--accent)] px-3 py-1 text-sm font-semibold text-black\">1985'ten beri</span><h1 class=\"mt-6 text-4xl md:text-6xl font-extrabold leading-tight\">Her sabah taş fırından taze ekmek</h1><p class=\"mt-4 text-lg opacity-80\">Ekşi mayamızla 24 saat dinlendirdiğimiz ekmekler, çıtır simitler ve sıcak poğaçalar Moda'nın sabahlarını tatlandırıyor.</p><div class=\"mt-8 flex flex-wrap gap-4\"><a href=\"#menu\" class=\"inline-block rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90\">Menüyü Gör</a><a href=\"#contact\" class=\"inline-block rounded-full border-2 border-[var(--primary)] px-6 py-3 font-semibold text-[var(--primary)]\">Yol Tarifi</a></div></div><img src=\"https://placehold.co/640x480/8b4513/fffaf3?text=Taze+Ekmek\" alt=\"Taş fırından yeni çıkmış ekşi mayalı somun ekmekler\" class=\"w-full rounded-2xl shadow-sm ring-1 ring-black/5\"></div></section>"
+}

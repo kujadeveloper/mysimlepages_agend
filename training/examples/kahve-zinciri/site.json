@@ -1,0 +1,19 @@
+{
+  "brief": "15 şubeli kahve zincirimiz için kariyer sitesi istiyoruz. barista, vardiya sorumlusu, şube müdürü alıyoruz. neden biz, başvuru süreci adımları ve sık sorulanlar, iş başvuru formu olsun",
+  "plan": {
+    "title": "Demlik Kahve Kariyer",
+    "language": "tr",
+    "style": "warm friendly employer",
+    "palette": {"primary": "#3f2a1d", "secondary": "#fbf7f2", "accent": "#e0b97a", "text": "#2a1c12"},
+    "font": "Fraunces",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Demlik Kariyer logosu, Neden Demlik, Pozisyonlar, Süreç, SSS bağlantıları ve Başvur butonu, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "15 şubede ekibimize katıl başlığı, takım fotoğrafı ve Açık Pozisyonlar butonu"},
+      {"id": "about", "type": "about", "goal": "Neden Demlik: barista akademisi, terfi yolu, prim sistemi, yemek ve kahve hakkı"},
+      {"id": "careers", "type": "careers", "goal": "Barista, vardiya sorumlusu ve şube müdürü pozisyonları; şube, maaş aralığı ve çalışma tipiyle, ad, telefon, e-posta, pozisyon, tercih edilen şube, deneyim, ön yazı ve KVKK onaylı başvuru formu"},
+      {"id": "process", "type": "process", "goal": "Başvuru süreci zaman çizelgesi: online başvuru, telefon görüşmesi, şubede deneme günü, teklif"},
+      {"id": "faq", "type": "faq", "goal": "Deneyimsiz başvurabilir miyim, part-time var mı, eğitim ücretli mi, şube değiştirebilir miyim soruları"},
+      {"id": "footer", "type": "footer", "goal": "Marka adı, insan kaynakları e-postası ve telif yılı"}
+    ]
+  }
+}

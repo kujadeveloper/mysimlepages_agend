@@ -1,0 +1,16 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto max-w-3xl">
+    <h2 class="text-3xl font-bold md:text-4xl">Tell us what you're building</h2>
+    <p class="mt-4 text-lg opacity-80">We reply within one business day with questions or a rough estimate.</p>
+    <form class="mt-10 space-y-5 rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="name" class="block font-semibold">Name</label><input id="name" name="name" type="text" required class="mt-2 w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3"></div>
+        <div><label for="email" class="block font-semibold">Email</label><input id="email" name="email" type="email" required class="mt-2 w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3"></div>
+        <div><label for="company" class="block font-semibold">Company</label><input id="company" name="company" type="text" class="mt-2 w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3"></div>
+        <div><label for="budget" class="block font-semibold">Budget</label><select id="budget" name="budget" class="mt-2 w-full rounded-lg border border-white/20 bg-[#151324] px-4 py-3"><option>$15k – $30k</option><option>$30k – $60k</option><option>$60k+</option><option>Not sure yet</option></select></div>
+      </div>
+      <div><label for="project" class="block font-semibold">About the project</label><textarea id="project" name="project" rows="5" class="mt-2 w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3"></textarea></div>
+      <button type="submit" class="inline-block rounded-full bg-[var(--primary)] px-8 py-3 font-semibold text-white hover:opacity-90">Send inquiry</button>
+    </form>
+  </div>
+</section>

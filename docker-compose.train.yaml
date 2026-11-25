@@ -1,0 +1,26 @@
+# Eğitim konteyneri (NVIDIA GPU). Windows'ta Akıllı Uygulama Denetimi yerel PyTorch DLL'lerini engellediği için
+# eğitim Docker (WSL2) içinde yapılır. Proje klasörü /app'e bağlanır: data/ ve models/ host'ta kalır.
+#   docker compose -f docker-compose.train.yaml build
+#   docker compose -f docker-compose.train.yaml run --rm train                       # GPU kontrolü
+#   docker compose -f docker-compose.train.yaml run --rm train hf download Qwen/Qwen2.5-Coder-7B-Instruct --local-dir models/Qwen2.5-Coder-7B-Instruct
+#   docker compose -f docker-compose.train.yaml run --rm train python -m training.build_examples
+#   docker compose -f docker-compose.train.yaml run --rm train python -m agent.cli freeze --min-rating 4
+#   docker compose -f docker-compose.train.yaml run --rm train python -m training.train_lora --dataset d1 --base models/Qwen2.5-Coder-7B-Instruct --out data/adapters/run1
+name: mysimplepages-train   # ayrı proje: ajan/vllm konteynerleriyle karışmasın
+# Eğitimden önce GPU'yu boşaltın: docker compose stop vllm   (16 GB kartta ikisi birden sığmaz)
+services:
+  train:
+    build:
+      context: .
+      dockerfile: Dockerfile.train
+    image: mysimplepages-train
+    volumes:
+      - .:/app
+    shm_size: "4gb"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

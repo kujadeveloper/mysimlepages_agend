@@ -12,3 +12,18 @@ def load(version: str, name: str) -> str:
         raise FileNotFoundError(f"Prompt bulunamadı: {version}/{name}")
     # Windows'ta git CRLF ile çekmiş olabilir: model her platformda aynı prompt'u görsün
     return path.read_text("utf-8").replace("\r\n", "\n").strip()
+
+
+@lru_cache
+def load_latest(version: str, name: str) -> str:
+    """Şablon bu sürümde yoksa en yakın yeni sürümden alır (ör. düzeltme prompt'ları v5'te eklendi; eski bir sürümle
+    eğitilmiş model de düzeltme yapabilsin)."""
+    try:
+        return load(version, name)
+    except FileNotFoundError:
+        versions = sorted((p.name for p in _ROOT.iterdir() if p.is_dir() and p.name[1:].isdigit()),
+                          key=lambda v: int(v[1:]), reverse=True)
+        for v in versions:
+            if (_ROOT / v / f"{name}.txt").is_file():
+                return load(v, name)
+        raise

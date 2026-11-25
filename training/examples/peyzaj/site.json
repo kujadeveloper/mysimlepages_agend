@@ -1,0 +1,52 @@
+{
+  "brief": "Peyzaj ve bahçe düzenleme firmasıyız, Antalya. Villa bahçeleri, otomatik sulama, rulo çim, bahçe bakımı aylık. Doğal yeşil tonlarda, projelerimizin göründüğü bir site. Keşif talep formu.",
+  "plan": {
+    "title": "Yeşil Vadi Peyzaj",
+    "language": "tr",
+    "style": "natural fresh",
+    "palette": {
+      "primary": "#166534",
+      "secondary": "#f7faf5",
+      "accent": "#a3e635",
+      "text": "#14261a"
+    },
+    "font": "Manrope",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Yeşil Vadi logosu, Hizmetler, Projeler, Bakım Paketleri ve Keşif butonu, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Antalya'da villa ve site bahçeleri tasarımı ve uygulaması, Ücretsiz Keşif butonu"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Bahçe tasarımı, otomatik sulama, rulo çim serimi, ağaç ve bitki dikimi, bahçe aydınlatması"
+      },
+      {
+        "id": "projects",
+        "type": "gallery",
+        "goal": "Konyaaltı villa bahçesi, Lara site ortak alanı ve Kemer otel bahçesi proje görselleri"
+      },
+      {
+        "id": "pricing",
+        "type": "pricing",
+        "goal": "Rulo çim m² 180₺ (serim dahil), otomatik sulama m² 120₺'den, aylık bakım 500 m²'ye kadar 6.500₺"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Telefon ve ad, telefon, ilçe, bahçe m², istenen hizmet alanlı keşif formu"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Firma adı ve telif yılı"
+      }
+    ]
+  }
+}

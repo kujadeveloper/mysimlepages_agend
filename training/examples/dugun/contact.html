@@ -1,0 +1,22 @@
+<section id="contact" class="px-6 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-bold md:text-4xl">Hayalinizi anlatın</h2>
+      <p class="mt-4 text-lg opacity-80">Formu doldurun, ücretsiz ilk görüşme için sizi arayalım. Ofisimizde ya da mekânda buluşabiliriz.</p>
+      <ul class="mt-8 space-y-4">
+        <li><span class="font-semibold text-[var(--primary)]">Ofis:</span> Güzeloba Mah. Lara Cad. No: 220, Muratpaşa / Antalya</li>
+        <li><span class="font-semibold text-[var(--primary)]">Telefon:</span> <a href="tel:+902423490220" class="underline">0242 349 02 20</a></li>
+      </ul>
+    </div>
+    <form class="space-y-5 rounded-2xl bg-white/70 p-6 shadow-sm ring-1 ring-black/5">
+      <div><label for="names" class="block font-semibold">Gelin ve damadın adı</label><input id="names" name="names" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div><label for="date" class="block font-semibold">Tarih</label><input id="date" name="date" type="date" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="guests" class="block font-semibold">Davetli sayısı</label><input id="guests" name="guests" type="number" min="10" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      </div>
+      <div><label for="type" class="block font-semibold">Organizasyon</label><select id="type" name="type" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Kır Düğünü</option><option>Sahil Nikahı</option><option>Kına Gecesi</option></select></div>
+      <div><label for="phone" class="block font-semibold">Telefon</label><input id="phone" name="phone" type="tel" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Teklif İste</button>
+    </form>
+  </div>
+</section>

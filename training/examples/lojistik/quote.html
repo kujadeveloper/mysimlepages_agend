@@ -1,0 +1,19 @@
+<section id="quote" class="bg-white px-6 py-16 md:py-24">
+  <div class="mx-auto max-w-4xl">
+    <h2 class="text-3xl font-bold uppercase md:text-4xl">Teklif Al</h2>
+    <p class="mt-4 text-lg opacity-80">Yük bilgilerinizi girin; operasyon ekibimiz 2 saat içinde fiyat ve transit süresiyle dönsün.</p>
+    <form class="mt-10 space-y-5 rounded-2xl p-6 ring-1 ring-black/10">
+      <div class="grid gap-5 md:grid-cols-2">
+        <div><label for="q-from" class="block font-semibold">Çıkış şehri / ülke</label><input id="q-from" name="from" type="text" placeholder="Ör. Mersin, TR" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="q-to" class="block font-semibold">Varış şehri / ülke</label><input id="q-to" name="to" type="text" placeholder="Ör. Münih, DE" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="q-type" class="block font-semibold">Yük tipi</label><select id="q-type" name="load_type" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"><option>Komple (FTL)</option><option>Parsiyel (LTL)</option><option>Frigorifik</option><option>Tehlikeli madde (ADR)</option></select></div>
+        <div><label for="q-date" class="block font-semibold">Yükleme tarihi</label><input id="q-date" name="date" type="date" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="q-weight" class="block font-semibold">Toplam ağırlık (kg)</label><input id="q-weight" name="weight" type="number" min="1" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="q-pallets" class="block font-semibold">Palet sayısı</label><input id="q-pallets" name="pallets" type="number" min="1" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="q-company" class="block font-semibold">Firma</label><input id="q-company" name="company" type="text" class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+        <div><label for="q-phone" class="block font-semibold">Ad Soyad / Telefon</label><input id="q-phone" name="contact" type="text" required class="mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3"></div>
+      </div>
+      <button type="submit" class="inline-block w-full rounded-full bg-[var(--primary)] px-6 py-3 font-semibold text-white hover:opacity-90">Teklif İste</button>
+    </form>
+  </div>
+</section>

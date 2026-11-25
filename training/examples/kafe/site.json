@@ -1,0 +1,52 @@
+{
+  "brief": "Moda sahilinde küçük bir üçüncü nesil kahve dükkanıyız. Kendi kavurduğumuz çekirdekler, V60, chemex, ev yapımı kurabiyeler. Laptopla çalışmaya gelenler çok. Sade, aydınlık, biraz İskandinav havası olsun. Menü ve konum lazım.",
+  "plan": {
+    "title": "Kumsal Coffee Roasters",
+    "language": "tr",
+    "style": "light scandinavian minimal",
+    "palette": {
+      "primary": "#7c4a1e",
+      "secondary": "#faf7f2",
+      "accent": "#c8a27a",
+      "text": "#2a211a"
+    },
+    "font": "DM Sans",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Kumsal logosu ve Menü, Kavurma, Çalışma Alanı, Konum bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Tam ekran Moda sahili görseli üstünde ortalanmış, bu hafta kavrulmuş kahve başlığı, Menüye Bak ve Yol Tarifi butonları"
+      },
+      {
+        "id": "menu",
+        "type": "menu",
+        "goal": "Espresso bazlılar, demleme (V60, Chemex, Aeropress) ve ev yapımı kurabiyelerden oluşan fiyatlı menü"
+      },
+      {
+        "id": "about",
+        "type": "about",
+        "goal": "Haftada iki kez dükkânda kavrulan tek kökenli çekirdekler ve paket kahve satışı"
+      },
+      {
+        "id": "features",
+        "type": "features",
+        "goal": "Laptopla çalışanlar için hızlı wifi, priz başına masa ve sessiz saatler"
+      },
+      {
+        "id": "location",
+        "type": "location",
+        "goal": "Moda Caddesi adresi, harita görseli ve hafta içi/hafta sonu saatleri"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Kumsal adı, Instagram hesabı, bağlantılar ve telif yılı"
+      }
+    ]
+  }
+}

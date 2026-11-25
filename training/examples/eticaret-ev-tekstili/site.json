@@ -1,0 +1,20 @@
+{
+  "brief": "Denizli'de üretim yapan ev tekstili markamız için e-ticaret sitesi. Nevresim takımı, pike, havlu, bornoz, keten masa örtüsü. Doğal kumaşlar, sade ve şık. Koleksiyonlar, ürünler, üye olana %10 indirim formu, iletişim",
+  "plan": {
+    "title": "Pamuk & Keten",
+    "language": "tr",
+    "style": "soft natural home",
+    "palette": {"primary": "#7c5c3b", "secondary": "#fbf8f3", "accent": "#d8c3a5", "text": "#2b2118"},
+    "font": "Cormorant Garamond",
+    "sections": [
+      {"id": "navbar", "type": "navbar", "goal": "Ortada Pamuk & Keten logosu, Koleksiyonlar, Ürünler, Üye Ol, İletişim bağlantıları ve Sepet, mobilde ☰ menü"},
+      {"id": "hero", "type": "hero", "goal": "Tam ekran keten nevresimli yatak odası görseli üstünde Denizli tezgâhlarından doğal kumaş başlığı ve Koleksiyonu Keşfet butonu"},
+      {"id": "collections", "type": "categories", "goal": "Bento ızgarada büyük Yatak Odası kutusu ile Banyo ve Mutfak & Sofra koleksiyon kutuları"},
+      {"id": "products", "type": "products", "goal": "Keten nevresim takımı 3.490₺, müslin pike 1.890₺, peştemal havlu 590₺, waffle bornoz 1.290₺, keten masa örtüsü 990₺, yastık kılıfı ikili 690₺ ürün kartları"},
+      {"id": "about", "type": "about", "goal": "1968'den beri Denizli Buldan'da aile atölyesi, OEKO-TEX sertifikalı pamuk ve keten"},
+      {"id": "register", "type": "register", "goal": "İlk siparişte %10 indirim için ad, e-posta, şifre ve onay kutulu üye ol formu"},
+      {"id": "contact", "type": "contact", "goal": "Müşteri hizmetleri telefonu, e-posta ve ad, e-posta, konu, mesaj alanlı iletişim formu"},
+      {"id": "footer", "type": "footer", "goal": "Marka, yardım bağlantıları ve telif yılı"}
+    ]
+  }
+}

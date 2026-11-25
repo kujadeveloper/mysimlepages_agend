@@ -1,0 +1,47 @@
+{
+  "brief": "çiçekçiyim izmir alsancak. buketler, saksı çiçekleri, düğün nişan süslemesi yapıyorum. siparişleri whatsapptan alıyorum",
+  "plan": {
+    "title": "Lale Bahçesi Çiçekçilik",
+    "language": "tr",
+    "style": "romantic botanical",
+    "palette": {
+      "primary": "#be185d",
+      "secondary": "#fff7f9",
+      "accent": "#65a30d",
+      "text": "#3b1d2a"
+    },
+    "font": "Lora",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Lale Bahçesi logosu, Buketler, Organizasyon, İletişim bağlantıları ve WhatsApp butonu, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Tam ekran şakayık buketi görseli üstünde soldan açık renk geçişli katmanla aynı gün teslim vurgusu ve WhatsApp'tan Sipariş Ver butonu"
+      },
+      {
+        "id": "products",
+        "type": "products",
+        "goal": "Pembe gül buketi, mevsim buketi, orkide saksı, sukulent set ve fiyatları"
+      },
+      {
+        "id": "events",
+        "type": "services",
+        "goal": "Düğün, nişan ve söz için masa, araba ve gelin buketi süslemeleri"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Alsancak dükkan adresi, telefon, WhatsApp ve çalışma saatleri"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "Dükkan adı, kısa slogan ve telif yılı"
+      }
+    ]
+  }
+}

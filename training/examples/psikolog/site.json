@@ -1,0 +1,52 @@
+{
+  "brief": "Klinik psikoloğum, Nişantaşı'nda muayenehanem var, online da görüşüyorum. Kaygı, depresyon, ilişki sorunları, BDT ve EMDR. Sakin, güven veren, sade bir site. İlk görüşme için iletişim formu.",
+  "plan": {
+    "title": "Uzm. Kl. Psk. Defne Aksoy",
+    "language": "tr",
+    "style": "calm minimal",
+    "palette": {
+      "primary": "#3f5e5a",
+      "secondary": "#f6f7f4",
+      "accent": "#b7c9b4",
+      "text": "#1f2d2b"
+    },
+    "font": "Lora",
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navbar",
+        "goal": "Defne Aksoy adı ve Hakkımda, Çalışma Alanları, Süreç, İletişim bağlantıları, mobilde ☰ menü"
+      },
+      {
+        "id": "hero",
+        "type": "hero",
+        "goal": "Nişantaşı'nda ve online bireysel terapi, İlk Görüşme İçin Yazın butonu"
+      },
+      {
+        "id": "about",
+        "type": "about",
+        "goal": "Klinik psikoloji yüksek lisansı, BDT ve EMDR eğitimleri, 10 yıllık deneyim"
+      },
+      {
+        "id": "services",
+        "type": "services",
+        "goal": "Kaygı ve panik, depresyon, ilişki sorunları ve travma (EMDR) çalışma alanları"
+      },
+      {
+        "id": "process",
+        "type": "faq",
+        "goal": "Seans süresi 50 dakika, seans ücreti 3.000₺, online görüşme ve gizlilik hakkında sorular"
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "goal": "Muayenehane adresi, e-posta ve ad, telefon, tercih (yüz yüze/online), kısa not alanlı form"
+      },
+      {
+        "id": "footer",
+        "type": "footer",
+        "goal": "İsim, acil durumlar için 112 uyarısı ve telif yılı"
+      }
+    ]
+  }
+}
